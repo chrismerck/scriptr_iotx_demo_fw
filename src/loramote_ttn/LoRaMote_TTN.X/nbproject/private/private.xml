@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/cmerck/Dropbox/Chris/Merck_Engineering/scriptr/loramote_ttn/LoRaMote_TTN.X/main.c</file>
+            <file>file:/home/cmerck/Dropbox/Chris/Merck_Engineering/scriptr/loramote_ttn/Includes/Board/MOTEapp.c</file>
+            <file>file:/home/cmerck/Dropbox/Chris/Merck_Engineering/scriptr/loramote_ttn/Includes/Board/HardwareProfile.h</file>
+            <file>file:/home/cmerck/Dropbox/Chris/Merck_Engineering/scriptr/loramote_ttn/Includes/Drivers/SSD1306oLED.c</file>
+            <file>file:/home/cmerck/Dropbox/Chris/Merck_Engineering/scriptr/loramote_ttn/Includes/MccGenerated/eusart.c</file>
+        </group>
+    </open-files>
+</project-private>
