@@ -11,9 +11,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "58
 [c E6355 0 1 2 3 4 .. ]
 [n E6355 . MOTE_HARDWARE MOTE_STARTUP MOTE_JOINING MOTE_RUNNING MOTE_SWAP  ]
-"64
-[c E6571 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
-[n E6571 . runningEnter runningSensor runningSensorMenu runningDataRateDisplay runningDataRateSelect runningSensorDisplay runningUplink runningUplinkSelect runningUplinkTransmit runningPortNumber runningDownlink runningDownlinkDisplay runningPeriodic runningPeriodicDisplay runningSleep  ]
+"71
+[c E6577 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 .. ]
+[n E6577 . runningEnter runningSensor runningSensorMenu runningDataRateDisplay runningDataRateSelect runningSensorDisplay runningUplink runningUplinkSelect runningUplinkTransmit runningPortNumber runningDownlink runningDownlinkDisplay runningPeriodic runningPeriodicDisplay runningSleep  ]
 "6872 /opt/microchip/xc8/v1.36/include/pic18lf25k50.h
 [s S404 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S404 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
@@ -85,7 +85,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _moteApp_delayms `(v ~T0 @X0 0 ef1`ui ]
 "7020 /opt/microchip/xc8/v1.36/include/pic18lf25k50.h
 [v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
-"68 ../Includes/Board/MOTEapp.c
+"75 ../Includes/Board/MOTEapp.c
 [v _sendCommand `(v ~T0 @X0 0 sf1`*Cuc ]
 "37 ../Includes/Board/MOTEapp.h
 [v _MOTEapp_getModemResponse `(uc ~T0 @X0 0 ef ]
@@ -103,7 +103,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S335 . . . . ]
 "5681
 [v _PIE1bits `VS335 ~T0 @X0 0 e@3997 ]
-"182 ../Includes/Board/MOTEapp.c
+"189 ../Includes/Board/MOTEapp.c
 [c E6327 0 1 2 3 .. ]
 [n E6327 . NoButton ShortPress1 ShortPress2 Released  ]
 "3033 /opt/microchip/xc8/v1.36/include/pic18lf25k50.h
@@ -137,7 +137,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _MOTEapp_TimerBasedTask `(v ~T0 @X0 0 ef1`S867 ]
 "22 ../Includes/Drivers/buttons.h
 [v _service_pushbutton `(E6327 ~T0 @X0 0 ef ]
-"230 ../Includes/Board/MOTEapp.c
+"237 ../Includes/Board/MOTEapp.c
 [c E6508 0 2 3 31 .. ]
 [n E6508 . Volt_channel Temp_channel Light_channel FVR_channel  ]
 "251 ../Includes/MccGenerated/adc.h
@@ -148,34 +148,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _oled_clear `(v ~T0 @X0 0 ef ]
 "73
 [v _oled_putString `(v ~T0 @X0 0 ef3`*Cuc`uc`uc ]
-"71 ../Includes/Board/MOTEapp.c
+"78 ../Includes/Board/MOTEapp.c
 [v _moteJoiningProcess `(E6542 ~T0 @X0 0 sf2`uc`uc ]
-"72
-[v _moteRunningProcess `(E6571 ~T0 @X0 0 sf4`uc`uc`uc`uc ]
-"3295 /opt/microchip/xc8/v1.36/include/pic18lf25k50.h
-[s S227 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S227 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
-"3305
-[s S228 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S228 . T1OSO T1OSI CCP1 . TX RX ]
-"3313
-[s S229 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S229 . T13CKI . P1A . CK DT ]
-"3321
-[s S230 :1 `uc 1 :1 `uc 1 ]
-[n S230 . . CCP2 ]
-"3325
-[s S231 :2 `uc 1 :1 `uc 1 ]
-[n S231 . . PA1 ]
-"3329
-[s S232 :1 `uc 1 :1 `uc 1 ]
-[n S232 . . PA2 ]
-"3294
-[u S226 `S227 1 `S228 1 `S229 1 `S230 1 `S231 1 `S232 1 ]
-[n S226 . . . . . . . ]
-"3334
-[v _PORTCbits `VS226 ~T0 @X0 0 e@3970 ]
-"3707
+"79
+[v _moteRunningProcess `(E6577 ~T0 @X0 0 sf4`uc`uc`uc`uc ]
+"3707 /opt/microchip/xc8/v1.36/include/pic18lf25k50.h
 [s S247 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S247 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
 "3717
@@ -213,26 +190,49 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _strcmp `(i ~T0 @X0 0 ef2`*Cuc`*Cuc ]
 "194 /opt/microchip/xc8/v1.36/include/stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"3295 /opt/microchip/xc8/v1.36/include/pic18lf25k50.h
+[s S227 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S227 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
+"3305
+[s S228 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S228 . T1OSO T1OSI CCP1 . TX RX ]
+"3313
+[s S229 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S229 . T13CKI . P1A . CK DT ]
+"3321
+[s S230 :1 `uc 1 :1 `uc 1 ]
+[n S230 . . CCP2 ]
+"3325
+[s S231 :2 `uc 1 :1 `uc 1 ]
+[n S231 . . PA1 ]
+"3329
+[s S232 :1 `uc 1 :1 `uc 1 ]
+[n S232 . . PA2 ]
+"3294
+[u S226 `S227 1 `S228 1 `S229 1 `S230 1 `S231 1 `S232 1 ]
+[n S226 . . . . . . . ]
+"3334
+[v _PORTCbits `VS226 ~T0 @X0 0 e@3970 ]
 "77 ../Includes/Drivers/SSD1306oLED.h
 [v _oled_putUint16 `(v ~T0 @X0 0 ef3`ui`uc`uc ]
 "249 ../Includes/MccGenerated/memory.h
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`uc`uc ]
 "75 ../Includes/Drivers/SSD1306oLED.h
 [v _oled_putUint8 `(v ~T0 @X0 0 ef3`uc`uc`uc ]
-"77 ../Includes/Board/MOTEapp.c
+"84 ../Includes/Board/MOTEapp.c
 [v _moteApp_clearBuffers `(v ~T0 @X0 0 sf ]
 "199 ../Includes/MccGenerated/tmr2.h
 [v _TMR2_ReadTimer `(uc ~T0 @X0 0 ef ]
-"78 ../Includes/Board/MOTEapp.c
+"85 ../Includes/Board/MOTEapp.c
 [v _moteApp_add8bToDataBuffer `(v ~T0 @X0 0 ef2`uc`uc ]
-"79
+"86
 [v _moteApp_add16bToDataBuffer `(v ~T0 @X0 0 ef2`ui`uc ]
 "43 /opt/microchip/xc8/v1.36/include/pic18.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
-"69 ../Includes/Board/MOTEapp.c
+"76 ../Includes/Board/MOTEapp.c
 [v _sendDataCommand `(v ~T0 @X0 0 sf3`*Cuc`*uc`uc ]
-"76
+"83
 [v _moteApp_GoToSleep `(uc ~T0 @X0 0 sf ]
 "275 ../Includes/MccGenerated/memory.h
 [v _DATAEE_ReadByte `(uc ~T0 @X0 0 ef1`uc ]
@@ -242,7 +242,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _EUSART_Read `(uc ~T0 @X0 0 ef ]
 "146
 [v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
-"75 ../Includes/Board/MOTEapp.c
+"82 ../Includes/Board/MOTEapp.c
 [v _hexToStr `(uc ~T0 @X0 0 sf1`uc ]
 "69 ../Includes/Drivers/SSD1306oLED.h
 [v _oled_displayOff `(v ~T0 @X0 0 ef1`uc ]
@@ -6352,3052 +6352,3131 @@ Version 3.2 HI-TECH Software Intermediate Code
 . `E6355 1
 ]
 [; ;MOTEapp.c: 58: static MOTE_MODE_T moteState = MOTE_STARTUP;
-[; ;MOTEapp.c: 63: typedef enum {runningEnter, runningSensor, runningSensorMenu, runningDataRateDisplay, runningDataRateSelect, runningSensorDisplay, runningUplink, runningUplinkSelect, runningUplinkTransmit, runningPortNumber, runningDownlink, runningDownlinkDisplay, 
-"64
-[v _runningState `E6571 ~T0 @X0 1 e ]
-[i _runningState
-. `E6571 0
+"60
+[v _autoMode `uc ~T0 @X0 1 s ]
+[i _autoMode
+-> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 64: MOTE_RUNNING_T runningState = runningEnter;
-[; ;MOTEapp.c: 67: static void EndLine(void);
-[; ;MOTEapp.c: 68: static void sendCommand(const char *);
-[; ;MOTEapp.c: 69: static void sendDataCommand(const char *string, uint8_t*, uint8_t);
-[; ;MOTEapp.c: 70: static void sendSetCommand(uint8_t*);
-[; ;MOTEapp.c: 71: static MOTE_T moteJoiningProcess(bool, bool);
-[; ;MOTEapp.c: 72: static MOTE_RUNNING_T moteRunningProcess(bool, bool, bool, bool);
-[; ;MOTEapp.c: 73: uint8_t MOTEapp_getByteCounte(void);
-[; ;MOTEapp.c: 74: static uint8_t unhex(uint8_t);
-[; ;MOTEapp.c: 75: static uint8_t hexToStr(uint8_t);
-[; ;MOTEapp.c: 76: static uint8_t moteApp_GoToSleep(void);
-[; ;MOTEapp.c: 77: static void moteApp_clearBuffers(void);
-[; ;MOTEapp.c: 78: void moteApp_add8bToDataBuffer(uint8_t, uint8_t);
-[; ;MOTEapp.c: 79: void moteApp_add16bToDataBuffer(uint16_t, uint8_t);
-[; ;MOTEapp.c: 80: static void MOTEapp_SetADR(bool);
-"83
+[; ;MOTEapp.c: 60: static bool autoMode = 0;
+"61
+[v _manualTrigger `uc ~T0 @X0 1 s ]
+[i _manualTrigger
+-> -> 0 `i `uc
+]
+[; ;MOTEapp.c: 61: static bool manualTrigger = 0;
+"62
+[v _S1 `uc ~T0 @X0 1 s ]
+[i _S1
+-> -> 1 `i `uc
+]
+[; ;MOTEapp.c: 62: static uint8_t S1 = 1;
+"63
+[v _S2 `uc ~T0 @X0 1 s ]
+[i _S2
+-> -> 1 `i `uc
+]
+[; ;MOTEapp.c: 63: static uint8_t S2 = 1;
+"64
+[v _prevS1 `uc ~T0 @X0 1 s ]
+[i _prevS1
+-> -> 1 `i `uc
+]
+[; ;MOTEapp.c: 64: static uint8_t prevS1 = 1;
+"65
+[v _prevS2 `uc ~T0 @X0 1 s ]
+[i _prevS2
+-> -> 1 `i `uc
+]
+[; ;MOTEapp.c: 65: static uint8_t prevS2 = 1;
+[; ;MOTEapp.c: 70: typedef enum {runningEnter, runningSensor, runningSensorMenu, runningDataRateDisplay, runningDataRateSelect, runningSensorDisplay, runningUplink, runningUplinkSelect, runningUplinkTransmit, runningPortNumber, runningDownlink, runningDownlinkDisplay, 
+"71
+[v _runningState `E6577 ~T0 @X0 1 e ]
+[i _runningState
+. `E6577 0
+]
+[; ;MOTEapp.c: 71: MOTE_RUNNING_T runningState = runningEnter;
+[; ;MOTEapp.c: 74: static void EndLine(void);
+[; ;MOTEapp.c: 75: static void sendCommand(const char *);
+[; ;MOTEapp.c: 76: static void sendDataCommand(const char *string, uint8_t*, uint8_t);
+[; ;MOTEapp.c: 77: static void sendSetCommand(uint8_t*);
+[; ;MOTEapp.c: 78: static MOTE_T moteJoiningProcess(bool, bool);
+[; ;MOTEapp.c: 79: static MOTE_RUNNING_T moteRunningProcess(bool, bool, bool, bool);
+[; ;MOTEapp.c: 80: uint8_t MOTEapp_getByteCounte(void);
+[; ;MOTEapp.c: 81: static uint8_t unhex(uint8_t);
+[; ;MOTEapp.c: 82: static uint8_t hexToStr(uint8_t);
+[; ;MOTEapp.c: 83: static uint8_t moteApp_GoToSleep(void);
+[; ;MOTEapp.c: 84: static void moteApp_clearBuffers(void);
+[; ;MOTEapp.c: 85: void moteApp_add8bToDataBuffer(uint8_t, uint8_t);
+[; ;MOTEapp.c: 86: void moteApp_add16bToDataBuffer(uint16_t, uint8_t);
+[; ;MOTEapp.c: 87: static void MOTEapp_SetADR(bool);
+"90
 [v _appDevEui `uc ~T0 @X0 -> 16 `i s ]
-[; ;MOTEapp.c: 83: static uint8_t appDevEui[16];
-"84
+[; ;MOTEapp.c: 90: static uint8_t appDevEui[16];
+"91
 [v _appKey `uc ~T0 @X0 -> 32 `i s ]
-[; ;MOTEapp.c: 84: static uint8_t appKey[32];
-"85
+[; ;MOTEapp.c: 91: static uint8_t appKey[32];
+"92
 [v _retryCount `uc ~T0 @X0 1 s ]
 [i _retryCount
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 85: static uint8_t retryCount = 0;
-"86
+[; ;MOTEapp.c: 92: static uint8_t retryCount = 0;
+"93
 [v _modemBufferIndex `uc ~T0 @X0 1 s ]
 [i _modemBufferIndex
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 86: static uint8_t modemBufferIndex = 0;
-"88
+[; ;MOTEapp.c: 93: static uint8_t modemBufferIndex = 0;
+"95
 [v _light `ui ~T0 @X0 1 s ]
 [i _light
 -> -> 0 `i `ui
 ]
-[; ;MOTEapp.c: 88: static uint16_t light = 0;
-"89
+[; ;MOTEapp.c: 95: static uint16_t light = 0;
+"96
 [v _temperature `ui ~T0 @X0 1 s ]
 [i _temperature
 -> -> 0 `i `ui
 ]
-[; ;MOTEapp.c: 89: static uint16_t temperature = 0;
-"90
+[; ;MOTEapp.c: 96: static uint16_t temperature = 0;
+"97
 [v _randomPortNum `uc ~T0 @X0 1 s ]
 [i _randomPortNum
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 90: static uint8_t randomPortNum = 0;
-"91
+[; ;MOTEapp.c: 97: static uint8_t randomPortNum = 0;
+"98
 [v _messageReceived `uc ~T0 @X0 1 s ]
 [i _messageReceived
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 91: static bool messageReceived = 0;
-"92
+[; ;MOTEapp.c: 98: static bool messageReceived = 0;
+"99
 [v _pkts `ui ~T0 @X0 1 s ]
 [i _pkts
 -> -> 0 `i `ui
 ]
-[; ;MOTEapp.c: 92: static uint16_t pkts = 0;
-"108
+[; ;MOTEapp.c: 99: static uint16_t pkts = 0;
+"115
 [v _secTicker `uc ~T0 @X0 1 s ]
 [i _secTicker
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 108: static uint8_t secTicker = 0;
-"109
+[; ;MOTEapp.c: 115: static uint8_t secTicker = 0;
+"116
 [v _minTicker `uc ~T0 @X0 1 s ]
 [i _minTicker
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 109: static uint8_t minTicker = 0;
-"110
+[; ;MOTEapp.c: 116: static uint8_t minTicker = 0;
+"117
 [v _m10SecTicker `uc ~T0 @X0 1 s ]
 [i _m10SecTicker
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 110: static uint8_t m10SecTicker = 0;
-"111
+[; ;MOTEapp.c: 117: static uint8_t m10SecTicker = 0;
+"118
 [v _sleepTicker `uc ~T0 @X0 1 s ]
 [i _sleepTicker
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 111: static uint8_t sleepTicker = 0;
-"113
+[; ;MOTEapp.c: 118: static uint8_t sleepTicker = 0;
+"120
 [v _nibble2int `(uc ~T0 @X0 1 ef1`uc ]
-"114
+"121
 {
-[; ;MOTEapp.c: 113: uint8_t nibble2int(char c)
-[; ;MOTEapp.c: 114: {
+[; ;MOTEapp.c: 120: uint8_t nibble2int(char c)
+[; ;MOTEapp.c: 121: {
 [e :U _nibble2int ]
-"113
+"120
 [v _c `uc ~T0 @X0 1 r1 ]
-"114
+"121
 [f ]
-[; ;MOTEapp.c: 115: if (c>='0' && c<='9') {
-"115
+[; ;MOTEapp.c: 122: if (c>='0' && c<='9') {
+"122
 [e $ ! && >= -> _c `ui -> 48 `ui <= -> _c `ui -> 57 `ui 872  ]
 {
-[; ;MOTEapp.c: 116: return c-'0';
-"116
+[; ;MOTEapp.c: 123: return c-'0';
+"123
 [e ) -> - -> _c `ui -> 48 `ui `uc ]
 [e $UE 871  ]
-"117
+"124
 }
-[; ;MOTEapp.c: 117: } else if (c >= 'A' && c <= 'F') {
+[; ;MOTEapp.c: 124: } else if (c >= 'A' && c <= 'F') {
 [e $U 873  ]
 [e :U 872 ]
 [e $ ! && >= -> _c `ui -> 65 `ui <= -> _c `ui -> 70 `ui 874  ]
 {
-[; ;MOTEapp.c: 118: return 10+c-'A';
-"118
+[; ;MOTEapp.c: 125: return 10+c-'A';
+"125
 [e ) -> - -> + -> 10 `i -> _c `i `ui -> 65 `ui `uc ]
 [e $UE 871  ]
-"119
+"126
 }
-[; ;MOTEapp.c: 119: } else if (c >= 'a' && c <= 'f') {
+[; ;MOTEapp.c: 126: } else if (c >= 'a' && c <= 'f') {
 [e $U 875  ]
 [e :U 874 ]
 [e $ ! && >= -> _c `ui -> 97 `ui <= -> _c `ui -> 102 `ui 876  ]
 {
-[; ;MOTEapp.c: 120: return 10+c-'a';
-"120
+[; ;MOTEapp.c: 127: return 10+c-'a';
+"127
 [e ) -> - -> + -> 10 `i -> _c `i `ui -> 97 `ui `uc ]
 [e $UE 871  ]
-"121
+"128
 }
-[; ;MOTEapp.c: 121: } else {
+[; ;MOTEapp.c: 128: } else {
 [e $U 877  ]
 [e :U 876 ]
 {
-[; ;MOTEapp.c: 122: return 0;
-"122
+[; ;MOTEapp.c: 129: return 0;
+"129
 [e ) -> -> 0 `i `uc ]
 [e $UE 871  ]
-"123
+"130
 }
 [e :U 877 ]
 [e :U 875 ]
 [e :U 873 ]
-[; ;MOTEapp.c: 123: }
-[; ;MOTEapp.c: 124: }
-"124
+[; ;MOTEapp.c: 130: }
+[; ;MOTEapp.c: 131: }
+"131
 [e :UE 871 ]
 }
-"126
+"133
 [v _modemResync `(v ~T0 @X0 1 ef ]
-"127
+"134
 {
-[; ;MOTEapp.c: 126: void modemResync(void)
-[; ;MOTEapp.c: 127: {
+[; ;MOTEapp.c: 133: void modemResync(void)
+[; ;MOTEapp.c: 134: {
 [e :U _modemResync ]
 [f ]
-"128
+"135
 [v _escapeEvent `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 128: bool escapeEvent = 0;
+[; ;MOTEapp.c: 135: bool escapeEvent = 0;
 [e = _escapeEvent -> -> 0 `i `uc ]
-"129
+"136
 [v _escapeCounter `ui ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 129: uint16_t escapeCounter = 0;
+[; ;MOTEapp.c: 136: uint16_t escapeCounter = 0;
 [e = _escapeCounter -> -> 0 `i `ui ]
-[; ;MOTEapp.c: 137: TXSTAbits.TXEN = 0;
-"137
-[e = . . _TXSTAbits 0 5 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 138: LATCbits.LATC6 = 0;
-"138
-[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 139: moteApp_delayms(10);
-"139
-[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 144: TXSTAbits.TXEN = 1;
+[; ;MOTEapp.c: 144: TXSTAbits.TXEN = 0;
 "144
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 145: moteApp_delayms(5);
+[e = . . _TXSTAbits 0 5 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 145: LATCbits.LATC6 = 0;
 "145
+[e = . . _LATCbits 0 6 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 146: moteApp_delayms(10);
+"146
+[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
+[; ;MOTEapp.c: 151: TXSTAbits.TXEN = 1;
+"151
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 152: moteApp_delayms(5);
+"152
 [e ( _moteApp_delayms (1 -> -> 5 `i `ui ]
-[; ;MOTEapp.c: 147: TXREG = 0x55;
-"147
+[; ;MOTEapp.c: 154: TXREG = 0x55;
+"154
 [e = _TXREG -> -> 85 `i `uc ]
-[; ;MOTEapp.c: 148: while (TXSTAbits.TRMT == 0)
-"148
+[; ;MOTEapp.c: 155: while (TXSTAbits.TRMT == 0)
+"155
 [e $U 879  ]
 [e :U 880 ]
-[; ;MOTEapp.c: 149: {};
-"149
+[; ;MOTEapp.c: 156: {};
+"156
 {
 }
 [e :U 879 ]
-"148
+"155
 [e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 880  ]
 [e :U 881 ]
-[; ;MOTEapp.c: 151: sendCommand("z");
-"151
+[; ;MOTEapp.c: 158: sendCommand("z");
+"158
 [e ( _sendCommand (1 :s 1C ]
-[; ;MOTEapp.c: 153: moteApp_delayms(40);
-"153
+[; ;MOTEapp.c: 160: moteApp_delayms(40);
+"160
 [e ( _moteApp_delayms (1 -> -> 40 `i `ui ]
-[; ;MOTEapp.c: 154: while (escapeEvent)
-"154
+[; ;MOTEapp.c: 161: while (escapeEvent)
+"161
 [e $U 882  ]
 [e :U 883 ]
-[; ;MOTEapp.c: 155: {
-"155
+[; ;MOTEapp.c: 162: {
+"162
 {
-[; ;MOTEapp.c: 156: if(MOTEapp_getModemResponse())
-"156
+[; ;MOTEapp.c: 163: if(MOTEapp_getModemResponse())
+"163
 [e $ ! != -> ( _MOTEapp_getModemResponse ..  `i -> -> -> 0 `i `uc `i 885  ]
-[; ;MOTEapp.c: 157: escapeEvent = 1;
-"157
+[; ;MOTEapp.c: 164: escapeEvent = 1;
+"164
 [e = _escapeEvent -> -> 1 `i `uc ]
 [e $U 886  ]
-"158
+"165
 [e :U 885 ]
-[; ;MOTEapp.c: 158: else if (++escapeCounter > 5000)
+[; ;MOTEapp.c: 165: else if (++escapeCounter > 5000)
 [e $ ! > =+ _escapeCounter -> -> 1 `i `ui -> -> 5000 `i `ui 887  ]
-[; ;MOTEapp.c: 159: escapeEvent = 1;
-"159
+[; ;MOTEapp.c: 166: escapeEvent = 1;
+"166
 [e = _escapeEvent -> -> 1 `i `uc ]
 [e :U 887 ]
-"160
+"167
 [e :U 886 ]
 }
 [e :U 882 ]
-"154
+"161
 [e $ != -> _escapeEvent `i -> -> -> 0 `i `uc `i 883  ]
 [e :U 884 ]
-[; ;MOTEapp.c: 160: }
-[; ;MOTEapp.c: 161: }
-"161
+[; ;MOTEapp.c: 167: }
+[; ;MOTEapp.c: 168: }
+"168
 [e :UE 878 ]
 }
-"163
+"170
 [v _modemSleep `(v ~T0 @X0 1 ef ]
-"164
+"171
 {
-[; ;MOTEapp.c: 163: void modemSleep()
-[; ;MOTEapp.c: 164: {
+[; ;MOTEapp.c: 170: void modemSleep()
+[; ;MOTEapp.c: 171: {
 [e :U _modemSleep ]
 [f ]
-[; ;MOTEapp.c: 165: sendCommand("sys sleep 999999999");
-"165
+[; ;MOTEapp.c: 172: sendCommand("sys sleep 999999999");
+"172
 [e ( _sendCommand (1 :s 2C ]
-[; ;MOTEapp.c: 166: while(1 == PIE1bits.TXIE)
-"166
+[; ;MOTEapp.c: 173: while(1 == PIE1bits.TXIE)
+"173
 [e $U 889  ]
 [e :U 890 ]
-[; ;MOTEapp.c: 167: ;
-"167
+[; ;MOTEapp.c: 174: ;
+"174
 [e :U 889 ]
-"166
+"173
 [e $ == -> 1 `i -> . . _PIE1bits 0 4 `i 890  ]
 [e :U 891 ]
-[; ;MOTEapp.c: 168: moteApp_delayms(20);
-"168
+[; ;MOTEapp.c: 175: moteApp_delayms(20);
+"175
 [e ( _moteApp_delayms (1 -> -> 20 `i `ui ]
-[; ;MOTEapp.c: 169: }
-"169
+[; ;MOTEapp.c: 176: }
+"176
 [e :UE 888 ]
 }
-"171
+"178
 [v _MOTEapp_handlerState `(v ~T0 @X0 1 ef1`E6355 ]
-"172
+"179
 {
-[; ;MOTEapp.c: 171: void MOTEapp_handlerState(MOTE_MODE_T state)
-[; ;MOTEapp.c: 172: {
+[; ;MOTEapp.c: 178: void MOTEapp_handlerState(MOTE_MODE_T state)
+[; ;MOTEapp.c: 179: {
 [e :U _MOTEapp_handlerState ]
-"171
+"178
 [v _state `E6355 ~T0 @X0 1 r1 ]
-"172
+"179
 [f ]
-[; ;MOTEapp.c: 173: moteState = state;
-"173
+[; ;MOTEapp.c: 180: moteState = state;
+"180
 [e = _moteState _state ]
-[; ;MOTEapp.c: 174: }
-"174
+[; ;MOTEapp.c: 181: }
+"181
 [e :UE 892 ]
 }
-"176
+"183
 [v _moteHandler `(E6355 ~T0 @X0 1 ef ]
-"177
+"184
 {
-[; ;MOTEapp.c: 176: MOTE_MODE_T moteHandler(void)
-[; ;MOTEapp.c: 177: {
+[; ;MOTEapp.c: 183: MOTE_MODE_T moteHandler(void)
+[; ;MOTEapp.c: 184: {
 [e :U _moteHandler ]
 [f ]
-"178
+"185
 [v _gotoSleep `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 178: bool gotoSleep = 0;
+[; ;MOTEapp.c: 185: bool gotoSleep = 0;
 [e = _gotoSleep -> -> 0 `i `uc ]
-"179
+"186
 [v _gotoNextState `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 179: bool gotoNextState = 0;
+[; ;MOTEapp.c: 186: bool gotoNextState = 0;
 [e = _gotoNextState -> -> 0 `i `uc ]
-"180
+"187
 [v _s2Button `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 180: bool s2Button = 0;
+[; ;MOTEapp.c: 187: bool s2Button = 0;
 [e = _s2Button -> -> 0 `i `uc ]
-"181
-[v _readMessage `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 181: bool readMessage = 0;
-[e = _readMessage -> -> 0 `i `uc ]
-"182
-[v _buttonPress `E6327 ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 182: buttonStates_t buttonPress = Released;
-[e = _buttonPress . `E6327 3 ]
-[; ;MOTEapp.c: 188: if (PORTAbits.RA0)
 "188
-[e $ ! != -> . . _PORTAbits 0 0 `i -> -> -> 0 `i `Vuc `i 894  ]
-[; ;MOTEapp.c: 189: moteState = MOTE_SWAP;
+[v _readMessage `uc ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 188: bool readMessage = 0;
+[e = _readMessage -> -> 0 `i `uc ]
 "189
+[v _buttonPress `E6327 ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 189: buttonStates_t buttonPress = Released;
+[e = _buttonPress . `E6327 3 ]
+[; ;MOTEapp.c: 195: if (PORTAbits.RA0)
+"195
+[e $ ! != -> . . _PORTAbits 0 0 `i -> -> -> 0 `i `Vuc `i 894  ]
+[; ;MOTEapp.c: 196: moteState = MOTE_SWAP;
+"196
 [e = _moteState . `E6355 4 ]
 [e :U 894 ]
-[; ;MOTEapp.c: 192: if ( appTimer.mSecTick )
-"192
-[e $ ! != -> . . _appTimer 1 0 `i -> -> -> 0 `i `uc `i 895  ]
-[; ;MOTEapp.c: 193: {
-"193
-{
-[; ;MOTEapp.c: 195: TMRapp_ClearBitFlags();
-"195
-[e ( _TMRapp_ClearBitFlags ..  ]
-[; ;MOTEapp.c: 197: TMRapp_Handler();
-"197
-[e ( _TMRapp_Handler ..  ]
-[; ;MOTEapp.c: 198: MOTEapp_TimerBasedTask(appTimer);
-"198
-[e ( _MOTEapp_TimerBasedTask (1 _appTimer ]
+[; ;MOTEapp.c: 199: if ( appTimer.mSecTick )
 "199
+[e $ ! != -> . . _appTimer 1 0 `i -> -> -> 0 `i `uc `i 895  ]
+[; ;MOTEapp.c: 200: {
+"200
+{
+[; ;MOTEapp.c: 202: TMRapp_ClearBitFlags();
+"202
+[e ( _TMRapp_ClearBitFlags ..  ]
+[; ;MOTEapp.c: 204: TMRapp_Handler();
+"204
+[e ( _TMRapp_Handler ..  ]
+[; ;MOTEapp.c: 205: MOTEapp_TimerBasedTask(appTimer);
+"205
+[e ( _MOTEapp_TimerBasedTask (1 _appTimer ]
+"206
 }
 [e :U 895 ]
-[; ;MOTEapp.c: 199: }
-[; ;MOTEapp.c: 202: buttonPress = service_pushbutton();
-"202
-[e = _buttonPress ( _service_pushbutton ..  ]
-[; ;MOTEapp.c: 203: if (buttonPress == ShortPress1)
-"203
-[e $ ! == -> _buttonPress `i -> . `E6327 1 `i 896  ]
-[; ;MOTEapp.c: 204: {
-"204
-{
-[; ;MOTEapp.c: 205: secTicker = 0;
-"205
-[e = _secTicker -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 206: gotoNextState = 1;
-"206
-[e = _gotoNextState -> -> 1 `i `uc ]
-"207
-}
-[; ;MOTEapp.c: 207: }
-[e $U 897  ]
-"208
-[e :U 896 ]
-[; ;MOTEapp.c: 208: else if (buttonPress == ShortPress2)
-[e $ ! == -> _buttonPress `i -> . `E6327 2 `i 898  ]
-[; ;MOTEapp.c: 209: {
+[; ;MOTEapp.c: 206: }
+[; ;MOTEapp.c: 209: buttonPress = service_pushbutton();
 "209
-{
-[; ;MOTEapp.c: 210: secTicker = 0;
+[e = _buttonPress ( _service_pushbutton ..  ]
+[; ;MOTEapp.c: 210: if (buttonPress == ShortPress1)
 "210
-[e = _secTicker -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 211: s2Button = 1;
+[e $ ! == -> _buttonPress `i -> . `E6327 1 `i 896  ]
+[; ;MOTEapp.c: 211: {
 "211
-[e = _s2Button -> -> 1 `i `uc ]
+{
+[; ;MOTEapp.c: 212: secTicker = 0;
 "212
+[e = _secTicker -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 213: gotoNextState = 1;
+"213
+[e = _gotoNextState -> -> 1 `i `uc ]
+"214
+}
+[; ;MOTEapp.c: 214: }
+[e $U 897  ]
+"215
+[e :U 896 ]
+[; ;MOTEapp.c: 215: else if (buttonPress == ShortPress2)
+[e $ ! == -> _buttonPress `i -> . `E6327 2 `i 898  ]
+[; ;MOTEapp.c: 216: {
+"216
+{
+[; ;MOTEapp.c: 217: secTicker = 0;
+"217
+[e = _secTicker -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 218: s2Button = 1;
+"218
+[e = _s2Button -> -> 1 `i `uc ]
+"219
 }
 [e :U 898 ]
-"215
+"222
 [e :U 897 ]
-[; ;MOTEapp.c: 212: }
-[; ;MOTEapp.c: 215: if ( MOTEapp_getModemResponse() )
+[; ;MOTEapp.c: 219: }
+[; ;MOTEapp.c: 222: if ( MOTEapp_getModemResponse() )
 [e $ ! != -> ( _MOTEapp_getModemResponse ..  `i -> -> -> 0 `i `uc `i 899  ]
-[; ;MOTEapp.c: 216: readMessage = 1;
-"216
+[; ;MOTEapp.c: 223: readMessage = 1;
+"223
 [e = _readMessage -> -> 1 `i `uc ]
 [e $U 900  ]
-"217
+"224
 [e :U 899 ]
-[; ;MOTEapp.c: 217: else
-[; ;MOTEapp.c: 218: readMessage = 0;
-"218
+[; ;MOTEapp.c: 224: else
+[; ;MOTEapp.c: 225: readMessage = 0;
+"225
 [e = _readMessage -> -> 0 `i `uc ]
 [e :U 900 ]
-[; ;MOTEapp.c: 221: if ( (runningState == runningUplink) || (runningState == runningSensorMenu) )
-"221
-[e $ ! || == -> _runningState `i -> . `E6571 6 `i == -> _runningState `i -> . `E6571 2 `i 901  ]
-[; ;MOTEapp.c: 222: {
-"222
-{
-[; ;MOTEapp.c: 224: if (m10SecTicker >= 5)
-"224
-[e $ ! >= -> _m10SecTicker `i -> 5 `i 902  ]
-[; ;MOTEapp.c: 225: {
-"225
-{
-"226
-[v _Traw `ui ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 226: uint16_t Traw = 0;
-[e = _Traw -> -> 0 `i `ui ]
-[; ;MOTEapp.c: 227: moteApp_delayms(10);
-"227
-[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 228: for(uint8_t i = 32; i>0; i--)
+[; ;MOTEapp.c: 228: if ( (runningState == runningUplink) || (runningState == runningSensorMenu) )
 "228
+[e $ ! || == -> _runningState `i -> . `E6577 6 `i == -> _runningState `i -> . `E6577 2 `i 901  ]
+[; ;MOTEapp.c: 229: {
+"229
+{
+[; ;MOTEapp.c: 231: if (m10SecTicker >= 5)
+"231
+[e $ ! >= -> _m10SecTicker `i -> 5 `i 902  ]
+[; ;MOTEapp.c: 232: {
+"232
+{
+"233
+[v _Traw `ui ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 233: uint16_t Traw = 0;
+[e = _Traw -> -> 0 `i `ui ]
+[; ;MOTEapp.c: 234: moteApp_delayms(10);
+"234
+[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
+[; ;MOTEapp.c: 235: for(uint8_t i = 32; i>0; i--)
+"235
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 32 `i `uc ]
 [e $ > -> _i `i -> 0 `i 903  ]
 [e $U 904  ]
-"229
+"236
 [e :U 903 ]
-[; ;MOTEapp.c: 229: {
+[; ;MOTEapp.c: 236: {
 {
-[; ;MOTEapp.c: 230: light = (light + ADC_GetConversion(Light_channel)) / 2;
-"230
+[; ;MOTEapp.c: 237: light = (light + ADC_GetConversion(Light_channel)) / 2;
+"237
 [e = _light / + _light ( _ADC_GetConversion (1 . `E6508 2 -> -> 2 `i `ui ]
-"231
+"238
 }
-"228
+"235
 [e -- _i -> -> 1 `i `uc ]
 [e $ > -> _i `i -> 0 `i 903  ]
 [e :U 904 ]
-"231
+"238
 }
-[; ;MOTEapp.c: 231: }
-[; ;MOTEapp.c: 232: moteApp_delayms(10);
-"232
+[; ;MOTEapp.c: 238: }
+[; ;MOTEapp.c: 239: moteApp_delayms(10);
+"239
 [e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 233: for(uint8_t i = 32; i>0; i--)
-"233
+[; ;MOTEapp.c: 240: for(uint8_t i = 32; i>0; i--)
+"240
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 32 `i `uc ]
 [e $ > -> _i `i -> 0 `i 906  ]
 [e $U 907  ]
-"234
+"241
 [e :U 906 ]
-[; ;MOTEapp.c: 234: {
+[; ;MOTEapp.c: 241: {
 {
-[; ;MOTEapp.c: 235: Traw = (Traw + ADC_GetConversion(Temp_channel)) / 2;
-"235
+[; ;MOTEapp.c: 242: Traw = (Traw + ADC_GetConversion(Temp_channel)) / 2;
+"242
 [e = _Traw / + _Traw ( _ADC_GetConversion (1 . `E6508 1 -> -> 2 `i `ui ]
-"236
+"243
 }
-"233
+"240
 [e -- _i -> -> 1 `i `uc ]
 [e $ > -> _i `i -> 0 `i 906  ]
 [e :U 907 ]
-"236
+"243
 }
-[; ;MOTEapp.c: 236: }
-[; ;MOTEapp.c: 237: temperature = ADC_TempConversion(Traw);
-"237
+[; ;MOTEapp.c: 243: }
+[; ;MOTEapp.c: 244: temperature = ADC_TempConversion(Traw);
+"244
 [e = _temperature -> ( _ADC_TempConversion (1 -> _Traw `E6508 `ui ]
-[; ;MOTEapp.c: 238: m10SecTicker = 0;
-"238
+[; ;MOTEapp.c: 245: m10SecTicker = 0;
+"245
 [e = _m10SecTicker -> -> 0 `i `uc ]
-"239
+"246
 }
 [e :U 902 ]
-"240
+"247
 }
 [e :U 901 ]
-[; ;MOTEapp.c: 239: }
-[; ;MOTEapp.c: 240: }
-[; ;MOTEapp.c: 242: if(secTicker)
-"242
-[e $ ! != -> _secTicker `i -> -> -> 0 `i `uc `i 909  ]
-[; ;MOTEapp.c: 243: {
-"243
-{
-[; ;MOTEapp.c: 244: if (secTicker >= 10)
-"244
-[e $ ! >= -> _secTicker `i -> 10 `i 910  ]
-[; ;MOTEapp.c: 245: {
-"245
-{
-[; ;MOTEapp.c: 246: gotoSleep = 1;
-"246
-[e = _gotoSleep -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 247: secTicker = 0;
-"247
-[e = _secTicker -> -> 0 `i `uc ]
-"248
-}
-[e :U 910 ]
+[; ;MOTEapp.c: 246: }
+[; ;MOTEapp.c: 247: }
+[; ;MOTEapp.c: 249: if(secTicker)
 "249
-}
-[e :U 909 ]
-[; ;MOTEapp.c: 248: }
-[; ;MOTEapp.c: 249: }
-[; ;MOTEapp.c: 251: switch(moteState)
+[e $ ! != -> _secTicker `i -> -> -> 0 `i `uc `i 909  ]
+[; ;MOTEapp.c: 250: {
+"250
+{
+[; ;MOTEapp.c: 251: if (secTicker >= 10)
 "251
-[e $U 912  ]
+[e $ ! >= -> _secTicker `i -> 10 `i 910  ]
 [; ;MOTEapp.c: 252: {
 "252
 {
-[; ;MOTEapp.c: 253: default:
+[; ;MOTEapp.c: 253: gotoSleep = 1;
 "253
-[e :U 913 ]
-[; ;MOTEapp.c: 254: while(1);
+[e = _gotoSleep -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 254: secTicker = 0;
 "254
+[e = _secTicker -> -> 0 `i `uc ]
+"255
+}
+[e :U 910 ]
+"256
+}
+[e :U 909 ]
+[; ;MOTEapp.c: 255: }
+[; ;MOTEapp.c: 256: }
+[; ;MOTEapp.c: 258: switch(moteState)
+"258
+[e $U 912  ]
+[; ;MOTEapp.c: 259: {
+"259
+{
+[; ;MOTEapp.c: 260: default:
+"260
+[e :U 913 ]
+[; ;MOTEapp.c: 261: while(1);
+"261
 [e :U 915 ]
 [e :U 914 ]
 [e $U 915  ]
 [e :U 916 ]
-[; ;MOTEapp.c: 255: break;
-"255
-[e $U 911  ]
-[; ;MOTEapp.c: 256: case MOTE_STARTUP:
-"256
-[e :U 917 ]
-[; ;MOTEapp.c: 257: oled_clear();
-"257
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 258: oled_putString("MOTE Mode",1,0);
-"258
-[e ( _oled_putString (3 , , :s 3C -> -> 1 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 259: oled_putString("Starting",2,1);
-"259
-[e ( _oled_putString (3 , , :s 4C -> -> 2 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 260: oled_putString("ReRun PwrTst<S2>",0,3);
-"260
-[e ( _oled_putString (3 , , :s 5C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 261: activeState = moteStartup;
-"261
-[e = _activeState . `E6542 0 ]
-[; ;MOTEapp.c: 262: moteState = MOTE_JOINING;
+[; ;MOTEapp.c: 262: break;
 "262
-[e = _moteState . `E6355 2 ]
-[; ;MOTEapp.c: 263: break;
-"263
 [e $U 911  ]
-[; ;MOTEapp.c: 264: case MOTE_JOINING:
+[; ;MOTEapp.c: 263: case MOTE_STARTUP:
+"263
+[e :U 917 ]
+[; ;MOTEapp.c: 264: oled_clear();
 "264
-[e :U 918 ]
-[; ;MOTEapp.c: 265: if ( moteJoiningProcess(readMessage, s2Button) )
-"265
-[e $ ! != -> ( _moteJoiningProcess (2 , _readMessage _s2Button `i -> -> -> 0 `i `E6542 `i 919  ]
-[; ;MOTEapp.c: 266: {
-"266
-{
-[; ;MOTEapp.c: 267: oled_clear();
-"267
 [e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 268: oled_putString("Mobile Mote -App",0,0);
+[; ;MOTEapp.c: 265: oled_putString("MOTE Mode",1,0);
+"265
+[e ( _oled_putString (3 , , :s 3C -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 266: oled_putString("Starting",2,1);
+"266
+[e ( _oled_putString (3 , , :s 4C -> -> 2 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 267: oled_putString("ReRun PwrTst<S2>",0,3);
+"267
+[e ( _oled_putString (3 , , :s 5C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 268: activeState = moteStartup;
 "268
-[e ( _oled_putString (3 , , :s 6C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 269: oled_putString("Navigate  Select", 0,2);
+[e = _activeState . `E6542 0 ]
+[; ;MOTEapp.c: 269: moteState = MOTE_JOINING;
 "269
-[e ( _oled_putString (3 , , :s 7C -> -> 0 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 270: oled_putString(" (S1)      (S2) ", 0,3);
+[e = _moteState . `E6355 2 ]
+[; ;MOTEapp.c: 270: break;
 "270
-[e ( _oled_putString (3 , , :s 8C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 271: runningState = runningEnter;
+[e $U 911  ]
+[; ;MOTEapp.c: 271: case MOTE_JOINING:
 "271
-[e = _runningState . `E6571 0 ]
-[; ;MOTEapp.c: 272: moteState = MOTE_RUNNING;
+[e :U 918 ]
+[; ;MOTEapp.c: 272: if ( moteJoiningProcess(readMessage, s2Button) )
 "272
-[e = _moteState . `E6355 3 ]
+[e $ ! != -> ( _moteJoiningProcess (2 , _readMessage _s2Button `i -> -> -> 0 `i `E6542 `i 919  ]
+[; ;MOTEapp.c: 273: {
 "273
+{
+[; ;MOTEapp.c: 274: oled_clear();
+"274
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 275: oled_putString("Mobile Mote -App",0,0);
+"275
+[e ( _oled_putString (3 , , :s 6C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 276: oled_putString("Navigate  Select", 0,2);
+"276
+[e ( _oled_putString (3 , , :s 7C -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 277: oled_putString(" (S1)      (S2) ", 0,3);
+"277
+[e ( _oled_putString (3 , , :s 8C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 278: runningState = runningEnter;
+"278
+[e = _runningState . `E6577 0 ]
+[; ;MOTEapp.c: 279: moteState = MOTE_RUNNING;
+"279
+[e = _moteState . `E6355 3 ]
+"280
 }
 [e :U 919 ]
-[; ;MOTEapp.c: 273: }
-[; ;MOTEapp.c: 274: break;
-"274
-[e $U 911  ]
-[; ;MOTEapp.c: 275: case MOTE_RUNNING:
-"275
-[e :U 920 ]
-[; ;MOTEapp.c: 276: moteRunningProcess(gotoNextState, s2Button, readMessage, gotoSleep);
-"276
-[e ( _moteRunningProcess (4 , , , _gotoNextState _s2Button _readMessage _gotoSleep ]
-[; ;MOTEapp.c: 277: break;
-"277
-[e $U 911  ]
-[; ;MOTEapp.c: 278: case MOTE_SWAP:
-"278
-[e :U 921 ]
-[; ;MOTEapp.c: 280: break;
-"280
-[e $U 911  ]
+[; ;MOTEapp.c: 280: }
+[; ;MOTEapp.c: 281: break;
 "281
-}
-[; ;MOTEapp.c: 281: }
 [e $U 911  ]
-"251
+[; ;MOTEapp.c: 282: case MOTE_RUNNING:
+"282
+[e :U 920 ]
+[; ;MOTEapp.c: 283: moteRunningProcess(gotoNextState, s2Button, readMessage, gotoSleep);
+"283
+[e ( _moteRunningProcess (4 , , , _gotoNextState _s2Button _readMessage _gotoSleep ]
+[; ;MOTEapp.c: 284: break;
+"284
+[e $U 911  ]
+[; ;MOTEapp.c: 285: case MOTE_SWAP:
+"285
+[e :U 921 ]
+[; ;MOTEapp.c: 287: break;
+"287
+[e $U 911  ]
+"288
+}
+[; ;MOTEapp.c: 288: }
+[e $U 911  ]
+"258
 [e :U 912 ]
 [e [\ _moteState , $ . `E6355 1 917
  , $ . `E6355 2 918
  , $ . `E6355 3 920
  , $ . `E6355 4 921
  913 ]
-"281
+"288
 [e :U 911 ]
-[; ;MOTEapp.c: 282: return moteState;
-"282
+[; ;MOTEapp.c: 289: return moteState;
+"289
 [e ) _moteState ]
 [e $UE 893  ]
-[; ;MOTEapp.c: 283: }
-"283
+[; ;MOTEapp.c: 290: }
+"290
 [e :UE 893 ]
 }
-"290
+"297
 [v _moteJoiningProcess `(E6542 ~T0 @X0 1 sf2`uc`uc ]
-"291
+"298
 {
-[; ;MOTEapp.c: 290: static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
-[; ;MOTEapp.c: 291: {
+[; ;MOTEapp.c: 297: static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
+[; ;MOTEapp.c: 298: {
 [e :U _moteJoiningProcess ]
-"290
+"297
 [v _messageReady `uc ~T0 @X0 1 r1 ]
 [v _switchEvent `uc ~T0 @X0 1 r2 ]
-"291
+"298
 [f ]
-"292
-[v F6656 `i ~T0 @X0 1 s ch ]
-[i F6656
+"299
+[v F6662 `i ~T0 @X0 1 s ch ]
+[i F6662
 -> 0 `i
 ]
-"293
+"300
 [v _joiningComplete `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 292: static int ch = 0;
-[; ;MOTEapp.c: 293: bool joiningComplete = 0;
+[; ;MOTEapp.c: 299: static int ch = 0;
+[; ;MOTEapp.c: 300: bool joiningComplete = 0;
 [e = _joiningComplete -> -> 0 `i `uc ]
-"294
-[v F6658 `i ~T0 @X0 1 s mode ]
-[i F6658
+"301
+[v F6664 `i ~T0 @X0 1 s mode ]
+[i F6664
 -> 0 `i
 ]
-"295
-[v F6659 `uc ~T0 @X0 1 s pkt_cnt ]
-[i F6659
+"302
+[v F6665 `uc ~T0 @X0 1 s pkt_cnt ]
+[i F6665
 -> -> 0 `i `uc
 ]
-"296
-[v F6660 `uc ~T0 @X0 1 s float_val ]
-[i F6660
+"303
+[v F6666 `uc ~T0 @X0 1 s float_val ]
+[i F6666
 -> -> 255 `i `uc
 ]
-"297
-[v F6661 `uc ~T0 @X0 1 s pending_confirm ]
-[i F6661
+"304
+[v F6667 `uc ~T0 @X0 1 s pending_confirm ]
+[i F6667
 -> -> 0 `i `uc
 ]
-"298
+"305
 [v _buf `uc ~T0 @X0 -> 50 `i a ]
-"299
-[v F6663 `i ~T0 @X0 1 s skip_count ]
-[i F6663
+"306
+[v F6669 `i ~T0 @X0 1 s skip_count ]
+[i F6669
 -> 0 `i
 ]
-[; ;MOTEapp.c: 294: static int mode = 0;
-[; ;MOTEapp.c: 295: static unsigned char pkt_cnt = 0;
-[; ;MOTEapp.c: 296: static unsigned char float_val = 255;
-[; ;MOTEapp.c: 297: static bool pending_confirm = 0;
-[; ;MOTEapp.c: 298: char buf[50];
-[; ;MOTEapp.c: 299: static int skip_count = 0;
-[; ;MOTEapp.c: 302: if (switchEvent)
-"302
-[e $ ! != -> _switchEvent `i -> -> -> 0 `i `uc `i 923  ]
-[; ;MOTEapp.c: 303: {
-"303
-{
-[; ;MOTEapp.c: 304: activeState = moteComFailure;
-"304
-[e = _activeState . `E6542 17 ]
-[; ;MOTEapp.c: 305: while(!PORTCbits.RC1);
-"305
+[; ;MOTEapp.c: 301: static int mode = 0;
+[; ;MOTEapp.c: 302: static unsigned char pkt_cnt = 0;
+[; ;MOTEapp.c: 303: static unsigned char float_val = 255;
+[; ;MOTEapp.c: 304: static bool pending_confirm = 0;
+[; ;MOTEapp.c: 305: char buf[50];
+[; ;MOTEapp.c: 306: static int skip_count = 0;
+[; ;MOTEapp.c: 315: switch (activeState)
+"315
 [e $U 924  ]
-[e :U 925 ]
-[e :U 924 ]
-[e $ ! != -> . . _PORTCbits 0 1 `i -> -> -> 0 `i `Vuc `i 925  ]
-[e :U 926 ]
-"306
-}
-[e :U 923 ]
-[; ;MOTEapp.c: 306: }
-[; ;MOTEapp.c: 308: switch (activeState)
-"308
-[e $U 928  ]
-[; ;MOTEapp.c: 309: {
-"309
+[; ;MOTEapp.c: 316: {
+"316
 {
-[; ;MOTEapp.c: 310: default:
-"310
+[; ;MOTEapp.c: 317: default:
+"317
+[e :U 925 ]
+[; ;MOTEapp.c: 318: while(1);
+"318
+[e :U 927 ]
+[e :U 926 ]
+[e $U 927  ]
+[e :U 928 ]
+[; ;MOTEapp.c: 319: break;
+"319
+[e $U 923  ]
+[; ;MOTEapp.c: 320: case moteStartup:
+"320
 [e :U 929 ]
-[; ;MOTEapp.c: 311: while(1);
-"311
+[; ;MOTEapp.c: 328: LATAbits.LATA7 = 0;
+"328
+[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 329: LATAbits.LATA6 = 0;
+"329
+[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 333: while (MOTEapp_getModemResponse());
+"333
+[e $U 930  ]
 [e :U 931 ]
 [e :U 930 ]
-[e $U 931  ]
+[e $ != -> ( _MOTEapp_getModemResponse ..  `i -> -> -> 0 `i `uc `i 931  ]
 [e :U 932 ]
-[; ;MOTEapp.c: 312: break;
-"312
-[e $U 927  ]
-[; ;MOTEapp.c: 313: case moteStartup:
-"313
-[e :U 933 ]
-[; ;MOTEapp.c: 321: LATAbits.LATA7 = 0;
-"321
-[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 322: LATAbits.LATA6 = 0;
-"322
-[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 326: while (MOTEapp_getModemResponse());
-"326
-[e $U 934  ]
-[e :U 935 ]
-[e :U 934 ]
-[e $ != -> ( _MOTEapp_getModemResponse ..  `i -> -> -> 0 `i `uc `i 935  ]
-[e :U 936 ]
-[; ;MOTEapp.c: 329: sendCommand("sys get ver");
-"329
-[e ( _sendCommand (1 :s 9C ]
-[; ;MOTEapp.c: 330: oled_clear();
-"330
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 331: oled_putString("get ver",0,0);
-"331
-[e ( _oled_putString (3 , , :s 10C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 332: moteApp_delayms(100);
-"332
-[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
-[; ;MOTEapp.c: 333: activeState = moteReset;
-"333
-[e = _activeState . `E6542 1 ]
-[; ;MOTEapp.c: 335: break;
-"335
-[e $U 927  ]
-[; ;MOTEapp.c: 336: case moteReset:
+[; ;MOTEapp.c: 336: sendCommand("sys get ver");
 "336
-[e :U 937 ]
-[; ;MOTEapp.c: 337: if ( messageReady )
+[e ( _sendCommand (1 :s 9C ]
+[; ;MOTEapp.c: 337: oled_clear();
 "337
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 938  ]
-[; ;MOTEapp.c: 338: {
-"338
-{
-[; ;MOTEapp.c: 339: if(strncmp(&modemResonseBuffer[2], "2903", 4) == 0)
-"339
-[e $ ! == ( _strncmp (3 , , -> &U *U + &U _modemResonseBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _modemResonseBuffer `ui `ux `*Cuc :s 11C -> -> 4 `i `ui -> 0 `i 939  ]
-[; ;MOTEapp.c: 340: {
-"340
-{
-[; ;MOTEapp.c: 341: sendCommand("mac set devaddr ABCD0001");
-"341
-[e ( _sendCommand (1 :s 12C ]
-[; ;MOTEapp.c: 342: oled_clear();
-"342
 [e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 343: oled_putString("set devaddr",0,0);
+[; ;MOTEapp.c: 338: oled_putString("get ver",0,0);
+"338
+[e ( _oled_putString (3 , , :s 10C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 339: moteApp_delayms(100);
+"339
+[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
+[; ;MOTEapp.c: 340: activeState = moteReset;
+"340
+[e = _activeState . `E6542 1 ]
+[; ;MOTEapp.c: 342: break;
+"342
+[e $U 923  ]
+[; ;MOTEapp.c: 343: case moteReset:
 "343
-[e ( _oled_putString (3 , , :s 13C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 344: moteApp_delayms(80);
+[e :U 933 ]
+[; ;MOTEapp.c: 344: if ( messageReady )
 "344
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 345: activeState = moteSetDevaddr;
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 934  ]
+[; ;MOTEapp.c: 345: {
 "345
-[e = _activeState . `E6542 2 ]
-"346
-}
-[; ;MOTEapp.c: 346: }
-[e $U 940  ]
-"347
-[e :U 939 ]
-[; ;MOTEapp.c: 347: else
-[; ;MOTEapp.c: 348: {
-"348
 {
+[; ;MOTEapp.c: 346: if(strncmp(&modemResonseBuffer[2], "2903", 4) == 0)
+"346
+[e $ ! == ( _strncmp (3 , , -> &U *U + &U _modemResonseBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _modemResonseBuffer `ui `ux `*Cuc :s 11C -> -> 4 `i `ui -> 0 `i 935  ]
+[; ;MOTEapp.c: 347: {
+"347
+{
+[; ;MOTEapp.c: 348: sendCommand("mac set devaddr ABCD0002");
+"348
+[e ( _sendCommand (1 :s 12C ]
 [; ;MOTEapp.c: 349: oled_clear();
 "349
 [e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 350: oled_putString(modemResonseBuffer,0,3);
+[; ;MOTEapp.c: 350: oled_putString("set devaddr",0,0);
 "350
-[e ( _oled_putString (3 , , -> &U _modemResonseBuffer `*Cuc -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 351: moteApp_delayms(1000);
+[e ( _oled_putString (3 , , :s 13C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 351: moteApp_delayms(80);
 "351
-[e ( _moteApp_delayms (1 -> -> 1000 `i `ui ]
-[; ;MOTEapp.c: 352: activeState = moteStartup;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 352: activeState = moteSetDevaddr;
 "352
-[e = _activeState . `E6542 0 ]
+[e = _activeState . `E6542 2 ]
 "353
 }
-[e :U 940 ]
-"354
-}
-[e :U 938 ]
 [; ;MOTEapp.c: 353: }
-[; ;MOTEapp.c: 354: }
-[; ;MOTEapp.c: 355: break;
+[e $U 936  ]
+"354
+[e :U 935 ]
+[; ;MOTEapp.c: 354: else
+[; ;MOTEapp.c: 355: {
 "355
-[e $U 927  ]
-[; ;MOTEapp.c: 356: case moteSetDevaddr:
+{
+[; ;MOTEapp.c: 356: oled_clear();
 "356
-[e :U 941 ]
-[; ;MOTEapp.c: 357: if ( messageReady )
-"357
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 942  ]
-[; ;MOTEapp.c: 358: {
-"358
-{
-[; ;MOTEapp.c: 359: if(strcmp(modemResonseBuffer, "ok") == 0)
-"359
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 14C -> 0 `i 943  ]
-[; ;MOTEapp.c: 360: {
-"360
-{
-[; ;MOTEapp.c: 361: sendCommand("mac set appskey 2B7E151628AED2A6ABF7158809CF4F3C");
-"361
-[e ( _sendCommand (1 :s 15C ]
-[; ;MOTEapp.c: 362: oled_clear();
-"362
 [e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 363: oled_putString("set appskey",0,0);
-"363
-[e ( _oled_putString (3 , , :s 16C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 364: moteApp_delayms(80);
-"364
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 365: activeState = moteSetAppskey;
-"365
-[e = _activeState . `E6542 3 ]
-"366
-}
-[; ;MOTEapp.c: 366: }
-[e $U 944  ]
-"367
-[e :U 943 ]
-[; ;MOTEapp.c: 367: else
-[; ;MOTEapp.c: 368: {
-"368
-{
-[; ;MOTEapp.c: 369: activeState = moteStartup;
-"369
+[; ;MOTEapp.c: 357: oled_putString(modemResonseBuffer,0,3);
+"357
+[e ( _oled_putString (3 , , -> &U _modemResonseBuffer `*Cuc -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 358: moteApp_delayms(1000);
+"358
+[e ( _moteApp_delayms (1 -> -> 1000 `i `ui ]
+[; ;MOTEapp.c: 359: activeState = moteStartup;
+"359
 [e = _activeState . `E6542 0 ]
+"360
+}
+[e :U 936 ]
+"361
+}
+[e :U 934 ]
+[; ;MOTEapp.c: 360: }
+[; ;MOTEapp.c: 361: }
+[; ;MOTEapp.c: 362: break;
+"362
+[e $U 923  ]
+[; ;MOTEapp.c: 363: case moteSetDevaddr:
+"363
+[e :U 937 ]
+[; ;MOTEapp.c: 364: if ( messageReady )
+"364
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 938  ]
+[; ;MOTEapp.c: 365: {
+"365
+{
+[; ;MOTEapp.c: 366: if(strcmp(modemResonseBuffer, "ok") == 0)
+"366
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 14C -> 0 `i 939  ]
+[; ;MOTEapp.c: 367: {
+"367
+{
+[; ;MOTEapp.c: 368: sendCommand("mac set appskey 2B7E151628AED2A6ABF7158809CF4F3C");
+"368
+[e ( _sendCommand (1 :s 15C ]
+[; ;MOTEapp.c: 369: oled_clear();
+"369
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 370: oled_putString("set appskey",0,0);
 "370
-}
-[e :U 944 ]
+[e ( _oled_putString (3 , , :s 16C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 371: moteApp_delayms(80);
 "371
-}
-[e :U 942 ]
-[; ;MOTEapp.c: 370: }
-[; ;MOTEapp.c: 371: }
-[; ;MOTEapp.c: 372: break;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 372: activeState = moteSetAppskey;
 "372
-[e $U 927  ]
-[; ;MOTEapp.c: 373: case moteSetAppskey:
+[e = _activeState . `E6542 3 ]
 "373
-[e :U 945 ]
-[; ;MOTEapp.c: 374: if ( messageReady )
+}
+[; ;MOTEapp.c: 373: }
+[e $U 940  ]
 "374
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 946  ]
+[e :U 939 ]
+[; ;MOTEapp.c: 374: else
 [; ;MOTEapp.c: 375: {
 "375
 {
-[; ;MOTEapp.c: 376: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 376: activeState = moteStartup;
 "376
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 17C -> 0 `i 947  ]
-[; ;MOTEapp.c: 377: {
-"377
-{
-[; ;MOTEapp.c: 379: sendCommand("mac set nwkskey 2B7E151628AED2A6ABF7158809CF4F3C");
-"379
-[e ( _sendCommand (1 :s 18C ]
-[; ;MOTEapp.c: 380: oled_clear();
-"380
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 381: oled_putString("set nwkskey",0,0);
-"381
-[e ( _oled_putString (3 , , :s 19C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 382: moteApp_delayms(80);
-"382
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 383: activeState = moteSetNwkskey;
-"383
-[e = _activeState . `E6542 4 ]
-"384
-}
-[; ;MOTEapp.c: 384: }
-[e $U 948  ]
-"385
-[e :U 947 ]
-[; ;MOTEapp.c: 385: else
-[; ;MOTEapp.c: 386: {
-"386
-{
-[; ;MOTEapp.c: 387: activeState = moteStartup;
-"387
 [e = _activeState . `E6542 0 ]
+"377
+}
+[e :U 940 ]
+"378
+}
+[e :U 938 ]
+[; ;MOTEapp.c: 377: }
+[; ;MOTEapp.c: 378: }
+[; ;MOTEapp.c: 379: break;
+"379
+[e $U 923  ]
+[; ;MOTEapp.c: 380: case moteSetAppskey:
+"380
+[e :U 941 ]
+[; ;MOTEapp.c: 381: if ( messageReady )
+"381
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 942  ]
+[; ;MOTEapp.c: 382: {
+"382
+{
+[; ;MOTEapp.c: 383: if(strcmp(modemResonseBuffer, "ok") == 0)
+"383
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 17C -> 0 `i 943  ]
+[; ;MOTEapp.c: 384: {
+"384
+{
+[; ;MOTEapp.c: 386: sendCommand("mac set nwkskey 2B7E151628AED2A6ABF7158809CF4F3C");
+"386
+[e ( _sendCommand (1 :s 18C ]
+[; ;MOTEapp.c: 387: oled_clear();
+"387
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 388: oled_putString("set nwkskey",0,0);
 "388
-}
-[e :U 948 ]
+[e ( _oled_putString (3 , , :s 19C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 389: moteApp_delayms(80);
 "389
-}
-[e :U 946 ]
-[; ;MOTEapp.c: 388: }
-[; ;MOTEapp.c: 389: }
-[; ;MOTEapp.c: 390: break;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 390: activeState = moteSetNwkskey;
 "390
-[e $U 927  ]
-[; ;MOTEapp.c: 391: case moteSetNwkskey:
+[e = _activeState . `E6542 4 ]
 "391
-[e :U 949 ]
-[; ;MOTEapp.c: 392: if ( messageReady )
+}
+[; ;MOTEapp.c: 391: }
+[e $U 944  ]
 "392
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 950  ]
+[e :U 943 ]
+[; ;MOTEapp.c: 392: else
 [; ;MOTEapp.c: 393: {
 "393
 {
-[; ;MOTEapp.c: 394: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 394: activeState = moteStartup;
 "394
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 20C -> 0 `i 951  ]
-[; ;MOTEapp.c: 395: {
-"395
-{
-[; ;MOTEapp.c: 397: sendCommand("mac set adr off");
-"397
-[e ( _sendCommand (1 :s 21C ]
-[; ;MOTEapp.c: 398: oled_clear();
-"398
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 399: oled_putString("set adr",0,0);
-"399
-[e ( _oled_putString (3 , , :s 22C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 400: moteApp_delayms(80);
-"400
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 401: activeState = moteSetAdr;
-"401
-[e = _activeState . `E6542 5 ]
-"402
-}
-[; ;MOTEapp.c: 402: }
-[e $U 952  ]
-"403
-[e :U 951 ]
-[; ;MOTEapp.c: 403: else
-[; ;MOTEapp.c: 404: {
-"404
-{
-[; ;MOTEapp.c: 405: activeState = moteStartup;
-"405
 [e = _activeState . `E6542 0 ]
+"395
+}
+[e :U 944 ]
+"396
+}
+[e :U 942 ]
+[; ;MOTEapp.c: 395: }
+[; ;MOTEapp.c: 396: }
+[; ;MOTEapp.c: 397: break;
+"397
+[e $U 923  ]
+[; ;MOTEapp.c: 398: case moteSetNwkskey:
+"398
+[e :U 945 ]
+[; ;MOTEapp.c: 399: if ( messageReady )
+"399
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 946  ]
+[; ;MOTEapp.c: 400: {
+"400
+{
+[; ;MOTEapp.c: 401: if(strcmp(modemResonseBuffer, "ok") == 0)
+"401
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 20C -> 0 `i 947  ]
+[; ;MOTEapp.c: 402: {
+"402
+{
+[; ;MOTEapp.c: 404: sendCommand("mac set adr off");
+"404
+[e ( _sendCommand (1 :s 21C ]
+[; ;MOTEapp.c: 405: oled_clear();
+"405
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 406: oled_putString("set adr",0,0);
 "406
-}
-[e :U 952 ]
+[e ( _oled_putString (3 , , :s 22C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 407: moteApp_delayms(80);
 "407
-}
-[e :U 950 ]
-[; ;MOTEapp.c: 406: }
-[; ;MOTEapp.c: 407: }
-[; ;MOTEapp.c: 408: break;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 408: activeState = moteSetAdr;
 "408
-[e $U 927  ]
-[; ;MOTEapp.c: 409: case moteSetAdr:
+[e = _activeState . `E6542 5 ]
 "409
-[e :U 953 ]
-[; ;MOTEapp.c: 410: if ( messageReady )
+}
+[; ;MOTEapp.c: 409: }
+[e $U 948  ]
 "410
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 954  ]
+[e :U 947 ]
+[; ;MOTEapp.c: 410: else
 [; ;MOTEapp.c: 411: {
 "411
 {
-[; ;MOTEapp.c: 412: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 412: activeState = moteStartup;
 "412
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 23C -> 0 `i 955  ]
-[; ;MOTEapp.c: 413: {
-"413
-{
-[; ;MOTEapp.c: 415: sendCommand("mac set sync 34");
-"415
-[e ( _sendCommand (1 :s 24C ]
-[; ;MOTEapp.c: 416: oled_clear();
-"416
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 417: oled_putString("set sync",0,0);
-"417
-[e ( _oled_putString (3 , , :s 25C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 418: moteApp_delayms(80);
-"418
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 419: activeState = moteSetSync;
-"419
-[e = _activeState . `E6542 7 ]
-"420
-}
-[; ;MOTEapp.c: 420: }
-[e $U 956  ]
-"421
-[e :U 955 ]
-[; ;MOTEapp.c: 421: else
-[; ;MOTEapp.c: 422: {
-"422
-{
-[; ;MOTEapp.c: 423: activeState = moteStartup;
-"423
 [e = _activeState . `E6542 0 ]
+"413
+}
+[e :U 948 ]
+"414
+}
+[e :U 946 ]
+[; ;MOTEapp.c: 413: }
+[; ;MOTEapp.c: 414: }
+[; ;MOTEapp.c: 415: break;
+"415
+[e $U 923  ]
+[; ;MOTEapp.c: 416: case moteSetAdr:
+"416
+[e :U 949 ]
+[; ;MOTEapp.c: 417: if ( messageReady )
+"417
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 950  ]
+[; ;MOTEapp.c: 418: {
+"418
+{
+[; ;MOTEapp.c: 419: if(strcmp(modemResonseBuffer, "ok") == 0)
+"419
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 23C -> 0 `i 951  ]
+[; ;MOTEapp.c: 420: {
+"420
+{
+[; ;MOTEapp.c: 422: sendCommand("mac set sync 34");
+"422
+[e ( _sendCommand (1 :s 24C ]
+[; ;MOTEapp.c: 423: oled_clear();
+"423
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 424: oled_putString("set sync",0,0);
 "424
-}
-[e :U 956 ]
+[e ( _oled_putString (3 , , :s 25C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 425: moteApp_delayms(80);
 "425
-}
-[e :U 954 ]
-[; ;MOTEapp.c: 424: }
-[; ;MOTEapp.c: 425: }
-[; ;MOTEapp.c: 426: break;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 426: activeState = moteSetSync;
 "426
-[e $U 927  ]
-[; ;MOTEapp.c: 427: case moteSetSync:
+[e = _activeState . `E6542 7 ]
 "427
-[e :U 957 ]
-[; ;MOTEapp.c: 428: if ( messageReady )
+}
+[; ;MOTEapp.c: 427: }
+[e $U 952  ]
 "428
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 958  ]
+[e :U 951 ]
+[; ;MOTEapp.c: 428: else
 [; ;MOTEapp.c: 429: {
 "429
 {
-[; ;MOTEapp.c: 430: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 430: activeState = moteStartup;
 "430
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 26C -> 0 `i 959  ]
-[; ;MOTEapp.c: 431: {
-"431
-{
-[; ;MOTEapp.c: 433: sendCommand("mac set rx2 8 923300000");
-"433
-[e ( _sendCommand (1 :s 27C ]
-[; ;MOTEapp.c: 434: oled_clear();
-"434
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 435: oled_putString("set rx2",0,0);
-"435
-[e ( _oled_putString (3 , , :s 28C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 436: moteApp_delayms(80);
-"436
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 437: ch = 0;
-"437
-[e = F6656 -> 0 `i ]
-[; ;MOTEapp.c: 438: activeState = moteSetRx2;
-"438
-[e = _activeState . `E6542 6 ]
-"440
-}
-[; ;MOTEapp.c: 440: }
-[e $U 960  ]
-"441
-[e :U 959 ]
-[; ;MOTEapp.c: 441: else
-[; ;MOTEapp.c: 442: {
-"442
-{
-[; ;MOTEapp.c: 443: activeState = moteStartup;
-"443
 [e = _activeState . `E6542 0 ]
+"431
+}
+[e :U 952 ]
+"432
+}
+[e :U 950 ]
+[; ;MOTEapp.c: 431: }
+[; ;MOTEapp.c: 432: }
+[; ;MOTEapp.c: 433: break;
+"433
+[e $U 923  ]
+[; ;MOTEapp.c: 434: case moteSetSync:
+"434
+[e :U 953 ]
+[; ;MOTEapp.c: 435: if ( messageReady )
+"435
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 954  ]
+[; ;MOTEapp.c: 436: {
+"436
+{
+[; ;MOTEapp.c: 437: if(strcmp(modemResonseBuffer, "ok") == 0)
+"437
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 26C -> 0 `i 955  ]
+[; ;MOTEapp.c: 438: {
+"438
+{
+[; ;MOTEapp.c: 440: sendCommand("mac set rx2 8 923300000");
+"440
+[e ( _sendCommand (1 :s 27C ]
+[; ;MOTEapp.c: 441: oled_clear();
+"441
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 442: oled_putString("set rx2",0,0);
+"442
+[e ( _oled_putString (3 , , :s 28C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 443: moteApp_delayms(80);
+"443
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 444: ch = 0;
 "444
-}
-[e :U 960 ]
+[e = F6662 -> 0 `i ]
+[; ;MOTEapp.c: 445: activeState = moteSetRx2;
 "445
-}
-[e :U 958 ]
-[; ;MOTEapp.c: 444: }
-[; ;MOTEapp.c: 445: }
-[; ;MOTEapp.c: 446: break;
-"446
-[e $U 927  ]
-[; ;MOTEapp.c: 447: case moteSetRx2:
+[e = _activeState . `E6542 6 ]
 "447
-[e :U 961 ]
-[; ;MOTEapp.c: 448: if ( messageReady )
+}
+[; ;MOTEapp.c: 447: }
+[e $U 956  ]
 "448
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 962  ]
+[e :U 955 ]
+[; ;MOTEapp.c: 448: else
 [; ;MOTEapp.c: 449: {
 "449
 {
-[; ;MOTEapp.c: 450: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 450: activeState = moteStartup;
 "450
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 29C -> 0 `i 963  ]
-[; ;MOTEapp.c: 451: {
-"451
-{
-[; ;MOTEapp.c: 453: sprintf(cmd,"mac set ch status %d %s",
-[; ;MOTEapp.c: 454: ch,
-[; ;MOTEapp.c: 455: (ch>=49 && ch<=51)?"on":"off");
-"455
-[e ( _sprintf (1 , , (. , &U _cmd :s 30C F6656 ? && >= F6656 -> 49 `i <= F6656 -> 51 `i : :s 31C :s 32C ]
-[; ;MOTEapp.c: 456: sendCommand(cmd);
-"456
-[e ( _sendCommand (1 -> &U _cmd `*Cuc ]
-[; ;MOTEapp.c: 457: oled_clear();
-"457
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 458: oled_putString("set ch",0,0);
-"458
-[e ( _oled_putString (3 , , :s 33C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 459: oled_putString(&cmd[18],0,1);
-"459
-[e ( _oled_putString (3 , , -> &U *U + &U _cmd * -> -> -> 18 `i `ui `ux -> -> # *U &U _cmd `ui `ux `*Cuc -> -> 0 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 460: moteApp_delayms(80);
-"460
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 461: ch++;
-"461
-[e ++ F6656 -> 1 `i ]
-[; ;MOTEapp.c: 462: if (ch<72) {
-"462
-[e $ ! < F6656 -> 72 `i 964  ]
-{
-[; ;MOTEapp.c: 463: activeState = moteSetRx2;
-"463
-[e = _activeState . `E6542 6 ]
-"464
-}
-[; ;MOTEapp.c: 464: } else {
-[e $U 965  ]
-[e :U 964 ]
-{
-[; ;MOTEapp.c: 465: activeState = moteSetChStatus;
-"465
-[e = _activeState . `E6542 8 ]
-"466
-}
-[e :U 965 ]
-"467
-}
-[; ;MOTEapp.c: 466: }
-[; ;MOTEapp.c: 467: }
-[e $U 966  ]
-"468
-[e :U 963 ]
-[; ;MOTEapp.c: 468: else
-[; ;MOTEapp.c: 469: {
-"469
-{
-[; ;MOTEapp.c: 470: activeState = moteStartup;
-"470
 [e = _activeState . `E6542 0 ]
+"451
+}
+[e :U 956 ]
+"452
+}
+[e :U 954 ]
+[; ;MOTEapp.c: 451: }
+[; ;MOTEapp.c: 452: }
+[; ;MOTEapp.c: 453: break;
+"453
+[e $U 923  ]
+[; ;MOTEapp.c: 454: case moteSetRx2:
+"454
+[e :U 957 ]
+[; ;MOTEapp.c: 455: if ( messageReady )
+"455
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 958  ]
+[; ;MOTEapp.c: 456: {
+"456
+{
+[; ;MOTEapp.c: 457: if(strcmp(modemResonseBuffer, "ok") == 0)
+"457
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 29C -> 0 `i 959  ]
+[; ;MOTEapp.c: 458: {
+"458
+{
+[; ;MOTEapp.c: 460: sprintf(cmd,"mac set ch status %d %s",
+[; ;MOTEapp.c: 461: ch,
+[; ;MOTEapp.c: 462: (ch>=49 && ch<=51)?"on":"off");
+"462
+[e ( _sprintf (1 , , (. , &U _cmd :s 30C F6662 ? && >= F6662 -> 49 `i <= F6662 -> 51 `i : :s 31C :s 32C ]
+[; ;MOTEapp.c: 463: sendCommand(cmd);
+"463
+[e ( _sendCommand (1 -> &U _cmd `*Cuc ]
+[; ;MOTEapp.c: 464: oled_clear();
+"464
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 465: oled_putString("set ch",0,0);
+"465
+[e ( _oled_putString (3 , , :s 33C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 466: oled_putString(&cmd[18],0,1);
+"466
+[e ( _oled_putString (3 , , -> &U *U + &U _cmd * -> -> -> 18 `i `ui `ux -> -> # *U &U _cmd `ui `ux `*Cuc -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 467: moteApp_delayms(80);
+"467
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 468: ch++;
+"468
+[e ++ F6662 -> 1 `i ]
+[; ;MOTEapp.c: 469: if (ch<72) {
+"469
+[e $ ! < F6662 -> 72 `i 960  ]
+{
+[; ;MOTEapp.c: 470: activeState = moteSetRx2;
+"470
+[e = _activeState . `E6542 6 ]
 "471
 }
-[e :U 966 ]
+[; ;MOTEapp.c: 471: } else {
+[e $U 961  ]
+[e :U 960 ]
+{
+[; ;MOTEapp.c: 472: activeState = moteSetChStatus;
 "472
-}
-[e :U 962 ]
-[; ;MOTEapp.c: 471: }
-[; ;MOTEapp.c: 472: }
-[; ;MOTEapp.c: 473: break;
+[e = _activeState . `E6542 8 ]
 "473
-[e $U 927  ]
-[; ;MOTEapp.c: 474: case moteSetChStatus:
+}
+[e :U 961 ]
 "474
-[e :U 967 ]
-[; ;MOTEapp.c: 475: if ( messageReady )
+}
+[; ;MOTEapp.c: 473: }
+[; ;MOTEapp.c: 474: }
+[e $U 962  ]
 "475
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 968  ]
+[e :U 959 ]
+[; ;MOTEapp.c: 475: else
 [; ;MOTEapp.c: 476: {
 "476
 {
-[; ;MOTEapp.c: 477: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 477: activeState = moteStartup;
 "477
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 34C -> 0 `i 969  ]
-[; ;MOTEapp.c: 478: {
-"478
-{
-[; ;MOTEapp.c: 479: moteApp_delayms(200);
-"479
-[e ( _moteApp_delayms (1 -> -> 200 `i `ui ]
-[; ;MOTEapp.c: 480: sendCommand("mac join abp");
-"480
-[e ( _sendCommand (1 :s 35C ]
-[; ;MOTEapp.c: 481: oled_clear();
-"481
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 482: oled_putString("join abp",0,0);
-"482
-[e ( _oled_putString (3 , , :s 36C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 483: moteApp_delayms(80);
-"483
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 484: activeState = moteJoinAbp;
-"484
-[e = _activeState . `E6542 9 ]
-"485
-}
-[; ;MOTEapp.c: 485: }
-[e $U 970  ]
-"486
-[e :U 969 ]
-[; ;MOTEapp.c: 486: else
-[; ;MOTEapp.c: 487: {
-"487
-{
-[; ;MOTEapp.c: 488: activeState = moteStartup;
-"488
 [e = _activeState . `E6542 0 ]
+"478
+}
+[e :U 962 ]
+"479
+}
+[e :U 958 ]
+[; ;MOTEapp.c: 478: }
+[; ;MOTEapp.c: 479: }
+[; ;MOTEapp.c: 480: break;
+"480
+[e $U 923  ]
+[; ;MOTEapp.c: 481: case moteSetChStatus:
+"481
+[e :U 963 ]
+[; ;MOTEapp.c: 482: if ( messageReady )
+"482
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 964  ]
+[; ;MOTEapp.c: 483: {
+"483
+{
+[; ;MOTEapp.c: 484: if(strcmp(modemResonseBuffer, "ok") == 0)
+"484
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 34C -> 0 `i 965  ]
+[; ;MOTEapp.c: 485: {
+"485
+{
+[; ;MOTEapp.c: 486: moteApp_delayms(200);
+"486
+[e ( _moteApp_delayms (1 -> -> 200 `i `ui ]
+[; ;MOTEapp.c: 487: sendCommand("mac join abp");
+"487
+[e ( _sendCommand (1 :s 35C ]
+[; ;MOTEapp.c: 488: oled_clear();
+"488
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 489: oled_putString("join abp",0,0);
 "489
-}
-[e :U 970 ]
+[e ( _oled_putString (3 , , :s 36C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 490: moteApp_delayms(80);
 "490
-}
-[e :U 968 ]
-[; ;MOTEapp.c: 489: }
-[; ;MOTEapp.c: 490: }
-[; ;MOTEapp.c: 491: break;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 491: activeState = moteJoinAbp;
 "491
-[e $U 927  ]
-[; ;MOTEapp.c: 492: case moteJoinAbp:
+[e = _activeState . `E6542 9 ]
 "492
-[e :U 971 ]
-[; ;MOTEapp.c: 493: if ( messageReady )
+}
+[; ;MOTEapp.c: 492: }
+[e $U 966  ]
 "493
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 972  ]
+[e :U 965 ]
+[; ;MOTEapp.c: 493: else
 [; ;MOTEapp.c: 494: {
 "494
 {
-[; ;MOTEapp.c: 495: if(strcmp(modemResonseBuffer, "ok") == 0)
+[; ;MOTEapp.c: 495: activeState = moteStartup;
 "495
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 37C -> 0 `i 973  ]
-[; ;MOTEapp.c: 496: {
-"496
-{
-[; ;MOTEapp.c: 498: oled_clear();
-"498
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 499: oled_putString("Wait accepted...",0,0);
-"499
-[e ( _oled_putString (3 , , :s 38C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 500: moteApp_delayms(80);
-"500
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 501: activeState = moteWaitAccepted;
-"501
-[e = _activeState . `E6542 10 ]
-"502
-}
-[; ;MOTEapp.c: 502: }
-[e $U 974  ]
-"503
-[e :U 973 ]
-[; ;MOTEapp.c: 503: else
-[; ;MOTEapp.c: 504: {
-"504
-{
-[; ;MOTEapp.c: 505: activeState = moteStartup;
-"505
 [e = _activeState . `E6542 0 ]
+"496
+}
+[e :U 966 ]
+"497
+}
+[e :U 964 ]
+[; ;MOTEapp.c: 496: }
+[; ;MOTEapp.c: 497: }
+[; ;MOTEapp.c: 498: break;
+"498
+[e $U 923  ]
+[; ;MOTEapp.c: 499: case moteJoinAbp:
+"499
+[e :U 967 ]
+[; ;MOTEapp.c: 500: if ( messageReady )
+"500
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 968  ]
+[; ;MOTEapp.c: 501: {
+"501
+{
+[; ;MOTEapp.c: 502: if(strcmp(modemResonseBuffer, "ok") == 0)
+"502
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 37C -> 0 `i 969  ]
+[; ;MOTEapp.c: 503: {
+"503
+{
+[; ;MOTEapp.c: 505: oled_clear();
+"505
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 506: oled_putString("Wait accepted...",0,0);
 "506
-}
-[e :U 974 ]
+[e ( _oled_putString (3 , , :s 38C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 507: moteApp_delayms(80);
 "507
-}
-[e :U 972 ]
-[; ;MOTEapp.c: 506: }
-[; ;MOTEapp.c: 507: }
-[; ;MOTEapp.c: 508: break;
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 508: activeState = moteWaitAccepted;
 "508
-[e $U 927  ]
-[; ;MOTEapp.c: 509: case moteWaitAccepted:
+[e = _activeState . `E6542 10 ]
 "509
-[e :U 975 ]
-[; ;MOTEapp.c: 510: if ( messageReady )
+}
+[; ;MOTEapp.c: 509: }
+[e $U 970  ]
 "510
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 976  ]
+[e :U 969 ]
+[; ;MOTEapp.c: 510: else
 [; ;MOTEapp.c: 511: {
 "511
 {
-[; ;MOTEapp.c: 512: if(strcmp(modemResonseBuffer, "accepted") == 0)
+[; ;MOTEapp.c: 512: activeState = moteStartup;
 "512
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 39C -> 0 `i 977  ]
-[; ;MOTEapp.c: 513: {
-"513
-{
-[; ;MOTEapp.c: 518: sendCommand("mac tx uncnf 1 00000000");
-"518
-[e ( _sendCommand (1 :s 40C ]
-[; ;MOTEapp.c: 519: oled_clear();
-"519
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 520: oled_putString("ini tx",0,0);
-"520
-[e ( _oled_putString (3 , , :s 41C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 521: moteApp_delayms(150);
-"521
-[e ( _moteApp_delayms (1 -> -> 150 `i `ui ]
-[; ;MOTEapp.c: 522: activeState = moteIniTx;
-"522
-[e = _activeState . `E6542 11 ]
-[; ;MOTEapp.c: 523: LATAbits.LATA6 = 1;
-"523
-[e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
-"524
-}
-[; ;MOTEapp.c: 524: }
-[e $U 978  ]
-"525
-[e :U 977 ]
-[; ;MOTEapp.c: 525: else
-[; ;MOTEapp.c: 526: {
-"526
-{
-[; ;MOTEapp.c: 527: oled_clear();
-"527
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 528: oled_putString("moteWaitAccepted",0,0);
-"528
-[e ( _oled_putString (3 , , :s 42C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 529: activeState = moteStartup;
-"529
 [e = _activeState . `E6542 0 ]
-[; ;MOTEapp.c: 530: moteApp_delayms(500);
+"513
+}
+[e :U 970 ]
+"514
+}
+[e :U 968 ]
+[; ;MOTEapp.c: 513: }
+[; ;MOTEapp.c: 514: }
+[; ;MOTEapp.c: 515: break;
+"515
+[e $U 923  ]
+[; ;MOTEapp.c: 516: case moteWaitAccepted:
+"516
+[e :U 971 ]
+[; ;MOTEapp.c: 517: if ( messageReady )
+"517
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 972  ]
+[; ;MOTEapp.c: 518: {
+"518
+{
+[; ;MOTEapp.c: 519: if(strcmp(modemResonseBuffer, "accepted") == 0)
+"519
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 39C -> 0 `i 973  ]
+[; ;MOTEapp.c: 520: {
+"520
+{
+[; ;MOTEapp.c: 525: sendCommand("mac tx uncnf 1 00000000");
+"525
+[e ( _sendCommand (1 :s 40C ]
+[; ;MOTEapp.c: 526: oled_clear();
+"526
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 527: oled_putString("ini tx",0,0);
+"527
+[e ( _oled_putString (3 , , :s 41C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 528: moteApp_delayms(150);
+"528
+[e ( _moteApp_delayms (1 -> -> 150 `i `ui ]
+[; ;MOTEapp.c: 529: activeState = moteIniTx;
+"529
+[e = _activeState . `E6542 11 ]
+[; ;MOTEapp.c: 530: LATAbits.LATA6 = 1;
 "530
-[e ( _moteApp_delayms (1 -> -> 500 `i `ui ]
-[; ;MOTEapp.c: 531: LATAbits.LATA7 = 1;
+[e = . . _LATAbits 0 6 -> -> 1 `i `uc ]
 "531
-[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+}
+[; ;MOTEapp.c: 531: }
+[e $U 974  ]
 "532
+[e :U 973 ]
+[; ;MOTEapp.c: 532: else
+[; ;MOTEapp.c: 533: {
+"533
+{
+[; ;MOTEapp.c: 534: oled_clear();
+"534
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 535: oled_putString("moteWaitAccepted",0,0);
+"535
+[e ( _oled_putString (3 , , :s 42C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 536: activeState = moteStartup;
+"536
+[e = _activeState . `E6542 0 ]
+[; ;MOTEapp.c: 537: moteApp_delayms(500);
+"537
+[e ( _moteApp_delayms (1 -> -> 500 `i `ui ]
+[; ;MOTEapp.c: 538: LATAbits.LATA7 = 1;
+"538
+[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+"539
+}
+[e :U 974 ]
+"540
+}
+[e :U 972 ]
+[; ;MOTEapp.c: 539: }
+[; ;MOTEapp.c: 540: }
+[; ;MOTEapp.c: 541: break;
+"541
+[e $U 923  ]
+[; ;MOTEapp.c: 542: case moteIniTx:
+"542
+[e :U 975 ]
+[; ;MOTEapp.c: 543: if ( messageReady )
+"543
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 976  ]
+[; ;MOTEapp.c: 544: {
+"544
+{
+[; ;MOTEapp.c: 545: if(strcmp(modemResonseBuffer, "ok") == 0)
+"545
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 43C -> 0 `i 977  ]
+[; ;MOTEapp.c: 546: {
+"546
+{
+[; ;MOTEapp.c: 547: oled_clear();
+"547
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 548: oled_putString("wait mac_tx_ok",0,0);
+"548
+[e ( _oled_putString (3 , , :s 44C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 549: moteApp_delayms(3000);
+"549
+[e ( _moteApp_delayms (1 -> -> 3000 `i `ui ]
+[; ;MOTEapp.c: 550: activeState = moteWaitIniTxOk;
+"550
+[e = _activeState . `E6542 12 ]
+[; ;MOTEapp.c: 551: LATAbits.LATA7 = 1;
+"551
+[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
+"552
+}
+[; ;MOTEapp.c: 552: }
+[e $U 978  ]
+"554
+[e :U 977 ]
+[; ;MOTEapp.c: 554: else
+[; ;MOTEapp.c: 555: {
+"555
+{
+[; ;MOTEapp.c: 556: oled_clear();
+"556
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 557: oled_putString("moteIniTx",0,0);
+"557
+[e ( _oled_putString (3 , , :s 45C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 558: activeState = moteStartup;
+"558
+[e = _activeState . `E6542 0 ]
+[; ;MOTEapp.c: 559: moteApp_delayms(500);
+"559
+[e ( _moteApp_delayms (1 -> -> 500 `i `ui ]
+[; ;MOTEapp.c: 560: LATAbits.LATA6 = 0;
+"560
+[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
+"561
 }
 [e :U 978 ]
-"533
+"562
 }
 [e :U 976 ]
-[; ;MOTEapp.c: 532: }
-[; ;MOTEapp.c: 533: }
-[; ;MOTEapp.c: 534: break;
-"534
-[e $U 927  ]
-[; ;MOTEapp.c: 535: case moteIniTx:
-"535
+[; ;MOTEapp.c: 561: }
+[; ;MOTEapp.c: 562: }
+[; ;MOTEapp.c: 563: break;
+"563
+[e $U 923  ]
+[; ;MOTEapp.c: 564: case moteWaitIniTxOk:
+"564
 [e :U 979 ]
-[; ;MOTEapp.c: 536: if ( messageReady )
-"536
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 980  ]
-[; ;MOTEapp.c: 537: {
-"537
+[; ;MOTEapp.c: 566: {
+"566
 {
-[; ;MOTEapp.c: 538: if(strcmp(modemResonseBuffer, "ok") == 0)
-"538
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 43C -> 0 `i 981  ]
-[; ;MOTEapp.c: 539: {
-"539
+[; ;MOTEapp.c: 568: {
+"568
 {
-[; ;MOTEapp.c: 540: oled_clear();
-"540
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 541: oled_putString("wait mac_tx_ok",0,0);
-"541
-[e ( _oled_putString (3 , , :s 44C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 542: moteApp_delayms(3000);
-"542
-[e ( _moteApp_delayms (1 -> -> 3000 `i `ui ]
-[; ;MOTEapp.c: 543: activeState = moteWaitIniTxOk;
-"543
-[e = _activeState . `E6542 12 ]
-[; ;MOTEapp.c: 544: LATAbits.LATA7 = 1;
-"544
+[; ;MOTEapp.c: 569: LATAbits.LATA7 = 1;
+"569
 [e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
-"545
-}
-[; ;MOTEapp.c: 545: }
-[e $U 982  ]
-"547
-[e :U 981 ]
-[; ;MOTEapp.c: 547: else
-[; ;MOTEapp.c: 548: {
-"548
-{
-[; ;MOTEapp.c: 549: oled_clear();
-"549
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 550: oled_putString("moteIniTx",0,0);
-"550
-[e ( _oled_putString (3 , , :s 45C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 551: activeState = moteStartup;
-"551
-[e = _activeState . `E6542 0 ]
-[; ;MOTEapp.c: 552: moteApp_delayms(500);
-"552
-[e ( _moteApp_delayms (1 -> -> 500 `i `ui ]
-[; ;MOTEapp.c: 553: LATAbits.LATA6 = 0;
-"553
+[; ;MOTEapp.c: 570: LATAbits.LATA6 = 0;
+"570
 [e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
-"554
+[; ;MOTEapp.c: 572: oled_clear();
+"572
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 573: oled_putString("Mode: ",0,0);
+"573
+[e ( _oled_putString (3 , , :s 46C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 574: oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+"574
+[e ( _oled_putString (3 , , ? != -> _autoMode `i -> -> -> 0 `i `uc `i : :s 47C :s 48C -> -> 6 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 575: oled_putString("S1 = auto on/off",0,1);
+"575
+[e ( _oled_putString (3 , , :s 49C -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 576: oled_putString("S2 = manual send",0,2);
+"576
+[e ( _oled_putString (3 , , :s 50C -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 578: moteApp_delayms(80);
+"578
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 579: ch = 0;
+"579
+[e = F6662 -> 0 `i ]
+[; ;MOTEapp.c: 580: activeState = moteRest;
+"580
+[e = _activeState . `E6542 13 ]
+"581
+}
+"602
+}
+[; ;MOTEapp.c: 581: }
+[; ;MOTEapp.c: 602: }
+[; ;MOTEapp.c: 603: break;
+"603
+[e $U 923  ]
+[; ;MOTEapp.c: 604: case moteRest:
+"604
+[e :U 980 ]
+[; ;MOTEapp.c: 605: if (autoMode || manualTrigger) {
+"605
+[e $ ! || != -> _autoMode `i -> -> -> 0 `i `uc `i != -> _manualTrigger `i -> -> -> 0 `i `uc `i 981  ]
+{
+[; ;MOTEapp.c: 606: ch++;
+"606
+[e ++ F6662 -> 1 `i ]
+"607
+}
+[e :U 981 ]
+[; ;MOTEapp.c: 607: }
+[; ;MOTEapp.c: 608: moteApp_delayms(100);
+"608
+[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
+[; ;MOTEapp.c: 610: S1 = PORTCbits.RC0;
+"610
+[e = _S1 . . _PORTCbits 0 0 ]
+[; ;MOTEapp.c: 611: S2 = PORTCbits.RC1;
+"611
+[e = _S2 . . _PORTCbits 0 1 ]
+[; ;MOTEapp.c: 612: if (S1 == 0 && prevS1 == 1) {
+"612
+[e $ ! && == -> _S1 `i -> 0 `i == -> _prevS1 `i -> 1 `i 982  ]
+{
+[; ;MOTEapp.c: 615: autoMode = !autoMode;
+"615
+[e = _autoMode -> -> ! != -> _autoMode `i -> -> -> 0 `i `uc `i `i `uc ]
+[; ;MOTEapp.c: 616: oled_putString("Mode: ",0,0);
+"616
+[e ( _oled_putString (3 , , :s 51C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 617: oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+"617
+[e ( _oled_putString (3 , , ? != -> _autoMode `i -> -> -> 0 `i `uc `i : :s 52C :s 53C -> -> 6 `i `uc -> -> 0 `i `uc ]
+"618
 }
 [e :U 982 ]
-"555
-}
-[e :U 980 ]
-[; ;MOTEapp.c: 554: }
-[; ;MOTEapp.c: 555: }
-[; ;MOTEapp.c: 556: break;
-"556
-[e $U 927  ]
-[; ;MOTEapp.c: 557: case moteWaitIniTxOk:
-"557
-[e :U 983 ]
-[; ;MOTEapp.c: 559: {
-"559
-{
-[; ;MOTEapp.c: 561: {
-"561
-{
-[; ;MOTEapp.c: 562: LATAbits.LATA7 = 1;
-"562
-[e = . . _LATAbits 0 7 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 563: LATAbits.LATA6 = 0;
-"563
-[e = . . _LATAbits 0 6 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 565: oled_clear();
-"565
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 566: oled_putString("resting",0,0);
-"566
-[e ( _oled_putString (3 , , :s 46C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 568: moteApp_delayms(80);
-"568
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 569: ch = 0;
-"569
-[e = F6656 -> 0 `i ]
-[; ;MOTEapp.c: 570: activeState = moteRest;
-"570
-[e = _activeState . `E6542 13 ]
-"571
-}
-"592
-}
-[; ;MOTEapp.c: 571: }
-[; ;MOTEapp.c: 592: }
-[; ;MOTEapp.c: 593: break;
-"593
-[e $U 927  ]
-[; ;MOTEapp.c: 594: case moteRest:
-"594
-[e :U 984 ]
-[; ;MOTEapp.c: 595: ch++;
-"595
-[e ++ F6656 -> 1 `i ]
-[; ;MOTEapp.c: 596: moteApp_delayms(100);
-"596
-[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
-[; ;MOTEapp.c: 597: if (ch>20) {
-"597
-[e $ ! > F6656 -> 20 `i 985  ]
-{
-[; ;MOTEapp.c: 598: ch = 0;
-"598
-[e = F6656 -> 0 `i ]
-"600
-[v _Traw `ui ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 600: uint16_t Traw = 0;
-[e = _Traw -> -> 0 `i `ui ]
-[; ;MOTEapp.c: 601: moteApp_delayms(10);
-"601
-[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 602: for(uint8_t i = 32; i>0; i--)
-"602
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 32 `i `uc ]
-[e $ > -> _i `i -> 0 `i 986  ]
-[e $U 987  ]
-"603
-[e :U 986 ]
-[; ;MOTEapp.c: 603: {
-{
-[; ;MOTEapp.c: 604: light = (light + ADC_GetConversion(Light_channel)) / 2;
-"604
-[e = _light / + _light ( _ADC_GetConversion (1 . `E6508 2 -> -> 2 `i `ui ]
-"605
-}
-"602
-[e -- _i -> -> 1 `i `uc ]
-[e $ > -> _i `i -> 0 `i 986  ]
-[e :U 987 ]
-"605
-}
-[; ;MOTEapp.c: 605: }
-[; ;MOTEapp.c: 606: moteApp_delayms(10);
-"606
-[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 607: for(uint8_t i = 32; i>0; i--)
-"607
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 32 `i `uc ]
-[e $ > -> _i `i -> 0 `i 989  ]
-[e $U 990  ]
-"608
-[e :U 989 ]
-[; ;MOTEapp.c: 608: {
-{
-[; ;MOTEapp.c: 609: Traw = (Traw + ADC_GetConversion(Temp_channel)) / 2;
-"609
-[e = _Traw / + _Traw ( _ADC_GetConversion (1 . `E6508 1 -> -> 2 `i `ui ]
-"610
-}
-"607
-[e -- _i -> -> 1 `i `uc ]
-[e $ > -> _i `i -> 0 `i 989  ]
-[e :U 990 ]
-"610
-}
-[; ;MOTEapp.c: 610: }
-[; ;MOTEapp.c: 611: temperature = ADC_TempConversion(Traw);
-"611
-[e = _temperature -> ( _ADC_TempConversion (1 -> _Traw `E6508 `ui ]
-[; ;MOTEapp.c: 612: m10SecTicker = 0;
-"612
-[e = _m10SecTicker -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 614: pkts++;
-"614
-[e ++ _pkts -> -> 1 `i `ui ]
-[; ;MOTEapp.c: 617: oled_clear();
-"617
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 618: oled_putString("  Sensor Data  ",0,0);
-"618
-[e ( _oled_putString (3 , , :s 47C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 619: oled_putString("Light:",0,1);
+[; ;MOTEapp.c: 618: }
+[; ;MOTEapp.c: 619: if (S2 == 0 && prevS2 == 1) {
 "619
-[e ( _oled_putString (3 , , :s 48C -> -> 0 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 620: oled_putString("Temp :",0,2);
-"620
-[e ( _oled_putString (3 , , :s 49C -> -> 0 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 621: oled_putString("C",12,2);
-"621
-[e ( _oled_putString (3 , , :s 50C -> -> 12 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 622: oled_putUint16(light,6,1);
+[e $ ! && == -> _S2 `i -> 0 `i == -> _prevS2 `i -> 1 `i 983  ]
+{
+[; ;MOTEapp.c: 622: manualTrigger = 1;
 "622
-[e ( _oled_putUint16 (3 , , _light -> -> 6 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 623: oled_putUint16(temperature,6,2);
+[e = _manualTrigger -> -> 1 `i `uc ]
 "623
-[e ( _oled_putUint16 (3 , , _temperature -> -> 6 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 624: oled_putString("Pkts|:",0,3);
-"624
-[e ( _oled_putString (3 , , :s 51C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 625: oled_putUint16(pkts,6,3);
-"625
-[e ( _oled_putUint16 (3 , , _pkts -> -> 6 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 628: sprintf(cmd,"mac tx uncnf 1 %04X%04X",
-[; ;MOTEapp.c: 629: temperature, light);
-"629
-[e ( _sprintf (1 , , (. , &U _cmd :s 52C _temperature _light ]
-[; ;MOTEapp.c: 630: sendCommand(cmd);
-"630
-[e ( _sendCommand (1 -> &U _cmd `*Cuc ]
-[; ;MOTEapp.c: 632: activeState = moteTxUncnf;
-"632
-[e = _activeState . `E6542 14 ]
-"633
 }
+[e :U 983 ]
+[; ;MOTEapp.c: 623: }
+[; ;MOTEapp.c: 624: prevS1 = S1;
+"624
+[e = _prevS1 _S1 ]
+[; ;MOTEapp.c: 625: prevS2 = S2;
+"625
+[e = _prevS2 _S2 ]
+[; ;MOTEapp.c: 626: if (ch>20) {
+"626
+[e $ ! > F6662 -> 20 `i 984  ]
+{
+[; ;MOTEapp.c: 627: manualTrigger=0;
+"627
+[e = _manualTrigger -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 628: ch = 0;
+"628
+[e = F6662 -> 0 `i ]
+"630
+[v _Traw `ui ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 630: uint16_t Traw = 0;
+[e = _Traw -> -> 0 `i `ui ]
+[; ;MOTEapp.c: 631: moteApp_delayms(10);
+"631
+[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
+[; ;MOTEapp.c: 632: for(uint8_t i = 32; i>0; i--)
+"632
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 32 `i `uc ]
+[e $ > -> _i `i -> 0 `i 985  ]
+[e $U 986  ]
+"633
 [e :U 985 ]
-[; ;MOTEapp.c: 633: }
-[; ;MOTEapp.c: 634: break;
+[; ;MOTEapp.c: 633: {
+{
+[; ;MOTEapp.c: 634: light = (light + ADC_GetConversion(Light_channel)) / 2;
 "634
-[e $U 927  ]
-[; ;MOTEapp.c: 635: case moteTxUncnf:
+[e = _light / + _light ( _ADC_GetConversion (1 . `E6508 2 -> -> 2 `i `ui ]
 "635
-[e :U 992 ]
-[; ;MOTEapp.c: 637: {
+}
+"632
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 985  ]
+[e :U 986 ]
+"635
+}
+[; ;MOTEapp.c: 635: }
+[; ;MOTEapp.c: 636: moteApp_delayms(10);
+"636
+[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
+[; ;MOTEapp.c: 637: for(uint8_t i = 32; i>0; i--)
 "637
 {
-[; ;MOTEapp.c: 639: {
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 32 `i `uc ]
+[e $ > -> _i `i -> 0 `i 988  ]
+[e $U 989  ]
+"638
+[e :U 988 ]
+[; ;MOTEapp.c: 638: {
+{
+[; ;MOTEapp.c: 639: Traw = (Traw + ADC_GetConversion(Temp_channel)) / 2;
 "639
-{
-[; ;MOTEapp.c: 640: oled_putString("Pkts/:",0,3);
+[e = _Traw / + _Traw ( _ADC_GetConversion (1 . `E6508 1 -> -> 2 `i `ui ]
 "640
-[e ( _oled_putString (3 , , :s 53C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 641: oled_putUint16(pkts,6,3);
+}
+"637
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 988  ]
+[e :U 989 ]
+"640
+}
+[; ;MOTEapp.c: 640: }
+[; ;MOTEapp.c: 641: temperature = ADC_TempConversion(Traw);
 "641
-[e ( _oled_putUint16 (3 , , _pkts -> -> 6 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 642: moteApp_delayms(80);
+[e = _temperature -> ( _ADC_TempConversion (1 -> _Traw `E6508 `ui ]
+[; ;MOTEapp.c: 642: m10SecTicker = 0;
 "642
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 643: activeState = moteTxWait;
-"643
-[e = _activeState . `E6542 15 ]
+[e = _m10SecTicker -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 644: pkts++;
 "644
-}
+[e ++ _pkts -> -> 1 `i `ui ]
+[; ;MOTEapp.c: 647: oled_clear();
+"647
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 648: oled_putString("Mode: ",0,0);
+"648
+[e ( _oled_putString (3 , , :s 54C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 649: oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+"649
+[e ( _oled_putString (3 , , ? != -> _autoMode `i -> -> -> 0 `i `uc `i : :s 55C :s 56C -> -> 6 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 650: oled_putString("Light:",0,1);
+"650
+[e ( _oled_putString (3 , , :s 57C -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 651: oled_putString("Temp :",0,2);
+"651
+[e ( _oled_putString (3 , , :s 58C -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 652: oled_putString("C",12,2);
+"652
+[e ( _oled_putString (3 , , :s 59C -> -> 12 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 653: oled_putUint16(light,6,1);
 "653
-}
-[; ;MOTEapp.c: 644: }
-[; ;MOTEapp.c: 653: }
-[; ;MOTEapp.c: 654: break;
+[e ( _oled_putUint16 (3 , , _light -> -> 6 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 654: oled_putUint16(temperature,6,2);
 "654
-[e $U 927  ]
-[; ;MOTEapp.c: 655: case moteTxWait:
+[e ( _oled_putUint16 (3 , , _temperature -> -> 6 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 655: oled_putString("Pkts|:",0,3);
 "655
-[e :U 993 ]
-[; ;MOTEapp.c: 656: if ( messageReady )
+[e ( _oled_putString (3 , , :s 60C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 656: oled_putUint16(pkts,6,3);
 "656
-[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 994  ]
-[; ;MOTEapp.c: 657: {
-"657
-{
-[; ;MOTEapp.c: 658: if(strcmp(modemResonseBuffer, "mac_tx_ok") == 0)
-"658
-[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 54C -> 0 `i 995  ]
-[; ;MOTEapp.c: 659: {
-"659
-{
-[; ;MOTEapp.c: 660: oled_putString("Pkts-:",0,3);
-"660
-[e ( _oled_putString (3 , , :s 55C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 661: oled_putUint16(pkts,6,3);
-"661
 [e ( _oled_putUint16 (3 , , _pkts -> -> 6 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 662: activeState = moteRest;
-"662
-[e = _activeState . `E6542 13 ]
+[; ;MOTEapp.c: 659: sprintf(cmd,"mac tx uncnf 1 %04X%04X",
+[; ;MOTEapp.c: 660: temperature, light);
+"660
+[e ( _sprintf (1 , , (. , &U _cmd :s 61C _temperature _light ]
+[; ;MOTEapp.c: 661: sendCommand(cmd);
+"661
+[e ( _sendCommand (1 -> &U _cmd `*Cuc ]
+[; ;MOTEapp.c: 663: activeState = moteTxUncnf;
 "663
-}
-[e :U 995 ]
+[e = _activeState . `E6542 14 ]
 "664
 }
-[e :U 994 ]
-[; ;MOTEapp.c: 663: }
+[e :U 984 ]
 [; ;MOTEapp.c: 664: }
 [; ;MOTEapp.c: 665: break;
 "665
-[e $U 927  ]
-[; ;MOTEapp.c: 667: case moteDone:
-"667
-[e :U 996 ]
-[; ;MOTEapp.c: 668: joiningComplete = 1;
+[e $U 923  ]
+[; ;MOTEapp.c: 666: case moteTxUncnf:
+"666
+[e :U 991 ]
+[; ;MOTEapp.c: 668: {
 "668
-[e = _joiningComplete -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 669: moteApp_delayms(80);
-"669
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 670: break;
+{
+[; ;MOTEapp.c: 670: {
 "670
-[e $U 927  ]
-[; ;MOTEapp.c: 671: case moteComFailure:
+{
+[; ;MOTEapp.c: 671: oled_putString("Pkts/:",0,3);
 "671
-[e :U 997 ]
-[; ;MOTEapp.c: 672: DATAEE_WriteByte(0x00, 0x00);
+[e ( _oled_putString (3 , , :s 62C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 672: oled_putUint16(pkts,6,3);
 "672
-[e ( _DATAEE_WriteByte (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 673: while((!PORTCbits.RC0) && (!PORTCbits.RC1));
+[e ( _oled_putUint16 (3 , , _pkts -> -> 6 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 673: moteApp_delayms(80);
 "673
-[e $U 998  ]
-[e :U 999 ]
-[e :U 998 ]
-[e $ && ! != -> . . _PORTCbits 0 0 `i -> -> -> 0 `i `Vuc `i ! != -> . . _PORTCbits 0 1 `i -> -> -> 0 `i `Vuc `i 999  ]
-[e :U 1000 ]
-[; ;MOTEapp.c: 674: moteApp_delayms(40);
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 674: activeState = moteTxWait;
 "674
-[e ( _moteApp_delayms (1 -> -> 40 `i `ui ]
-[; ;MOTEapp.c: 675: asm("reset");
+[e = _activeState . `E6542 15 ]
 "675
-[; <" reset ;# ">
-[; ;MOTEapp.c: 677: break;
-"677
-[e $U 927  ]
-"678
 }
-[; ;MOTEapp.c: 678: }
-[e $U 927  ]
-"308
-[e :U 928 ]
-[e [\ _activeState , $ . `E6542 0 933
- , $ . `E6542 1 937
- , $ . `E6542 2 941
- , $ . `E6542 3 945
- , $ . `E6542 4 949
- , $ . `E6542 5 953
- , $ . `E6542 7 957
- , $ . `E6542 6 961
- , $ . `E6542 8 967
- , $ . `E6542 9 971
- , $ . `E6542 10 975
- , $ . `E6542 11 979
- , $ . `E6542 12 983
- , $ . `E6542 13 984
- , $ . `E6542 14 992
- , $ . `E6542 15 993
- , $ . `E6542 16 996
- , $ . `E6542 17 997
- 929 ]
-"678
-[e :U 927 ]
-[; ;MOTEapp.c: 679: return joiningComplete;
-"679
+"684
+}
+[; ;MOTEapp.c: 675: }
+[; ;MOTEapp.c: 684: }
+[; ;MOTEapp.c: 685: break;
+"685
+[e $U 923  ]
+[; ;MOTEapp.c: 686: case moteTxWait:
+"686
+[e :U 992 ]
+[; ;MOTEapp.c: 687: if ( messageReady )
+"687
+[e $ ! != -> _messageReady `i -> -> -> 0 `i `uc `i 993  ]
+[; ;MOTEapp.c: 688: {
+"688
+{
+[; ;MOTEapp.c: 689: if(strcmp(modemResonseBuffer, "mac_tx_ok") == 0)
+"689
+[e $ ! == ( _strcmp (2 , -> &U _modemResonseBuffer `*Cuc :s 63C -> 0 `i 994  ]
+[; ;MOTEapp.c: 690: {
+"690
+{
+[; ;MOTEapp.c: 691: oled_putString("Pkts-:",0,3);
+"691
+[e ( _oled_putString (3 , , :s 64C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 692: oled_putUint16(pkts,6,3);
+"692
+[e ( _oled_putUint16 (3 , , _pkts -> -> 6 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 693: activeState = moteRest;
+"693
+[e = _activeState . `E6542 13 ]
+"694
+}
+[e :U 994 ]
+"695
+}
+[e :U 993 ]
+[; ;MOTEapp.c: 694: }
+[; ;MOTEapp.c: 695: }
+[; ;MOTEapp.c: 696: break;
+"696
+[e $U 923  ]
+[; ;MOTEapp.c: 698: case moteDone:
+"698
+[e :U 995 ]
+[; ;MOTEapp.c: 699: joiningComplete = 1;
+"699
+[e = _joiningComplete -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 700: moteApp_delayms(80);
+"700
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 701: break;
+"701
+[e $U 923  ]
+[; ;MOTEapp.c: 702: case moteComFailure:
+"702
+[e :U 996 ]
+[; ;MOTEapp.c: 703: DATAEE_WriteByte(0x00, 0x00);
+"703
+[e ( _DATAEE_WriteByte (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 704: while((!PORTCbits.RC0) && (!PORTCbits.RC1));
+"704
+[e $U 997  ]
+[e :U 998 ]
+[e :U 997 ]
+[e $ && ! != -> . . _PORTCbits 0 0 `i -> -> -> 0 `i `Vuc `i ! != -> . . _PORTCbits 0 1 `i -> -> -> 0 `i `Vuc `i 998  ]
+[e :U 999 ]
+[; ;MOTEapp.c: 705: moteApp_delayms(40);
+"705
+[e ( _moteApp_delayms (1 -> -> 40 `i `ui ]
+[; ;MOTEapp.c: 706: asm("reset");
+"706
+[; <" reset ;# ">
+[; ;MOTEapp.c: 708: break;
+"708
+[e $U 923  ]
+"709
+}
+[; ;MOTEapp.c: 709: }
+[e $U 923  ]
+"315
+[e :U 924 ]
+[e [\ _activeState , $ . `E6542 0 929
+ , $ . `E6542 1 933
+ , $ . `E6542 2 937
+ , $ . `E6542 3 941
+ , $ . `E6542 4 945
+ , $ . `E6542 5 949
+ , $ . `E6542 7 953
+ , $ . `E6542 6 957
+ , $ . `E6542 8 963
+ , $ . `E6542 9 967
+ , $ . `E6542 10 971
+ , $ . `E6542 11 975
+ , $ . `E6542 12 979
+ , $ . `E6542 13 980
+ , $ . `E6542 14 991
+ , $ . `E6542 15 992
+ , $ . `E6542 16 995
+ , $ . `E6542 17 996
+ 925 ]
+"709
+[e :U 923 ]
+[; ;MOTEapp.c: 710: return joiningComplete;
+"710
 [e ) -> _joiningComplete `E6542 ]
 [e $UE 922  ]
-[; ;MOTEapp.c: 680: }
-"680
+[; ;MOTEapp.c: 711: }
+"711
 [e :UE 922 ]
 }
-"682
+"713
 [v _dotCount `uc ~T0 @X0 1 s ]
 [i _dotCount
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 682: static uint8_t dotCount = 0;
-"683
+[; ;MOTEapp.c: 713: static uint8_t dotCount = 0;
+"714
 [v _periodicState `uc ~T0 @X0 1 s ]
 [i _periodicState
 -> -> 1 `i `uc
 ]
-[; ;MOTEapp.c: 683: static bool periodicState = 1;
-"684
+[; ;MOTEapp.c: 714: static bool periodicState = 1;
+"715
 [v _sleepTxOccurances `uc ~T0 @X0 1 s ]
-[; ;MOTEapp.c: 684: static uint8_t sleepTxOccurances;
-"685
+[; ;MOTEapp.c: 715: static uint8_t sleepTxOccurances;
+"716
 [v _dataBuffer `uc ~T0 @X0 -> 12 `i s ]
-[; ;MOTEapp.c: 685: static uint8_t dataBuffer[12];
-"686
+[; ;MOTEapp.c: 716: static uint8_t dataBuffer[12];
+"717
 [v _dataRatePosition `uc ~T0 @X0 1 s ]
 [i _dataRatePosition
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 686: static uint8_t dataRatePosition = 0;
-"687
+[; ;MOTEapp.c: 717: static uint8_t dataRatePosition = 0;
+"718
 [v _dataRateSelection `uc ~T0 @X0 1 s ]
 [i _dataRateSelection
 -> -> 2 `i `uc
 ]
-[; ;MOTEapp.c: 687: static uint8_t dataRateSelection = 2;
-"688
+[; ;MOTEapp.c: 718: static uint8_t dataRateSelection = 2;
+"719
 [v _adrStatus `uc ~T0 @X0 1 s ]
 [i _adrStatus
 -> -> 0 `i `uc
 ]
-[; ;MOTEapp.c: 688: static bool adrStatus = 0;
-"690
-[v _moteRunningProcess `(E6571 ~T0 @X0 1 sf4`uc`uc`uc`uc ]
-"691
+[; ;MOTEapp.c: 719: static bool adrStatus = 0;
+"721
+[v _moteRunningProcess `(E6577 ~T0 @X0 1 sf4`uc`uc`uc`uc ]
+"722
 {
-[; ;MOTEapp.c: 690: static MOTE_RUNNING_T moteRunningProcess(bool changeStates, bool selectButton, bool messageReady, bool sleepEvent)
-[; ;MOTEapp.c: 691: {
+[; ;MOTEapp.c: 721: static MOTE_RUNNING_T moteRunningProcess(bool changeStates, bool selectButton, bool messageReady, bool sleepEvent)
+[; ;MOTEapp.c: 722: {
 [e :U _moteRunningProcess ]
-"690
+"721
 [v _changeStates `uc ~T0 @X0 1 r1 ]
 [v _selectButton `uc ~T0 @X0 1 r2 ]
 [v _messageReady `uc ~T0 @X0 1 r3 ]
 [v _sleepEvent `uc ~T0 @X0 1 r4 ]
-"691
-[f ]
-"692
-[v _readByte `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 692: uint8_t readByte = 0;
-[e = _readByte -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 694: if ((sleepEvent) && (periodicState))
-"694
-[e $ ! && != -> _sleepEvent `i -> -> -> 0 `i `uc `i != -> _periodicState `i -> -> -> 0 `i `uc `i 1002  ]
-[; ;MOTEapp.c: 695: {
-"695
-{
-[; ;MOTEapp.c: 696: if (sleepTicker >= 33)
-"696
-[e $ ! >= -> _sleepTicker `i -> 33 `i 1003  ]
-[; ;MOTEapp.c: 697: {
-"697
-{
-"699
-[v _Traw `ui ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 699: uint16_t Traw = 0;
-[e = _Traw -> -> 0 `i `ui ]
-[; ;MOTEapp.c: 700: moteApp_delayms(10);
-"700
-[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 701: for(uint8_t i = 32; i>0; i--)
-"701
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 32 `i `uc ]
-[e $ > -> _i `i -> 0 `i 1004  ]
-[e $U 1005  ]
-"702
-[e :U 1004 ]
-[; ;MOTEapp.c: 702: {
-{
-[; ;MOTEapp.c: 703: light = (light + ADC_GetConversion(Light_channel)) / 2;
-"703
-[e = _light / + _light ( _ADC_GetConversion (1 . `E6508 2 -> -> 2 `i `ui ]
-"704
-}
-"701
-[e -- _i -> -> 1 `i `uc ]
-[e $ > -> _i `i -> 0 `i 1004  ]
-[e :U 1005 ]
-"704
-}
-[; ;MOTEapp.c: 704: }
-[; ;MOTEapp.c: 705: moteApp_delayms(10);
-"705
-[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
-[; ;MOTEapp.c: 706: for(uint8_t i = 32; i>0; i--)
-"706
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 32 `i `uc ]
-[e $ > -> _i `i -> 0 `i 1007  ]
-[e $U 1008  ]
-"707
-[e :U 1007 ]
-[; ;MOTEapp.c: 707: {
-{
-[; ;MOTEapp.c: 708: Traw = (Traw + ADC_GetConversion(Temp_channel)) / 2;
-"708
-[e = _Traw / + _Traw ( _ADC_GetConversion (1 . `E6508 1 -> -> 2 `i `ui ]
-"709
-}
-"706
-[e -- _i -> -> 1 `i `uc ]
-[e $ > -> _i `i -> 0 `i 1007  ]
-[e :U 1008 ]
-"709
-}
-[; ;MOTEapp.c: 709: }
-[; ;MOTEapp.c: 710: temperature = ADC_TempConversion(Traw);
-"710
-[e = _temperature -> ( _ADC_TempConversion (1 -> _Traw `E6508 `ui ]
-[; ;MOTEapp.c: 712: sleepTicker = 0;
-"712
-[e = _sleepTicker -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 713: oled_clear();
-"713
-[e ( _oled_clear ..  ]
-[; ;MOTEapp.c: 714: oled_putString("Issue Perodic TX",0,0);
-"714
-[e ( _oled_putString (3 , , :s 56C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 715: oled_putString("On Port #: ",0,1);
-"715
-[e ( _oled_putString (3 , , :s 57C -> -> 0 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 716: oled_putUint8(randomPortNum,10,1);
-"716
-[e ( _oled_putUint8 (3 , , _randomPortNum -> -> 10 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 717: oled_putString("L:       T: ",0,2);
-"717
-[e ( _oled_putString (3 , , :s 58C -> -> 0 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 718: oled_putUint16(light,3,2);
-"718
-[e ( _oled_putUint16 (3 , , _light -> -> 3 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 719: oled_putUint8(temperature,12,2);
-"719
-[e ( _oled_putUint8 (3 , , -> _temperature `uc -> -> 12 `i `uc -> -> 2 `i `uc ]
-[; ;MOTEapp.c: 720: oled_putString("(NAV)    (SEL) ",0,3);
-"720
-[e ( _oled_putString (3 , , :s 59C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;MOTEapp.c: 722: moteApp_clearBuffers();
 "722
-[e ( _moteApp_clearBuffers ..  ]
-[; ;MOTEapp.c: 723: randomPortNum = TMR2_ReadTimer();
+[f ]
 "723
-[e = _randomPortNum ( _TMR2_ReadTimer ..  ]
-[; ;MOTEapp.c: 725: if (!randomPortNum)
+[v _readByte `uc ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 723: uint8_t readByte = 0;
+[e = _readByte -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 725: if ((sleepEvent) && (periodicState))
 "725
-[e $ ! ! != -> _randomPortNum `i -> -> -> 0 `i `uc `i 1010  ]
-[; ;MOTEapp.c: 726: randomPortNum = 5;
+[e $ ! && != -> _sleepEvent `i -> -> -> 0 `i `uc `i != -> _periodicState `i -> -> -> 0 `i `uc `i 1001  ]
+[; ;MOTEapp.c: 726: {
 "726
-[e = _randomPortNum -> -> 5 `i `uc ]
-[e $U 1011  ]
+{
+[; ;MOTEapp.c: 727: if (sleepTicker >= 33)
 "727
-[e :U 1010 ]
-[; ;MOTEapp.c: 727: else if (randomPortNum > 223)
-[e $ ! > -> _randomPortNum `i -> 223 `i 1012  ]
-[; ;MOTEapp.c: 728: randomPortNum = randomPortNum - 50;
+[e $ ! >= -> _sleepTicker `i -> 33 `i 1002  ]
+[; ;MOTEapp.c: 728: {
 "728
-[e = _randomPortNum -> - -> _randomPortNum `i -> 50 `i `uc ]
-[e :U 1012 ]
+{
 "730
-[e :U 1011 ]
-[; ;MOTEapp.c: 730: moteApp_add8bToDataBuffer(randomPortNum, 0);
-[e ( _moteApp_add8bToDataBuffer (2 , _randomPortNum -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 731: dataBuffer[3] = 0x20;
+[v _Traw `ui ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 730: uint16_t Traw = 0;
+[e = _Traw -> -> 0 `i `ui ]
+[; ;MOTEapp.c: 731: moteApp_delayms(10);
 "731
-[e = *U + &U _dataBuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> -> 32 `i `uc ]
-[; ;MOTEapp.c: 732: moteApp_add16bToDataBuffer(light, 4);
+[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
+[; ;MOTEapp.c: 732: for(uint8_t i = 32; i>0; i--)
 "732
-[e ( _moteApp_add16bToDataBuffer (2 , _light -> -> 4 `i `uc ]
-[; ;MOTEapp.c: 733: moteApp_add8bToDataBuffer(temperature, 9);
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 32 `i `uc ]
+[e $ > -> _i `i -> 0 `i 1003  ]
+[e $U 1004  ]
 "733
-[e ( _moteApp_add8bToDataBuffer (2 , -> _temperature `uc -> -> 9 `i `uc ]
-[; ;MOTEapp.c: 734: __nop();
+[e :U 1003 ]
+[; ;MOTEapp.c: 733: {
+{
+[; ;MOTEapp.c: 734: light = (light + ADC_GetConversion(Light_channel)) / 2;
 "734
-[e ( ___nop ..  ]
-[; ;MOTEapp.c: 735: sleepTxOccurances = 0;
+[e = _light / + _light ( _ADC_GetConversion (1 . `E6508 2 -> -> 2 `i `ui ]
 "735
-[e = _sleepTxOccurances -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 736: oled_putString("C",15,1);
+}
+"732
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 1003  ]
+[e :U 1004 ]
+"735
+}
+[; ;MOTEapp.c: 735: }
+[; ;MOTEapp.c: 736: moteApp_delayms(10);
 "736
-[e ( _oled_putString (3 , , :s 60C -> -> 15 `i `uc -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 737: sendDataCommand("radio tx ", dataBuffer, 12);
+[e ( _moteApp_delayms (1 -> -> 10 `i `ui ]
+[; ;MOTEapp.c: 737: for(uint8_t i = 32; i>0; i--)
 "737
-[e ( _sendDataCommand (3 , , :s 61C &U _dataBuffer -> -> 12 `i `uc ]
-[; ;MOTEapp.c: 738: secTicker = 10 - (10 / 3);
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 32 `i `uc ]
+[e $ > -> _i `i -> 0 `i 1006  ]
+[e $U 1007  ]
 "738
-[e = _secTicker -> - -> 10 `i / -> 10 `i -> 3 `i `uc ]
-[; ;MOTEapp.c: 739: runningState = runningUplinkTransmit;
+[e :U 1006 ]
+[; ;MOTEapp.c: 738: {
+{
+[; ;MOTEapp.c: 739: Traw = (Traw + ADC_GetConversion(Temp_channel)) / 2;
 "739
-[e = _runningState . `E6571 8 ]
+[e = _Traw / + _Traw ( _ADC_GetConversion (1 . `E6508 1 -> -> 2 `i `ui ]
+"740
+}
+"737
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 1006  ]
+[e :U 1007 ]
 "740
 }
 [; ;MOTEapp.c: 740: }
-[e $U 1013  ]
+[; ;MOTEapp.c: 741: temperature = ADC_TempConversion(Traw);
 "741
-[e :U 1003 ]
-[; ;MOTEapp.c: 741: else
-[; ;MOTEapp.c: 742: {
-"742
-{
-[; ;MOTEapp.c: 743: sleepTicker++;
+[e = _temperature -> ( _ADC_TempConversion (1 -> _Traw `E6508 `ui ]
+[; ;MOTEapp.c: 743: sleepTicker = 0;
 "743
-[e ++ _sleepTicker -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 744: runningState = runningSleep;
+[e = _sleepTicker -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 744: oled_clear();
 "744
-[e = _runningState . `E6571 14 ]
-[; ;MOTEapp.c: 745: selectButton = 1;
+[e ( _oled_clear ..  ]
+[; ;MOTEapp.c: 745: oled_putString("Issue Perodic TX",0,0);
 "745
-[e = _selectButton -> -> 1 `i `uc ]
+[e ( _oled_putString (3 , , :s 65C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 746: oled_putString("On Port #: ",0,1);
 "746
-}
-[e :U 1013 ]
+[e ( _oled_putString (3 , , :s 66C -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 747: oled_putUint8(randomPortNum,10,1);
 "747
-}
-[e :U 1002 ]
-[; ;MOTEapp.c: 746: }
-[; ;MOTEapp.c: 747: }
-[; ;MOTEapp.c: 749: moteApp_GoToSleep();
+[e ( _oled_putUint8 (3 , , _randomPortNum -> -> 10 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 748: oled_putString("L:       T: ",0,2);
+"748
+[e ( _oled_putString (3 , , :s 67C -> -> 0 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 749: oled_putUint16(light,3,2);
 "749
-[e ( _moteApp_GoToSleep ..  ]
-[; ;MOTEapp.c: 752: switch(runningState)
-"752
-[e $U 1015  ]
-[; ;MOTEapp.c: 753: {
+[e ( _oled_putUint16 (3 , , _light -> -> 3 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 750: oled_putUint8(temperature,12,2);
+"750
+[e ( _oled_putUint8 (3 , , -> _temperature `uc -> -> 12 `i `uc -> -> 2 `i `uc ]
+[; ;MOTEapp.c: 751: oled_putString("(NAV)    (SEL) ",0,3);
+"751
+[e ( _oled_putString (3 , , :s 68C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;MOTEapp.c: 753: moteApp_clearBuffers();
 "753
-{
-[; ;MOTEapp.c: 754: default:
+[e ( _moteApp_clearBuffers ..  ]
+[; ;MOTEapp.c: 754: randomPortNum = TMR2_ReadTimer();
 "754
-[e :U 1016 ]
-[; ;MOTEapp.c: 755: while(1);
-"755
-[e :U 1018 ]
-[e :U 1017 ]
-[e $U 1018  ]
-[e :U 1019 ]
-[; ;MOTEapp.c: 756: break;
+[e = _randomPortNum ( _TMR2_ReadTimer ..  ]
+[; ;MOTEapp.c: 756: if (!randomPortNum)
 "756
-[e $U 1014  ]
+[e $ ! ! != -> _randomPortNum `i -> -> -> 0 `i `uc `i 1009  ]
+[; ;MOTEapp.c: 757: randomPortNum = 5;
 "757
-}
-[; ;MOTEapp.c: 757: }
-[e $U 1014  ]
-"752
-[e :U 1015 ]
-[e [\ _runningState 1016 ]
-"757
-[e :U 1014 ]
-[; ;MOTEapp.c: 758: return runningState;
+[e = _randomPortNum -> -> 5 `i `uc ]
+[e $U 1010  ]
 "758
-[e ) _runningState ]
-[e $UE 1001  ]
-[; ;MOTEapp.c: 759: }
+[e :U 1009 ]
+[; ;MOTEapp.c: 758: else if (randomPortNum > 223)
+[e $ ! > -> _randomPortNum `i -> 223 `i 1011  ]
+[; ;MOTEapp.c: 759: randomPortNum = randomPortNum - 50;
 "759
-[e :UE 1001 ]
-}
+[e = _randomPortNum -> - -> _randomPortNum `i -> 50 `i `uc ]
+[e :U 1011 ]
 "761
-[v _MOTEapp_GetDataRateSetting `(uc ~T0 @X0 1 ef ]
+[e :U 1010 ]
+[; ;MOTEapp.c: 761: moteApp_add8bToDataBuffer(randomPortNum, 0);
+[e ( _moteApp_add8bToDataBuffer (2 , _randomPortNum -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 762: dataBuffer[3] = 0x20;
 "762
+[e = *U + &U _dataBuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> -> 32 `i `uc ]
+[; ;MOTEapp.c: 763: moteApp_add16bToDataBuffer(light, 4);
+"763
+[e ( _moteApp_add16bToDataBuffer (2 , _light -> -> 4 `i `uc ]
+[; ;MOTEapp.c: 764: moteApp_add8bToDataBuffer(temperature, 9);
+"764
+[e ( _moteApp_add8bToDataBuffer (2 , -> _temperature `uc -> -> 9 `i `uc ]
+[; ;MOTEapp.c: 765: __nop();
+"765
+[e ( ___nop ..  ]
+[; ;MOTEapp.c: 766: sleepTxOccurances = 0;
+"766
+[e = _sleepTxOccurances -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 767: oled_putString("C",15,1);
+"767
+[e ( _oled_putString (3 , , :s 69C -> -> 15 `i `uc -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 768: sendDataCommand("radio tx ", dataBuffer, 12);
+"768
+[e ( _sendDataCommand (3 , , :s 70C &U _dataBuffer -> -> 12 `i `uc ]
+[; ;MOTEapp.c: 769: secTicker = 10 - (10 / 3);
+"769
+[e = _secTicker -> - -> 10 `i / -> 10 `i -> 3 `i `uc ]
+[; ;MOTEapp.c: 770: runningState = runningUplinkTransmit;
+"770
+[e = _runningState . `E6577 8 ]
+"771
+}
+[; ;MOTEapp.c: 771: }
+[e $U 1012  ]
+"772
+[e :U 1002 ]
+[; ;MOTEapp.c: 772: else
+[; ;MOTEapp.c: 773: {
+"773
 {
-[; ;MOTEapp.c: 761: uint8_t MOTEapp_GetDataRateSetting(void)
-[; ;MOTEapp.c: 762: {
+[; ;MOTEapp.c: 774: sleepTicker++;
+"774
+[e ++ _sleepTicker -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 775: runningState = runningSleep;
+"775
+[e = _runningState . `E6577 14 ]
+[; ;MOTEapp.c: 776: selectButton = 1;
+"776
+[e = _selectButton -> -> 1 `i `uc ]
+"777
+}
+[e :U 1012 ]
+"778
+}
+[e :U 1001 ]
+[; ;MOTEapp.c: 777: }
+[; ;MOTEapp.c: 778: }
+[; ;MOTEapp.c: 780: moteApp_GoToSleep();
+"780
+[e ( _moteApp_GoToSleep ..  ]
+[; ;MOTEapp.c: 783: switch(runningState)
+"783
+[e $U 1014  ]
+[; ;MOTEapp.c: 784: {
+"784
+{
+[; ;MOTEapp.c: 785: default:
+"785
+[e :U 1015 ]
+[; ;MOTEapp.c: 786: while(1);
+"786
+[e :U 1017 ]
+[e :U 1016 ]
+[e $U 1017  ]
+[e :U 1018 ]
+[; ;MOTEapp.c: 787: break;
+"787
+[e $U 1013  ]
+"788
+}
+[; ;MOTEapp.c: 788: }
+[e $U 1013  ]
+"783
+[e :U 1014 ]
+[e [\ _runningState 1015 ]
+"788
+[e :U 1013 ]
+[; ;MOTEapp.c: 789: return runningState;
+"789
+[e ) _runningState ]
+[e $UE 1000  ]
+[; ;MOTEapp.c: 790: }
+"790
+[e :UE 1000 ]
+}
+"792
+[v _MOTEapp_GetDataRateSetting `(uc ~T0 @X0 1 ef ]
+"793
+{
+[; ;MOTEapp.c: 792: uint8_t MOTEapp_GetDataRateSetting(void)
+[; ;MOTEapp.c: 793: {
 [e :U _MOTEapp_GetDataRateSetting ]
 [f ]
-"763
+"794
 [v _readData `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 763: uint8_t readData;
-[; ;MOTEapp.c: 764: readData = DATAEE_ReadByte(0x10);
-"764
+[; ;MOTEapp.c: 794: uint8_t readData;
+[; ;MOTEapp.c: 795: readData = DATAEE_ReadByte(0x10);
+"795
 [e = _readData ( _DATAEE_ReadByte (1 -> -> 16 `i `uc ]
-[; ;MOTEapp.c: 765: moteApp_delayms(20);
-"765
+[; ;MOTEapp.c: 796: moteApp_delayms(20);
+"796
 [e ( _moteApp_delayms (1 -> -> 20 `i `ui ]
-[; ;MOTEapp.c: 767: return readData;
-"767
+[; ;MOTEapp.c: 798: return readData;
+"798
 [e ) _readData ]
-[e $UE 1020  ]
-[; ;MOTEapp.c: 768: }
-"768
+[e $UE 1019  ]
+[; ;MOTEapp.c: 799: }
+"799
+[e :UE 1019 ]
+}
+"801
+[v _MOTEapp_SetADR `(v ~T0 @X0 1 sf1`uc ]
+"802
+{
+[; ;MOTEapp.c: 801: static void MOTEapp_SetADR(bool state)
+[; ;MOTEapp.c: 802: {
+[e :U _MOTEapp_SetADR ]
+"801
+[v _state `uc ~T0 @X0 1 r1 ]
+"802
+[f ]
+[; ;MOTEapp.c: 803: adrStatus = state;
+"803
+[e = _adrStatus _state ]
+[; ;MOTEapp.c: 804: }
+"804
 [e :UE 1020 ]
 }
-"770
-[v _MOTEapp_SetADR `(v ~T0 @X0 1 sf1`uc ]
-"771
+"806
+[v _MOTEapp_SetDataRate `(v ~T0 @X0 1 ef1`uc ]
+"807
 {
-[; ;MOTEapp.c: 770: static void MOTEapp_SetADR(bool state)
-[; ;MOTEapp.c: 771: {
-[e :U _MOTEapp_SetADR ]
-"770
-[v _state `uc ~T0 @X0 1 r1 ]
-"771
+[; ;MOTEapp.c: 806: void MOTEapp_SetDataRate(uint8_t dataRate)
+[; ;MOTEapp.c: 807: {
+[e :U _MOTEapp_SetDataRate ]
+"806
+[v _dataRate `uc ~T0 @X0 1 r1 ]
+"807
 [f ]
-[; ;MOTEapp.c: 772: adrStatus = state;
-"772
-[e = _adrStatus _state ]
-[; ;MOTEapp.c: 773: }
-"773
+[; ;MOTEapp.c: 808: dataRateSelection = dataRate;
+"808
+[e = _dataRateSelection _dataRate ]
+[; ;MOTEapp.c: 809: }
+"809
 [e :UE 1021 ]
 }
-"775
-[v _MOTEapp_SetDataRate `(v ~T0 @X0 1 ef1`uc ]
-"776
-{
-[; ;MOTEapp.c: 775: void MOTEapp_SetDataRate(uint8_t dataRate)
-[; ;MOTEapp.c: 776: {
-[e :U _MOTEapp_SetDataRate ]
-"775
-[v _dataRate `uc ~T0 @X0 1 r1 ]
-"776
-[f ]
-[; ;MOTEapp.c: 777: dataRateSelection = dataRate;
-"777
-[e = _dataRateSelection _dataRate ]
-[; ;MOTEapp.c: 778: }
-"778
-[e :UE 1022 ]
-}
-"780
+"811
 [v _MOTEapp_WriteDataRate `(v ~T0 @X0 1 ef ]
-"781
+"812
 {
-[; ;MOTEapp.c: 780: void MOTEapp_WriteDataRate(void)
-[; ;MOTEapp.c: 781: {
+[; ;MOTEapp.c: 811: void MOTEapp_WriteDataRate(void)
+[; ;MOTEapp.c: 812: {
 [e :U _MOTEapp_WriteDataRate ]
 [f ]
-[; ;MOTEapp.c: 783: moteApp_delayms(100);
-"783
-[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
-[; ;MOTEapp.c: 785: if (adrStatus)
-"785
-[e $ ! != -> _adrStatus `i -> -> -> 0 `i `uc `i 1024  ]
-[; ;MOTEapp.c: 786: {
-"786
-{
-[; ;MOTEapp.c: 787: sendCommand("mac set adr on");
-"787
-[e ( _sendCommand (1 :s 62C ]
-[; ;MOTEapp.c: 788: moteApp_delayms(100);
-"788
-[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
-"789
-}
-[; ;MOTEapp.c: 789: }
-[e $U 1025  ]
-"790
-[e :U 1024 ]
-[; ;MOTEapp.c: 790: else
-[; ;MOTEapp.c: 791: {
-"791
-{
-[; ;MOTEapp.c: 792: sendCommand("mac set adr off");
-"792
-[e ( _sendCommand (1 :s 63C ]
-[; ;MOTEapp.c: 793: moteApp_delayms(100);
-"793
-[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
-"794
-}
-[e :U 1025 ]
-[; ;MOTEapp.c: 794: }
-[; ;MOTEapp.c: 796: switch (dataRateSelection)
-"796
-[e $U 1027  ]
-[; ;MOTEapp.c: 797: {
-"797
-{
-[; ;MOTEapp.c: 798: case 0:
-"798
-[e :U 1028 ]
-[; ;MOTEapp.c: 799: sendCommand("mac set dr 0");
-"799
-[e ( _sendCommand (1 :s 64C ]
-[; ;MOTEapp.c: 800: break;
-"800
-[e $U 1026  ]
-[; ;MOTEapp.c: 801: case 1:
-"801
-[e :U 1029 ]
-[; ;MOTEapp.c: 802: sendCommand("mac set dr 1");
-"802
-[e ( _sendCommand (1 :s 65C ]
-[; ;MOTEapp.c: 803: break;
-"803
-[e $U 1026  ]
-[; ;MOTEapp.c: 804: case 2:
-"804
-[e :U 1030 ]
-[; ;MOTEapp.c: 805: sendCommand("mac set dr 2");
-"805
-[e ( _sendCommand (1 :s 66C ]
-[; ;MOTEapp.c: 806: break;
-"806
-[e $U 1026  ]
-[; ;MOTEapp.c: 807: case 3:
-"807
-[e :U 1031 ]
-[; ;MOTEapp.c: 808: sendCommand("mac set dr 3");
-"808
-[e ( _sendCommand (1 :s 67C ]
-[; ;MOTEapp.c: 809: break;
-"809
-[e $U 1026  ]
-[; ;MOTEapp.c: 810: case 4:
-"810
-[e :U 1032 ]
-[; ;MOTEapp.c: 811: sendCommand("mac set dr 4");
-"811
-[e ( _sendCommand (1 :s 68C ]
-[; ;MOTEapp.c: 812: break;
-"812
-[e $U 1026  ]
-[; ;MOTEapp.c: 813: case 5:
-"813
-[e :U 1033 ]
-[; ;MOTEapp.c: 814: sendCommand("mac set dr 5");
+[; ;MOTEapp.c: 814: moteApp_delayms(100);
 "814
-[e ( _sendCommand (1 :s 69C ]
-[; ;MOTEapp.c: 815: break;
-"815
-[e $U 1026  ]
-[; ;MOTEapp.c: 816: case 6:
-"816
-[e :U 1034 ]
-[; ;MOTEapp.c: 817: sendCommand("mac set dr 6");
-"817
-[e ( _sendCommand (1 :s 70C ]
-[; ;MOTEapp.c: 818: break;
-"818
-[e $U 1026  ]
-[; ;MOTEapp.c: 819: case 7:
-"819
-[e :U 1035 ]
-[; ;MOTEapp.c: 820: sendCommand("mac set dr 7");
-"820
-[e ( _sendCommand (1 :s 71C ]
-[; ;MOTEapp.c: 821: break;
-"821
-[e $U 1026  ]
-"825
-}
-[; ;MOTEapp.c: 825: }
-[e $U 1026  ]
-"796
-[e :U 1027 ]
-[e [\ _dataRateSelection , $ -> -> 0 `i `uc 1028
- , $ -> -> 1 `i `uc 1029
- , $ -> -> 2 `i `uc 1030
- , $ -> -> 3 `i `uc 1031
- , $ -> -> 4 `i `uc 1032
- , $ -> -> 5 `i `uc 1033
- , $ -> -> 6 `i `uc 1034
- , $ -> -> 7 `i `uc 1035
- 1026 ]
-"825
-[e :U 1026 ]
-[; ;MOTEapp.c: 826: moteApp_delayms(100);
-"826
 [e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
-[; ;MOTEapp.c: 827: sendCommand("mac save");
-"827
-[e ( _sendCommand (1 :s 72C ]
-[; ;MOTEapp.c: 828: moteApp_delayms(300);
-"828
-[e ( _moteApp_delayms (1 -> -> 300 `i `ui ]
-[; ;MOTEapp.c: 829: }
-"829
-[e :UE 1023 ]
+[; ;MOTEapp.c: 816: if (adrStatus)
+"816
+[e $ ! != -> _adrStatus `i -> -> -> 0 `i `uc `i 1023  ]
+[; ;MOTEapp.c: 817: {
+"817
+{
+[; ;MOTEapp.c: 818: sendCommand("mac set adr on");
+"818
+[e ( _sendCommand (1 :s 71C ]
+[; ;MOTEapp.c: 819: moteApp_delayms(100);
+"819
+[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
+"820
 }
-"831
-[v _MOTEapp_TimerBasedTask `(v ~T0 @X0 1 ef1`S867 ]
-"832
+[; ;MOTEapp.c: 820: }
+[e $U 1024  ]
+"821
+[e :U 1023 ]
+[; ;MOTEapp.c: 821: else
+[; ;MOTEapp.c: 822: {
+"822
 {
-[; ;MOTEapp.c: 831: void MOTEapp_TimerBasedTask(appTimerHandlerBit_t timerTask)
-[; ;MOTEapp.c: 832: {
-[e :U _MOTEapp_TimerBasedTask ]
+[; ;MOTEapp.c: 823: sendCommand("mac set adr off");
+"823
+[e ( _sendCommand (1 :s 72C ]
+[; ;MOTEapp.c: 824: moteApp_delayms(100);
+"824
+[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
+"825
+}
+[e :U 1024 ]
+[; ;MOTEapp.c: 825: }
+[; ;MOTEapp.c: 827: switch (dataRateSelection)
+"827
+[e $U 1026  ]
+[; ;MOTEapp.c: 828: {
+"828
+{
+[; ;MOTEapp.c: 829: case 0:
+"829
+[e :U 1027 ]
+[; ;MOTEapp.c: 830: sendCommand("mac set dr 0");
+"830
+[e ( _sendCommand (1 :s 73C ]
+[; ;MOTEapp.c: 831: break;
 "831
-[v _timerTask `S867 ~T0 @X0 1 r1 ]
+[e $U 1025  ]
+[; ;MOTEapp.c: 832: case 1:
 "832
-[f ]
-[; ;MOTEapp.c: 836: if (timerTask.mSecTenTick)
+[e :U 1028 ]
+[; ;MOTEapp.c: 833: sendCommand("mac set dr 1");
+"833
+[e ( _sendCommand (1 :s 74C ]
+[; ;MOTEapp.c: 834: break;
+"834
+[e $U 1025  ]
+[; ;MOTEapp.c: 835: case 2:
+"835
+[e :U 1029 ]
+[; ;MOTEapp.c: 836: sendCommand("mac set dr 2");
 "836
-[e $ ! != -> . . _timerTask 1 1 `i -> -> -> 0 `i `uc `i 1037  ]
-[; ;MOTEapp.c: 837: {
+[e ( _sendCommand (1 :s 75C ]
+[; ;MOTEapp.c: 837: break;
 "837
-{
-[; ;MOTEapp.c: 839: m10SecTicker++;
+[e $U 1025  ]
+[; ;MOTEapp.c: 838: case 3:
+"838
+[e :U 1030 ]
+[; ;MOTEapp.c: 839: sendCommand("mac set dr 3");
 "839
-[e ++ _m10SecTicker -> -> 1 `i `uc ]
+[e ( _sendCommand (1 :s 76C ]
+[; ;MOTEapp.c: 840: break;
 "840
+[e $U 1025  ]
+[; ;MOTEapp.c: 841: case 4:
+"841
+[e :U 1031 ]
+[; ;MOTEapp.c: 842: sendCommand("mac set dr 4");
+"842
+[e ( _sendCommand (1 :s 77C ]
+[; ;MOTEapp.c: 843: break;
+"843
+[e $U 1025  ]
+[; ;MOTEapp.c: 844: case 5:
+"844
+[e :U 1032 ]
+[; ;MOTEapp.c: 845: sendCommand("mac set dr 5");
+"845
+[e ( _sendCommand (1 :s 78C ]
+[; ;MOTEapp.c: 846: break;
+"846
+[e $U 1025  ]
+[; ;MOTEapp.c: 847: case 6:
+"847
+[e :U 1033 ]
+[; ;MOTEapp.c: 848: sendCommand("mac set dr 6");
+"848
+[e ( _sendCommand (1 :s 79C ]
+[; ;MOTEapp.c: 849: break;
+"849
+[e $U 1025  ]
+[; ;MOTEapp.c: 850: case 7:
+"850
+[e :U 1034 ]
+[; ;MOTEapp.c: 851: sendCommand("mac set dr 7");
+"851
+[e ( _sendCommand (1 :s 80C ]
+[; ;MOTEapp.c: 852: break;
+"852
+[e $U 1025  ]
+"856
+}
+[; ;MOTEapp.c: 856: }
+[e $U 1025  ]
+"827
+[e :U 1026 ]
+[e [\ _dataRateSelection , $ -> -> 0 `i `uc 1027
+ , $ -> -> 1 `i `uc 1028
+ , $ -> -> 2 `i `uc 1029
+ , $ -> -> 3 `i `uc 1030
+ , $ -> -> 4 `i `uc 1031
+ , $ -> -> 5 `i `uc 1032
+ , $ -> -> 6 `i `uc 1033
+ , $ -> -> 7 `i `uc 1034
+ 1025 ]
+"856
+[e :U 1025 ]
+[; ;MOTEapp.c: 857: moteApp_delayms(100);
+"857
+[e ( _moteApp_delayms (1 -> -> 100 `i `ui ]
+[; ;MOTEapp.c: 858: sendCommand("mac save");
+"858
+[e ( _sendCommand (1 :s 81C ]
+[; ;MOTEapp.c: 859: moteApp_delayms(300);
+"859
+[e ( _moteApp_delayms (1 -> -> 300 `i `ui ]
+[; ;MOTEapp.c: 860: }
+"860
+[e :UE 1022 ]
+}
+"862
+[v _MOTEapp_TimerBasedTask `(v ~T0 @X0 1 ef1`S867 ]
+"863
+{
+[; ;MOTEapp.c: 862: void MOTEapp_TimerBasedTask(appTimerHandlerBit_t timerTask)
+[; ;MOTEapp.c: 863: {
+[e :U _MOTEapp_TimerBasedTask ]
+"862
+[v _timerTask `S867 ~T0 @X0 1 r1 ]
+"863
+[f ]
+[; ;MOTEapp.c: 867: if (timerTask.mSecTenTick)
+"867
+[e $ ! != -> . . _timerTask 1 1 `i -> -> -> 0 `i `uc `i 1036  ]
+[; ;MOTEapp.c: 868: {
+"868
+{
+[; ;MOTEapp.c: 870: m10SecTicker++;
+"870
+[e ++ _m10SecTicker -> -> 1 `i `uc ]
+"871
+}
+[e :U 1036 ]
+[; ;MOTEapp.c: 871: }
+[; ;MOTEapp.c: 872: if (timerTask.mSecHundredTick)
+"872
+[e $ ! != -> . . _timerTask 1 2 `i -> -> -> 0 `i `uc `i 1037  ]
+[; ;MOTEapp.c: 873: {
+"873
+{
+"876
 }
 [e :U 1037 ]
-[; ;MOTEapp.c: 840: }
-[; ;MOTEapp.c: 841: if (timerTask.mSecHundredTick)
-"841
-[e $ ! != -> . . _timerTask 1 2 `i -> -> -> 0 `i `uc `i 1038  ]
-[; ;MOTEapp.c: 842: {
-"842
+[; ;MOTEapp.c: 876: }
+[; ;MOTEapp.c: 877: if (timerTask.SecTick)
+"877
+[e $ ! != -> . . _timerTask 1 3 `i -> -> -> 0 `i `uc `i 1038  ]
+[; ;MOTEapp.c: 878: {
+"878
 {
-"845
+[; ;MOTEapp.c: 880: secTicker++;
+"880
+[e ++ _secTicker -> -> 1 `i `uc ]
+"881
 }
 [e :U 1038 ]
-[; ;MOTEapp.c: 845: }
-[; ;MOTEapp.c: 846: if (timerTask.SecTick)
-"846
-[e $ ! != -> . . _timerTask 1 3 `i -> -> -> 0 `i `uc `i 1039  ]
-[; ;MOTEapp.c: 847: {
-"847
+[; ;MOTEapp.c: 881: }
+[; ;MOTEapp.c: 882: if (timerTask.MinTick)
+"882
+[e $ ! != -> . . _timerTask 1 4 `i -> -> -> 0 `i `uc `i 1039  ]
+[; ;MOTEapp.c: 883: {
+"883
 {
-[; ;MOTEapp.c: 849: secTicker++;
-"849
-[e ++ _secTicker -> -> 1 `i `uc ]
-"850
+[; ;MOTEapp.c: 885: minTicker++;
+"885
+[e ++ _minTicker -> -> 1 `i `uc ]
+"886
 }
 [e :U 1039 ]
-[; ;MOTEapp.c: 850: }
-[; ;MOTEapp.c: 851: if (timerTask.MinTick)
-"851
-[e $ ! != -> . . _timerTask 1 4 `i -> -> -> 0 `i `uc `i 1040  ]
-[; ;MOTEapp.c: 852: {
-"852
+[; ;MOTEapp.c: 886: }
+[; ;MOTEapp.c: 887: if (timerTask.HourTick)
+"887
+[e $ ! != -> . . _timerTask 1 5 `i -> -> -> 0 `i `uc `i 1040  ]
+[; ;MOTEapp.c: 888: {
+"888
 {
-[; ;MOTEapp.c: 854: minTicker++;
-"854
-[e ++ _minTicker -> -> 1 `i `uc ]
-"855
+"890
 }
 [e :U 1040 ]
-[; ;MOTEapp.c: 855: }
-[; ;MOTEapp.c: 856: if (timerTask.HourTick)
-"856
-[e $ ! != -> . . _timerTask 1 5 `i -> -> -> 0 `i `uc `i 1041  ]
-[; ;MOTEapp.c: 857: {
-"857
-{
-"859
-}
-[e :U 1041 ]
-[; ;MOTEapp.c: 859: }
-[; ;MOTEapp.c: 860: if (timerTask.HalfDayTick)
-"860
-[e $ ! != -> . . _timerTask 1 6 `i -> -> -> 0 `i `uc `i 1042  ]
-[; ;MOTEapp.c: 861: {
-"861
-{
-"863
-}
-[e :U 1042 ]
-[; ;MOTEapp.c: 863: }
-[; ;MOTEapp.c: 864: if (timerTask.DayTick)
-"864
-[e $ ! != -> . . _timerTask 1 7 `i -> -> -> 0 `i `uc `i 1043  ]
-[; ;MOTEapp.c: 865: {
-"865
-{
-"867
-}
-[e :U 1043 ]
-[; ;MOTEapp.c: 867: }
-[; ;MOTEapp.c: 868: }
-"868
-[e :UE 1036 ]
-}
-"870
-[v _MOTEapp_getModemResponse `(uc ~T0 @X0 1 ef ]
-"871
-{
-[; ;MOTEapp.c: 870: bool MOTEapp_getModemResponse(void)
-[; ;MOTEapp.c: 871: {
-[e :U _MOTEapp_getModemResponse ]
-[f ]
-"872
-[v _terminatorReceived `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 872: bool terminatorReceived = 0;
-[e = _terminatorReceived -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 873: if ((eusartRxCount))
-"873
-[e $ ! != -> _eusartRxCount `i -> -> -> 0 `i `Vuc `i 1045  ]
-[; ;MOTEapp.c: 874: {
-"874
-{
-"875
-[v _bufferByte `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 875: uint8_t bufferByte = 0;
-[e = _bufferByte -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 876: bufferByte = EUSART_Read();
-"876
-[e = _bufferByte ( _EUSART_Read ..  ]
-[; ;MOTEapp.c: 878: if (bufferByte == 0x0D)
-"878
-[e $ ! == -> _bufferByte `i -> 13 `i 1046  ]
-[; ;MOTEapp.c: 879: {
-"879
-{
-[; ;MOTEapp.c: 880: modemResonseBuffer[modemBufferIndex] = 0x00;
-"880
-[e = *U + &U _modemResonseBuffer * -> _modemBufferIndex `ux -> -> # *U &U _modemResonseBuffer `ui `ux -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 881: terminatorReceived = 1;
-"881
-[e = _terminatorReceived -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 882: modemBufferIndex = 0;
-"882
-[e = _modemBufferIndex -> -> 0 `i `uc ]
-"883
-}
-[; ;MOTEapp.c: 883: }
-[e $U 1047  ]
-"884
-[e :U 1046 ]
-[; ;MOTEapp.c: 884: else if ( (bufferByte == 0x00) || (bufferByte == 0x0A) )
-[e $ ! || == -> _bufferByte `i -> 0 `i == -> _bufferByte `i -> 10 `i 1048  ]
-[; ;MOTEapp.c: 885: {
-"885
-{
-"887
-}
-[; ;MOTEapp.c: 887: }
-[e $U 1049  ]
-"888
-[e :U 1048 ]
-[; ;MOTEapp.c: 888: else
-[; ;MOTEapp.c: 889: {
-"889
-{
-[; ;MOTEapp.c: 890: modemResonseBuffer[modemBufferIndex] = bufferByte;
-"890
-[e = *U + &U _modemResonseBuffer * -> _modemBufferIndex `ux -> -> # *U &U _modemResonseBuffer `ui `ux _bufferByte ]
-[; ;MOTEapp.c: 892: modemBufferIndex++;
+[; ;MOTEapp.c: 890: }
+[; ;MOTEapp.c: 891: if (timerTask.HalfDayTick)
+"891
+[e $ ! != -> . . _timerTask 1 6 `i -> -> -> 0 `i `uc `i 1041  ]
+[; ;MOTEapp.c: 892: {
 "892
-[e ++ _modemBufferIndex -> -> 1 `i `uc ]
-"893
-}
-[e :U 1049 ]
-[e :U 1047 ]
+{
 "894
 }
-[e :U 1045 ]
-[; ;MOTEapp.c: 893: }
+[e :U 1041 ]
 [; ;MOTEapp.c: 894: }
-[; ;MOTEapp.c: 895: return terminatorReceived;
+[; ;MOTEapp.c: 895: if (timerTask.DayTick)
 "895
-[e ) _terminatorReceived ]
-[e $UE 1044  ]
-[; ;MOTEapp.c: 896: }
+[e $ ! != -> . . _timerTask 1 7 `i -> -> -> 0 `i `uc `i 1042  ]
+[; ;MOTEapp.c: 896: {
 "896
-[e :UE 1044 ]
-}
+{
 "898
-[v _MOTEapp_setResponseReady `(v ~T0 @X0 1 ef ]
+}
+[e :U 1042 ]
+[; ;MOTEapp.c: 898: }
+[; ;MOTEapp.c: 899: }
 "899
-{
-[; ;MOTEapp.c: 898: void MOTEapp_setResponseReady(void)
-[; ;MOTEapp.c: 899: {
-[e :U _MOTEapp_setResponseReady ]
-[f ]
-[; ;MOTEapp.c: 900: responseReady = 1;
-"900
-[e = _responseReady -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 901: }
+[e :UE 1035 ]
+}
 "901
-[e :UE 1050 ]
-}
+[v _MOTEapp_getModemResponse `(uc ~T0 @X0 1 ef ]
+"902
+{
+[; ;MOTEapp.c: 901: bool MOTEapp_getModemResponse(void)
+[; ;MOTEapp.c: 902: {
+[e :U _MOTEapp_getModemResponse ]
+[f ]
 "903
-[v _EndLine `(v ~T0 @X0 1 sf ]
+[v _terminatorReceived `uc ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 903: bool terminatorReceived = 0;
+[e = _terminatorReceived -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 904: if ((eusartRxCount))
 "904
-{
-[; ;MOTEapp.c: 903: static void EndLine(void)
-[; ;MOTEapp.c: 904: {
-[e :U _EndLine ]
-[f ]
-[; ;MOTEapp.c: 905: EUSART_Write(0x0D);
+[e $ ! != -> _eusartRxCount `i -> -> -> 0 `i `Vuc `i 1044  ]
+[; ;MOTEapp.c: 905: {
 "905
-[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
-[; ;MOTEapp.c: 906: EUSART_Write(0x0A);
+{
 "906
-[e ( _EUSART_Write (1 -> -> 10 `i `uc ]
-[; ;MOTEapp.c: 907: }
+[v _bufferByte `uc ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 906: uint8_t bufferByte = 0;
+[e = _bufferByte -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 907: bufferByte = EUSART_Read();
 "907
-[e :UE 1051 ]
-}
+[e = _bufferByte ( _EUSART_Read ..  ]
+[; ;MOTEapp.c: 909: if (bufferByte == 0x0D)
 "909
-[v _sendCommand `(v ~T0 @X0 1 sf1`*Cuc ]
-"910
-{
-[; ;MOTEapp.c: 909: static void sendCommand(const char *string)
+[e $ ! == -> _bufferByte `i -> 13 `i 1045  ]
 [; ;MOTEapp.c: 910: {
-[e :U _sendCommand ]
-"909
-[v _string `*Cuc ~T0 @X0 1 r1 ]
 "910
-[f ]
-[; ;MOTEapp.c: 912: while (*string)
-"912
-[e $U 1053  ]
-[e :U 1054 ]
-[; ;MOTEapp.c: 913: {
-"913
 {
-[; ;MOTEapp.c: 914: EUSART_Write(*string++);
-"914
-[e ( _EUSART_Write (1 *U ++ _string * -> -> 1 `i `x -> -> # *U _string `i `x ]
-"915
-}
-[e :U 1053 ]
+[; ;MOTEapp.c: 911: modemResonseBuffer[modemBufferIndex] = 0x00;
+"911
+[e = *U + &U _modemResonseBuffer * -> _modemBufferIndex `ux -> -> # *U &U _modemResonseBuffer `ui `ux -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 912: terminatorReceived = 1;
 "912
-[e $ != -> *U _string `i -> -> -> 0 `i `Cuc `i 1054  ]
-[e :U 1055 ]
-[; ;MOTEapp.c: 915: }
-[; ;MOTEapp.c: 916: EndLine();
-"916
-[e ( _EndLine ..  ]
-[; ;MOTEapp.c: 917: }
-"917
-[e :UE 1052 ]
+[e = _terminatorReceived -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 913: modemBufferIndex = 0;
+"913
+[e = _modemBufferIndex -> -> 0 `i `uc ]
+"914
 }
+[; ;MOTEapp.c: 914: }
+[e $U 1046  ]
+"915
+[e :U 1045 ]
+[; ;MOTEapp.c: 915: else if ( (bufferByte == 0x00) || (bufferByte == 0x0A) )
+[e $ ! || == -> _bufferByte `i -> 0 `i == -> _bufferByte `i -> 10 `i 1047  ]
+[; ;MOTEapp.c: 916: {
+"916
+{
+"918
+}
+[; ;MOTEapp.c: 918: }
+[e $U 1048  ]
 "919
-[v _sendDataCommand `(v ~T0 @X0 1 sf3`*Cuc`*uc`uc ]
+[e :U 1047 ]
+[; ;MOTEapp.c: 919: else
+[; ;MOTEapp.c: 920: {
 "920
 {
-[; ;MOTEapp.c: 919: static void sendDataCommand(const char *string, uint8_t* appData, uint8_t dataLength)
-[; ;MOTEapp.c: 920: {
+[; ;MOTEapp.c: 921: modemResonseBuffer[modemBufferIndex] = bufferByte;
+"921
+[e = *U + &U _modemResonseBuffer * -> _modemBufferIndex `ux -> -> # *U &U _modemResonseBuffer `ui `ux _bufferByte ]
+[; ;MOTEapp.c: 923: modemBufferIndex++;
+"923
+[e ++ _modemBufferIndex -> -> 1 `i `uc ]
+"924
+}
+[e :U 1048 ]
+[e :U 1046 ]
+"925
+}
+[e :U 1044 ]
+[; ;MOTEapp.c: 924: }
+[; ;MOTEapp.c: 925: }
+[; ;MOTEapp.c: 926: return terminatorReceived;
+"926
+[e ) _terminatorReceived ]
+[e $UE 1043  ]
+[; ;MOTEapp.c: 927: }
+"927
+[e :UE 1043 ]
+}
+"929
+[v _MOTEapp_setResponseReady `(v ~T0 @X0 1 ef ]
+"930
+{
+[; ;MOTEapp.c: 929: void MOTEapp_setResponseReady(void)
+[; ;MOTEapp.c: 930: {
+[e :U _MOTEapp_setResponseReady ]
+[f ]
+[; ;MOTEapp.c: 931: responseReady = 1;
+"931
+[e = _responseReady -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 932: }
+"932
+[e :UE 1049 ]
+}
+"934
+[v _EndLine `(v ~T0 @X0 1 sf ]
+"935
+{
+[; ;MOTEapp.c: 934: static void EndLine(void)
+[; ;MOTEapp.c: 935: {
+[e :U _EndLine ]
+[f ]
+[; ;MOTEapp.c: 936: EUSART_Write(0x0D);
+"936
+[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
+[; ;MOTEapp.c: 937: EUSART_Write(0x0A);
+"937
+[e ( _EUSART_Write (1 -> -> 10 `i `uc ]
+[; ;MOTEapp.c: 938: }
+"938
+[e :UE 1050 ]
+}
+"940
+[v _sendCommand `(v ~T0 @X0 1 sf1`*Cuc ]
+"941
+{
+[; ;MOTEapp.c: 940: static void sendCommand(const char *string)
+[; ;MOTEapp.c: 941: {
+[e :U _sendCommand ]
+"940
+[v _string `*Cuc ~T0 @X0 1 r1 ]
+"941
+[f ]
+[; ;MOTEapp.c: 943: while (*string)
+"943
+[e $U 1052  ]
+[e :U 1053 ]
+[; ;MOTEapp.c: 944: {
+"944
+{
+[; ;MOTEapp.c: 945: EUSART_Write(*string++);
+"945
+[e ( _EUSART_Write (1 *U ++ _string * -> -> 1 `i `x -> -> # *U _string `i `x ]
+"946
+}
+[e :U 1052 ]
+"943
+[e $ != -> *U _string `i -> -> -> 0 `i `Cuc `i 1053  ]
+[e :U 1054 ]
+[; ;MOTEapp.c: 946: }
+[; ;MOTEapp.c: 947: EndLine();
+"947
+[e ( _EndLine ..  ]
+[; ;MOTEapp.c: 948: }
+"948
+[e :UE 1051 ]
+}
+"950
+[v _sendDataCommand `(v ~T0 @X0 1 sf3`*Cuc`*uc`uc ]
+"951
+{
+[; ;MOTEapp.c: 950: static void sendDataCommand(const char *string, uint8_t* appData, uint8_t dataLength)
+[; ;MOTEapp.c: 951: {
 [e :U _sendDataCommand ]
-"919
+"950
 [v _string `*Cuc ~T0 @X0 1 r1 ]
 [v _appData `*uc ~T0 @X0 1 r2 ]
 [v _dataLength `uc ~T0 @X0 1 r3 ]
-"920
+"951
 [f ]
-[; ;MOTEapp.c: 922: while (*string)
-"922
-[e $U 1057  ]
-[e :U 1058 ]
-[; ;MOTEapp.c: 923: {
-"923
-{
-[; ;MOTEapp.c: 924: EUSART_Write(*string++);
-"924
-[e ( _EUSART_Write (1 *U ++ _string * -> -> 1 `i `x -> -> # *U _string `i `x ]
-"925
-}
+[; ;MOTEapp.c: 953: while (*string)
+"953
+[e $U 1056  ]
 [e :U 1057 ]
-"922
-[e $ != -> *U _string `i -> -> -> 0 `i `Cuc `i 1058  ]
-[e :U 1059 ]
-[; ;MOTEapp.c: 925: }
-[; ;MOTEapp.c: 927: for (uint8_t byteCount = 0; byteCount < 3; byteCount++)
-"927
+[; ;MOTEapp.c: 954: {
+"954
+{
+[; ;MOTEapp.c: 955: EUSART_Write(*string++);
+"955
+[e ( _EUSART_Write (1 *U ++ _string * -> -> 1 `i `x -> -> # *U _string `i `x ]
+"956
+}
+[e :U 1056 ]
+"953
+[e $ != -> *U _string `i -> -> -> 0 `i `Cuc `i 1057  ]
+[e :U 1058 ]
+[; ;MOTEapp.c: 956: }
+[; ;MOTEapp.c: 958: for (uint8_t byteCount = 0; byteCount < 3; byteCount++)
+"958
 {
 [v _byteCount `uc ~T0 @X0 1 a ]
 [e = _byteCount -> -> 0 `i `uc ]
-[e $ < -> _byteCount `i -> 3 `i 1060  ]
-[e $U 1061  ]
-"928
-[e :U 1060 ]
-[; ;MOTEapp.c: 928: {
+[e $ < -> _byteCount `i -> 3 `i 1059  ]
+[e $U 1060  ]
+"959
+[e :U 1059 ]
+[; ;MOTEapp.c: 959: {
 {
-[; ;MOTEapp.c: 929: EUSART_Write(appData[byteCount]);
-"929
+[; ;MOTEapp.c: 960: EUSART_Write(appData[byteCount]);
+"960
 [e ( _EUSART_Write (1 *U + _appData * -> _byteCount `ux -> -> # *U _appData `ui `ux ]
-"930
+"961
 }
-"927
+"958
 [e ++ _byteCount -> -> 1 `i `uc ]
-[e $ < -> _byteCount `i -> 3 `i 1060  ]
-[e :U 1061 ]
-"930
+[e $ < -> _byteCount `i -> 3 `i 1059  ]
+[e :U 1060 ]
+"961
 }
-[; ;MOTEapp.c: 930: }
-[; ;MOTEapp.c: 932: EUSART_Write(appData[3]);
-"932
+[; ;MOTEapp.c: 961: }
+[; ;MOTEapp.c: 963: EUSART_Write(appData[3]);
+"963
 [e ( _EUSART_Write (1 *U + _appData * -> -> 3 `i `x -> -> # *U _appData `i `x ]
-[; ;MOTEapp.c: 934: for (uint8_t byteCount = 4; byteCount < dataLength; byteCount++)
-"934
+[; ;MOTEapp.c: 965: for (uint8_t byteCount = 4; byteCount < dataLength; byteCount++)
+"965
 {
 [v _byteCount `uc ~T0 @X0 1 a ]
 [e = _byteCount -> -> 4 `i `uc ]
-[e $U 1066  ]
-"935
-[e :U 1063 ]
-[; ;MOTEapp.c: 935: {
-{
-[; ;MOTEapp.c: 936: EUSART_Write(hexToStr(appData[byteCount] >> 4));
-"936
-[e ( _EUSART_Write (1 ( _hexToStr (1 -> >> -> *U + _appData * -> _byteCount `ux -> -> # *U _appData `ui `ux `i -> 4 `i `uc ]
-[; ;MOTEapp.c: 937: EUSART_Write(hexToStr(appData[byteCount] & 0x0F));
-"937
-[e ( _EUSART_Write (1 ( _hexToStr (1 -> & -> *U + _appData * -> _byteCount `ux -> -> # *U _appData `ui `ux `i -> 15 `i `uc ]
-"938
-}
-"934
-[e ++ _byteCount -> -> 1 `i `uc ]
-[e :U 1066 ]
-[e $ < -> _byteCount `i -> _dataLength `i 1063  ]
-[e :U 1064 ]
-"938
-}
-[; ;MOTEapp.c: 938: }
-[; ;MOTEapp.c: 939: EndLine();
-"939
-[e ( _EndLine ..  ]
-[; ;MOTEapp.c: 940: }
-"940
-[e :UE 1056 ]
-}
-"942
-[v _unhex `(uc ~T0 @X0 1 sf1`uc ]
-"943
-{
-[; ;MOTEapp.c: 942: static uint8_t unhex(uint8_t c)
-[; ;MOTEapp.c: 943: {
-[e :U _unhex ]
-"942
-[v _c `uc ~T0 @X0 1 r1 ]
-"943
-[f ]
-[; ;MOTEapp.c: 944: if (c >= '0' && c <= '9')
-"944
-[e $ ! && >= -> _c `ui -> 48 `ui <= -> _c `ui -> 57 `ui 1068  ]
-[; ;MOTEapp.c: 945: return c - '0';
-"945
-[e ) -> - -> _c `ui -> 48 `ui `uc ]
-[e $UE 1067  ]
-[e :U 1068 ]
-[; ;MOTEapp.c: 946: if (c >= 'A' && c <= 'F')
-"946
-[e $ ! && >= -> _c `ui -> 65 `ui <= -> _c `ui -> 70 `ui 1069  ]
-[; ;MOTEapp.c: 947: return c - 'A' + 10;
-"947
-[e ) -> + - -> _c `ui -> 65 `ui -> -> 10 `i `ui `uc ]
-[e $UE 1067  ]
-[e :U 1069 ]
-[; ;MOTEapp.c: 948: return '-';
-"948
-[e ) -> -> 45 `ui `uc ]
-[e $UE 1067  ]
-[; ;MOTEapp.c: 949: }
-"949
-[e :UE 1067 ]
-}
-"951
-[v _hexToStr `(uc ~T0 @X0 1 sf1`uc ]
-"952
-{
-[; ;MOTEapp.c: 951: static uint8_t hexToStr(uint8_t character)
-[; ;MOTEapp.c: 952: {
-[e :U _hexToStr ]
-"951
-[v _character `uc ~T0 @X0 1 r1 ]
-"952
-[f ]
-[; ;MOTEapp.c: 954: character = character & 0x0F;
-"954
-[e = _character -> & -> _character `i -> 15 `i `uc ]
-[; ;MOTEapp.c: 956: if (character < 0x0A)
-"956
-[e $ ! < -> _character `i -> 10 `i 1071  ]
-[; ;MOTEapp.c: 957: {
-"957
-{
-[; ;MOTEapp.c: 958: return character + '0';
-"958
-[e ) -> + -> _character `ui -> 48 `ui `uc ]
-[e $UE 1070  ]
-"959
-}
-[; ;MOTEapp.c: 959: }
-[e $U 1072  ]
-"960
-[e :U 1071 ]
-[; ;MOTEapp.c: 960: else if ( (character >= 0x0A) && (character <= 0x0F) )
-[e $ ! && >= -> _character `i -> 10 `i <= -> _character `i -> 15 `i 1073  ]
-[; ;MOTEapp.c: 961: {
-"961
-{
-[; ;MOTEapp.c: 962: return character + '0' + 7;
-"962
-[e ) -> + + -> _character `ui -> 48 `ui -> -> 7 `i `ui `uc ]
-[e $UE 1070  ]
-"963
-}
-[; ;MOTEapp.c: 963: }
-[e $U 1074  ]
-"964
-[e :U 1073 ]
-[; ;MOTEapp.c: 964: else
-[; ;MOTEapp.c: 965: {
-"965
-{
-[; ;MOTEapp.c: 966: return 0;
+[e $U 1065  ]
 "966
-[e ) -> -> 0 `i `uc ]
-[e $UE 1070  ]
-"967
-}
-[e :U 1074 ]
-[e :U 1072 ]
-[; ;MOTEapp.c: 967: }
-[; ;MOTEapp.c: 968: }
-"968
-[e :UE 1070 ]
-}
-"970
-[v _moteApp_GoToSleep `(uc ~T0 @X0 1 sf ]
-"971
+[e :U 1062 ]
+[; ;MOTEapp.c: 966: {
 {
-[; ;MOTEapp.c: 970: static uint8_t moteApp_GoToSleep(void)
-[; ;MOTEapp.c: 971: {
+[; ;MOTEapp.c: 967: EUSART_Write(hexToStr(appData[byteCount] >> 4));
+"967
+[e ( _EUSART_Write (1 ( _hexToStr (1 -> >> -> *U + _appData * -> _byteCount `ux -> -> # *U _appData `ui `ux `i -> 4 `i `uc ]
+[; ;MOTEapp.c: 968: EUSART_Write(hexToStr(appData[byteCount] & 0x0F));
+"968
+[e ( _EUSART_Write (1 ( _hexToStr (1 -> & -> *U + _appData * -> _byteCount `ux -> -> # *U _appData `ui `ux `i -> 15 `i `uc ]
+"969
+}
+"965
+[e ++ _byteCount -> -> 1 `i `uc ]
+[e :U 1065 ]
+[e $ < -> _byteCount `i -> _dataLength `i 1062  ]
+[e :U 1063 ]
+"969
+}
+[; ;MOTEapp.c: 969: }
+[; ;MOTEapp.c: 970: EndLine();
+"970
+[e ( _EndLine ..  ]
+[; ;MOTEapp.c: 971: }
+"971
+[e :UE 1055 ]
+}
+"973
+[v _unhex `(uc ~T0 @X0 1 sf1`uc ]
+"974
+{
+[; ;MOTEapp.c: 973: static uint8_t unhex(uint8_t c)
+[; ;MOTEapp.c: 974: {
+[e :U _unhex ]
+"973
+[v _c `uc ~T0 @X0 1 r1 ]
+"974
+[f ]
+[; ;MOTEapp.c: 975: if (c >= '0' && c <= '9')
+"975
+[e $ ! && >= -> _c `ui -> 48 `ui <= -> _c `ui -> 57 `ui 1067  ]
+[; ;MOTEapp.c: 976: return c - '0';
+"976
+[e ) -> - -> _c `ui -> 48 `ui `uc ]
+[e $UE 1066  ]
+[e :U 1067 ]
+[; ;MOTEapp.c: 977: if (c >= 'A' && c <= 'F')
+"977
+[e $ ! && >= -> _c `ui -> 65 `ui <= -> _c `ui -> 70 `ui 1068  ]
+[; ;MOTEapp.c: 978: return c - 'A' + 10;
+"978
+[e ) -> + - -> _c `ui -> 65 `ui -> -> 10 `i `ui `uc ]
+[e $UE 1066  ]
+[e :U 1068 ]
+[; ;MOTEapp.c: 979: return '-';
+"979
+[e ) -> -> 45 `ui `uc ]
+[e $UE 1066  ]
+[; ;MOTEapp.c: 980: }
+"980
+[e :UE 1066 ]
+}
+"982
+[v _hexToStr `(uc ~T0 @X0 1 sf1`uc ]
+"983
+{
+[; ;MOTEapp.c: 982: static uint8_t hexToStr(uint8_t character)
+[; ;MOTEapp.c: 983: {
+[e :U _hexToStr ]
+"982
+[v _character `uc ~T0 @X0 1 r1 ]
+"983
+[f ]
+[; ;MOTEapp.c: 985: character = character & 0x0F;
+"985
+[e = _character -> & -> _character `i -> 15 `i `uc ]
+[; ;MOTEapp.c: 987: if (character < 0x0A)
+"987
+[e $ ! < -> _character `i -> 10 `i 1070  ]
+[; ;MOTEapp.c: 988: {
+"988
+{
+[; ;MOTEapp.c: 989: return character + '0';
+"989
+[e ) -> + -> _character `ui -> 48 `ui `uc ]
+[e $UE 1069  ]
+"990
+}
+[; ;MOTEapp.c: 990: }
+[e $U 1071  ]
+"991
+[e :U 1070 ]
+[; ;MOTEapp.c: 991: else if ( (character >= 0x0A) && (character <= 0x0F) )
+[e $ ! && >= -> _character `i -> 10 `i <= -> _character `i -> 15 `i 1072  ]
+[; ;MOTEapp.c: 992: {
+"992
+{
+[; ;MOTEapp.c: 993: return character + '0' + 7;
+"993
+[e ) -> + + -> _character `ui -> 48 `ui -> -> 7 `i `ui `uc ]
+[e $UE 1069  ]
+"994
+}
+[; ;MOTEapp.c: 994: }
+[e $U 1073  ]
+"995
+[e :U 1072 ]
+[; ;MOTEapp.c: 995: else
+[; ;MOTEapp.c: 996: {
+"996
+{
+[; ;MOTEapp.c: 997: return 0;
+"997
+[e ) -> -> 0 `i `uc ]
+[e $UE 1069  ]
+"998
+}
+[e :U 1073 ]
+[e :U 1071 ]
+[; ;MOTEapp.c: 998: }
+[; ;MOTEapp.c: 999: }
+"999
+[e :UE 1069 ]
+}
+"1001
+[v _moteApp_GoToSleep `(uc ~T0 @X0 1 sf ]
+"1002
+{
+[; ;MOTEapp.c: 1001: static uint8_t moteApp_GoToSleep(void)
+[; ;MOTEapp.c: 1002: {
 [e :U _moteApp_GoToSleep ]
 [f ]
-"972
-[v _status `uc ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 972: uint8_t status = 0;
-[e = _status -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 973: while (PORTCbits.RC1 == 0);
-"973
-[e $U 1076  ]
-[e :U 1077 ]
-[e :U 1076 ]
-[e $ == -> . . _PORTCbits 0 1 `i -> 0 `i 1077  ]
-[e :U 1078 ]
-[; ;MOTEapp.c: 974: modemSleep();
-"974
-[e ( _modemSleep ..  ]
-[; ;MOTEapp.c: 975: oled_displayOff(1);
-"975
-[e ( _oled_displayOff (1 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 976: ADCON0bits.ADON = 0;
-"976
-[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 977: INTCONbits.GIE = 0;
-"977
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 978: GIE = 0;
-"978
-[e = _GIE -> -> 0 `i `b ]
-[; ;MOTEapp.c: 979: PEIE = 0;
-"979
-[e = _PEIE -> -> 0 `i `b ]
-[; ;MOTEapp.c: 981: ANSELAbits.ANSA0 = 1;
-"981
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 983: PIE2bits.C1IE = 1;
-"983
-[e = . . _PIE2bits 0 6 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 984: IOCCbits.IOCC0 = 1;
-"984
-[e = . . _IOCCbits 0 0 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 985: IOCCbits.IOCC1 = 1;
-"985
-[e = . . _IOCCbits 0 1 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 986: IOCCbits.IOCC2 = 1;
-"986
-[e = . . _IOCCbits 0 2 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 987: INTCONbits.IOCIE = 1;
-"987
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-[; ;MOTEapp.c: 989: status = PORTCbits.RC0;
-"989
-[e = _status . . _PORTCbits 0 0 ]
-[; ;MOTEapp.c: 990: status = PORTCbits.RC1;
-"990
-[e = _status . . _PORTCbits 0 1 ]
-[; ;MOTEapp.c: 991: status = PORTCbits.RC2;
-"991
-[e = _status . . _PORTCbits 0 2 ]
-[; ;MOTEapp.c: 992: if (periodicState)
-"992
-[e $ ! != -> _periodicState `i -> -> -> 0 `i `uc `i 1079  ]
-[; ;MOTEapp.c: 993: {
-"993
-{
-"995
-}
-[e :U 1079 ]
-[; ;MOTEapp.c: 995: }
-[; ;MOTEapp.c: 996: INTCONbits.IOCIF = 0;
-"996
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 997: PIR2bits.C1IF = 0;
-"997
-[e = . . _PIR2bits 0 6 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 998: __nop();
-"998
-[e ( ___nop ..  ]
-[; ;MOTEapp.c: 999: asm(" sleep");
-"999
-[; <"  sleep ;# ">
-[; ;MOTEapp.c: 1000: __nop();
-"1000
-[e ( ___nop ..  ]
-[; ;MOTEapp.c: 1003: EUSART_FlushBuffer();
 "1003
-[e ( _EUSART_FlushBuffer ..  ]
-[; ;MOTEapp.c: 1005: INTCONbits.IOCIE = 0;
-"1005
-[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1006: IOCCbits.IOCC0 = 0;
-"1006
-[e = . . _IOCCbits 0 0 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1007: IOCCbits.IOCC1 = 0;
-"1007
-[e = . . _IOCCbits 0 1 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1008: IOCCbits.IOCC2 = 0;
-"1008
-[e = . . _IOCCbits 0 2 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1009: PIE2bits.C1IE = 0;
-"1009
-[e = . . _PIE2bits 0 6 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1010: GIE = 1;
-"1010
-[e = _GIE -> -> 1 `i `b ]
-[; ;MOTEapp.c: 1012: PIN_MANAGER_Initialize();
-"1012
-[e ( _PIN_MANAGER_Initialize ..  ]
-[; ;MOTEapp.c: 1013: EUSART_Initialize();
-"1013
-[e ( _EUSART_Initialize ..  ]
-[; ;MOTEapp.c: 1015: if (INTCONbits.IOCIF)
-"1015
-[e $ ! != -> . . _INTCONbits 0 0 `i -> -> -> 0 `i `Vuc `i 1080  ]
-[; ;MOTEapp.c: 1016: {
-"1016
-{
-[; ;MOTEapp.c: 1017: INTCONbits.IOCIF = 0;
-"1017
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1018: status = 1;
-"1018
-[e = _status -> -> 1 `i `uc ]
-"1019
-}
-[; ;MOTEapp.c: 1019: }
-[e $U 1081  ]
-"1025
-[e :U 1080 ]
-[; ;MOTEapp.c: 1025: else
-[; ;MOTEapp.c: 1026: {
-"1026
-{
-[; ;MOTEapp.c: 1027: secTicker = 10;
-"1027
-[e = _secTicker -> -> 10 `i `uc ]
-[; ;MOTEapp.c: 1028: status = 0;
-"1028
+[v _status `uc ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 1003: uint8_t status = 0;
 [e = _status -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1004: while (PORTCbits.RC1 == 0);
+"1004
+[e $U 1075  ]
+[e :U 1076 ]
+[e :U 1075 ]
+[e $ == -> . . _PORTCbits 0 1 `i -> 0 `i 1076  ]
+[e :U 1077 ]
+[; ;MOTEapp.c: 1005: modemSleep();
+"1005
+[e ( _modemSleep ..  ]
+[; ;MOTEapp.c: 1006: oled_displayOff(1);
+"1006
+[e ( _oled_displayOff (1 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1007: ADCON0bits.ADON = 0;
+"1007
+[e = . . _ADCON0bits 1 0 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1008: INTCONbits.GIE = 0;
+"1008
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1009: GIE = 0;
+"1009
+[e = _GIE -> -> 0 `i `b ]
+[; ;MOTEapp.c: 1010: PEIE = 0;
+"1010
+[e = _PEIE -> -> 0 `i `b ]
+[; ;MOTEapp.c: 1012: ANSELAbits.ANSA0 = 1;
+"1012
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1014: PIE2bits.C1IE = 1;
+"1014
+[e = . . _PIE2bits 0 6 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1015: IOCCbits.IOCC0 = 1;
+"1015
+[e = . . _IOCCbits 0 0 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1016: IOCCbits.IOCC1 = 1;
+"1016
+[e = . . _IOCCbits 0 1 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1017: IOCCbits.IOCC2 = 1;
+"1017
+[e = . . _IOCCbits 0 2 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1018: INTCONbits.IOCIE = 1;
+"1018
+[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
+[; ;MOTEapp.c: 1020: status = PORTCbits.RC0;
+"1020
+[e = _status . . _PORTCbits 0 0 ]
+[; ;MOTEapp.c: 1021: status = PORTCbits.RC1;
+"1021
+[e = _status . . _PORTCbits 0 1 ]
+[; ;MOTEapp.c: 1022: status = PORTCbits.RC2;
+"1022
+[e = _status . . _PORTCbits 0 2 ]
+[; ;MOTEapp.c: 1023: if (periodicState)
+"1023
+[e $ ! != -> _periodicState `i -> -> -> 0 `i `uc `i 1078  ]
+[; ;MOTEapp.c: 1024: {
+"1024
+{
+"1026
+}
+[e :U 1078 ]
+[; ;MOTEapp.c: 1026: }
+[; ;MOTEapp.c: 1027: INTCONbits.IOCIF = 0;
+"1027
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1028: PIR2bits.C1IF = 0;
+"1028
+[e = . . _PIR2bits 0 6 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1029: __nop();
 "1029
-}
-[e :U 1081 ]
-[; ;MOTEapp.c: 1029: }
-[; ;MOTEapp.c: 1030: ANSELAbits.ANSA0 = 0;
+[e ( ___nop ..  ]
+[; ;MOTEapp.c: 1030: asm(" sleep");
 "1030
-[e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1031: oled_displayOff(0);
+[; <"  sleep ;# ">
+[; ;MOTEapp.c: 1031: __nop();
 "1031
-[e ( _oled_displayOff (1 -> -> 0 `i `uc ]
-[; ;MOTEapp.c: 1032: oled_init();
-"1032
-[e ( _oled_init ..  ]
-[; ;MOTEapp.c: 1034: modemResync();
+[e ( ___nop ..  ]
+[; ;MOTEapp.c: 1034: EUSART_FlushBuffer();
 "1034
-[e ( _modemResync ..  ]
-[; ;MOTEapp.c: 1035: return status;
-"1035
-[e ) _status ]
-[e $UE 1075  ]
-[; ;MOTEapp.c: 1036: }
+[e ( _EUSART_FlushBuffer ..  ]
+[; ;MOTEapp.c: 1036: INTCONbits.IOCIE = 0;
 "1036
-[e :UE 1075 ]
-}
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1037: IOCCbits.IOCC0 = 0;
+"1037
+[e = . . _IOCCbits 0 0 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1038: IOCCbits.IOCC1 = 0;
 "1038
-[v _moteApp_clearCommand `(v ~T0 @X0 1 ef ]
+[e = . . _IOCCbits 0 1 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1039: IOCCbits.IOCC2 = 0;
 "1039
-{
-[; ;MOTEapp.c: 1038: void moteApp_clearCommand(void)
-[; ;MOTEapp.c: 1039: {
-[e :U _moteApp_clearCommand ]
-[f ]
-[; ;MOTEapp.c: 1040: sendCommand("");
+[e = . . _IOCCbits 0 2 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1040: PIE2bits.C1IE = 0;
 "1040
-[e ( _sendCommand (1 :s 73C ]
-[; ;MOTEapp.c: 1041: }
+[e = . . _PIE2bits 0 6 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1041: GIE = 1;
 "1041
-[e :UE 1082 ]
-}
+[e = _GIE -> -> 1 `i `b ]
+[; ;MOTEapp.c: 1043: PIN_MANAGER_Initialize();
 "1043
-[v _moteApp_toggleLeds `(v ~T0 @X0 1 ef1`uc ]
+[e ( _PIN_MANAGER_Initialize ..  ]
+[; ;MOTEapp.c: 1044: EUSART_Initialize();
 "1044
-{
-[; ;MOTEapp.c: 1043: void moteApp_toggleLeds(bool state)
-[; ;MOTEapp.c: 1044: {
-[e :U _moteApp_toggleLeds ]
-"1043
-[v _state `uc ~T0 @X0 1 r1 ]
-"1044
-[f ]
-[; ;MOTEapp.c: 1045: moteApp_delayms(80);
-"1045
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 1046: if (state)
+[e ( _EUSART_Initialize ..  ]
+[; ;MOTEapp.c: 1046: if (INTCONbits.IOCIF)
 "1046
-[e $ ! != -> _state `i -> -> -> 0 `i `uc `i 1084  ]
+[e $ ! != -> . . _INTCONbits 0 0 `i -> -> -> 0 `i `Vuc `i 1079  ]
 [; ;MOTEapp.c: 1047: {
 "1047
 {
-[; ;MOTEapp.c: 1048: sendCommand("sys set pindig GPIO10 1\r\n");
+[; ;MOTEapp.c: 1048: INTCONbits.IOCIF = 0;
 "1048
-[e ( _sendCommand (1 :s 74C ]
-[; ;MOTEapp.c: 1049: moteApp_delayms(80);
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1049: status = 1;
 "1049
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 1050: sendCommand("sys set pindig GPIO11 1\r\n");
+[e = _status -> -> 1 `i `uc ]
 "1050
-[e ( _sendCommand (1 :s 75C ]
-"1051
 }
-[; ;MOTEapp.c: 1051: }
-[e $U 1085  ]
-"1052
-[e :U 1084 ]
-[; ;MOTEapp.c: 1052: else
-[; ;MOTEapp.c: 1053: {
-"1053
-{
-[; ;MOTEapp.c: 1054: sendCommand("sys set pindig GPIO10 0\r\n");
-"1054
-[e ( _sendCommand (1 :s 76C ]
-[; ;MOTEapp.c: 1055: moteApp_delayms(80);
-"1055
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 1056: sendCommand("sys set pindig GPIO11 0\r\n");
+[; ;MOTEapp.c: 1050: }
+[e $U 1080  ]
 "1056
-[e ( _sendCommand (1 :s 77C ]
+[e :U 1079 ]
+[; ;MOTEapp.c: 1056: else
+[; ;MOTEapp.c: 1057: {
 "1057
-}
-[e :U 1085 ]
-[; ;MOTEapp.c: 1057: }
-[; ;MOTEapp.c: 1058: moteApp_delayms(80);
-"1058
-[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
-[; ;MOTEapp.c: 1059: }
-"1059
-[e :UE 1083 ]
-}
-"1061
-[v _moteApp_clearBuffers `(v ~T0 @X0 1 sf ]
-"1062
 {
-[; ;MOTEapp.c: 1061: static void moteApp_clearBuffers(void)
-[; ;MOTEapp.c: 1062: {
+[; ;MOTEapp.c: 1058: secTicker = 10;
+"1058
+[e = _secTicker -> -> 10 `i `uc ]
+[; ;MOTEapp.c: 1059: status = 0;
+"1059
+[e = _status -> -> 0 `i `uc ]
+"1060
+}
+[e :U 1080 ]
+[; ;MOTEapp.c: 1060: }
+[; ;MOTEapp.c: 1061: ANSELAbits.ANSA0 = 0;
+"1061
+[e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1062: oled_displayOff(0);
+"1062
+[e ( _oled_displayOff (1 -> -> 0 `i `uc ]
+[; ;MOTEapp.c: 1063: oled_init();
+"1063
+[e ( _oled_init ..  ]
+[; ;MOTEapp.c: 1065: modemResync();
+"1065
+[e ( _modemResync ..  ]
+[; ;MOTEapp.c: 1066: return status;
+"1066
+[e ) _status ]
+[e $UE 1074  ]
+[; ;MOTEapp.c: 1067: }
+"1067
+[e :UE 1074 ]
+}
+"1069
+[v _moteApp_clearCommand `(v ~T0 @X0 1 ef ]
+"1070
+{
+[; ;MOTEapp.c: 1069: void moteApp_clearCommand(void)
+[; ;MOTEapp.c: 1070: {
+[e :U _moteApp_clearCommand ]
+[f ]
+[; ;MOTEapp.c: 1071: sendCommand("");
+"1071
+[e ( _sendCommand (1 :s 82C ]
+[; ;MOTEapp.c: 1072: }
+"1072
+[e :UE 1081 ]
+}
+"1074
+[v _moteApp_toggleLeds `(v ~T0 @X0 1 ef1`uc ]
+"1075
+{
+[; ;MOTEapp.c: 1074: void moteApp_toggleLeds(bool state)
+[; ;MOTEapp.c: 1075: {
+[e :U _moteApp_toggleLeds ]
+"1074
+[v _state `uc ~T0 @X0 1 r1 ]
+"1075
+[f ]
+[; ;MOTEapp.c: 1076: moteApp_delayms(80);
+"1076
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 1077: if (state)
+"1077
+[e $ ! != -> _state `i -> -> -> 0 `i `uc `i 1083  ]
+[; ;MOTEapp.c: 1078: {
+"1078
+{
+[; ;MOTEapp.c: 1079: sendCommand("sys set pindig GPIO10 1\r\n");
+"1079
+[e ( _sendCommand (1 :s 83C ]
+[; ;MOTEapp.c: 1080: moteApp_delayms(80);
+"1080
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 1081: sendCommand("sys set pindig GPIO11 1\r\n");
+"1081
+[e ( _sendCommand (1 :s 84C ]
+"1082
+}
+[; ;MOTEapp.c: 1082: }
+[e $U 1084  ]
+"1083
+[e :U 1083 ]
+[; ;MOTEapp.c: 1083: else
+[; ;MOTEapp.c: 1084: {
+"1084
+{
+[; ;MOTEapp.c: 1085: sendCommand("sys set pindig GPIO10 0\r\n");
+"1085
+[e ( _sendCommand (1 :s 85C ]
+[; ;MOTEapp.c: 1086: moteApp_delayms(80);
+"1086
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 1087: sendCommand("sys set pindig GPIO11 0\r\n");
+"1087
+[e ( _sendCommand (1 :s 86C ]
+"1088
+}
+[e :U 1084 ]
+[; ;MOTEapp.c: 1088: }
+[; ;MOTEapp.c: 1089: moteApp_delayms(80);
+"1089
+[e ( _moteApp_delayms (1 -> -> 80 `i `ui ]
+[; ;MOTEapp.c: 1090: }
+"1090
+[e :UE 1082 ]
+}
+"1092
+[v _moteApp_clearBuffers `(v ~T0 @X0 1 sf ]
+"1093
+{
+[; ;MOTEapp.c: 1092: static void moteApp_clearBuffers(void)
+[; ;MOTEapp.c: 1093: {
 [e :U _moteApp_clearBuffers ]
 [f ]
-[; ;MOTEapp.c: 1063: for (uint8_t counter = 0; counter < 3; counter++)
-"1063
-{
-[v _counter `uc ~T0 @X0 1 a ]
-[e = _counter -> -> 0 `i `uc ]
-[e $ < -> _counter `i -> 3 `i 1087  ]
-[e $U 1088  ]
-"1064
-[e :U 1087 ]
-[; ;MOTEapp.c: 1064: {
-{
-[; ;MOTEapp.c: 1065: responsePortNum[counter] = 0;
-"1065
-[e = *U + &U _responsePortNum * -> _counter `ux -> -> # *U &U _responsePortNum `ui `ux -> -> 0 `i `uc ]
-"1066
-}
-"1063
-[e ++ _counter -> -> 1 `i `uc ]
-[e $ < -> _counter `i -> 3 `i 1087  ]
-[e :U 1088 ]
-"1066
-}
-[; ;MOTEapp.c: 1066: }
-[; ;MOTEapp.c: 1067: for (uint8_t counter = 0; counter < 34; counter++)
-"1067
-{
-[v _counter `uc ~T0 @X0 1 a ]
-[e = _counter -> -> 0 `i `uc ]
-[e $ < -> _counter `i -> 34 `i 1090  ]
-[e $U 1091  ]
-"1068
-[e :U 1090 ]
-[; ;MOTEapp.c: 1068: {
-{
-[; ;MOTEapp.c: 1069: responseId[counter] = 0;
-"1069
-[e = *U + &U _responseId * -> _counter `ux -> -> # *U &U _responseId `ui `ux -> -> 0 `i `uc ]
-"1070
-}
-"1067
-[e ++ _counter -> -> 1 `i `uc ]
-[e $ < -> _counter `i -> 34 `i 1090  ]
-[e :U 1091 ]
-"1070
-}
-[; ;MOTEapp.c: 1070: }
-[; ;MOTEapp.c: 1071: for (uint8_t counter = 0; counter < 10; counter++)
-"1071
-{
-[v _counter `uc ~T0 @X0 1 a ]
-[e = _counter -> -> 0 `i `uc ]
-[e $ < -> _counter `i -> 10 `i 1093  ]
-[e $U 1094  ]
-"1072
-[e :U 1093 ]
-[; ;MOTEapp.c: 1072: {
-{
-[; ;MOTEapp.c: 1073: responseData[counter] = 0;
-"1073
-[e = *U + &U _responseData * -> _counter `ux -> -> # *U &U _responseData `ui `ux -> -> 0 `i `uc ]
-"1074
-}
-"1071
-[e ++ _counter -> -> 1 `i `uc ]
-[e $ < -> _counter `i -> 10 `i 1093  ]
-[e :U 1094 ]
-"1074
-}
-[; ;MOTEapp.c: 1074: }
-[; ;MOTEapp.c: 1075: }
-"1075
-[e :UE 1086 ]
-}
-"1077
-[v _moteApp_add8bToDataBuffer `(v ~T0 @X0 1 ef2`uc`uc ]
-"1078
-{
-[; ;MOTEapp.c: 1077: void moteApp_add8bToDataBuffer(uint8_t number, uint8_t bufferLocation)
-[; ;MOTEapp.c: 1078: {
-[e :U _moteApp_add8bToDataBuffer ]
-"1077
-[v _number `uc ~T0 @X0 1 r1 ]
-[v _bufferLocation `uc ~T0 @X0 1 r2 ]
-"1078
-[f ]
-[; ;MOTEapp.c: 1079: dataBuffer[bufferLocation + 2] = '0' + (number % 10);
-"1079
-[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 2 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui -> % -> _number `i -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1080: number /= 10;
-"1080
-[e =/ _number -> 10 `uc ]
-[; ;MOTEapp.c: 1081: dataBuffer[bufferLocation + 1] = '0' + (number % 10);
-"1081
-[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui -> % -> _number `i -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1082: number /= 10;
-"1082
-[e =/ _number -> 10 `uc ]
-[; ;MOTEapp.c: 1083: dataBuffer[bufferLocation] = '0' + (number % 10);
-"1083
-[e = *U + &U _dataBuffer * -> _bufferLocation `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui -> % -> _number `i -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1084: }
-"1084
-[e :UE 1096 ]
-}
-"1086
-[v _moteApp_add16bToDataBuffer `(v ~T0 @X0 1 ef2`ui`uc ]
-"1087
-{
-[; ;MOTEapp.c: 1086: void moteApp_add16bToDataBuffer(uint16_t number, uint8_t bufferLocation)
-[; ;MOTEapp.c: 1087: {
-[e :U _moteApp_add16bToDataBuffer ]
-"1086
-[v _number `ui ~T0 @X0 1 r1 ]
-[v _bufferLocation `uc ~T0 @X0 1 r2 ]
-"1087
-[f ]
-[; ;MOTEapp.c: 1088: dataBuffer[bufferLocation + 4] = '0' + (number % 10);
-"1088
-[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 4 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1089: number /= 10;
-"1089
-[e =/ _number -> -> 10 `uc `ui ]
-[; ;MOTEapp.c: 1090: dataBuffer[bufferLocation + 3] = '0' + (number % 10);
-"1090
-[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 3 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1091: number /= 10;
-"1091
-[e =/ _number -> -> 10 `uc `ui ]
-[; ;MOTEapp.c: 1092: dataBuffer[bufferLocation + 2] = '0' + (number % 10);
-"1092
-[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 2 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1093: number /= 10;
-"1093
-[e =/ _number -> -> 10 `uc `ui ]
-[; ;MOTEapp.c: 1094: dataBuffer[bufferLocation + 1] = '0' + (number % 10);
+[; ;MOTEapp.c: 1094: for (uint8_t counter = 0; counter < 3; counter++)
 "1094
-[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1095: number /= 10;
-"1095
-[e =/ _number -> -> 10 `uc `ui ]
-[; ;MOTEapp.c: 1096: dataBuffer[bufferLocation] = '0' + (number % 10);
-"1096
-[e = *U + &U _dataBuffer * -> _bufferLocation `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
-[; ;MOTEapp.c: 1097: }
-"1097
-[e :UE 1097 ]
-}
-"1099
-[v _moteApp_delayms `(v ~T0 @X0 1 ef1`ui ]
-"1100
 {
-[; ;MOTEapp.c: 1099: void moteApp_delayms(uint16_t length)
-[; ;MOTEapp.c: 1100: {
-[e :U _moteApp_delayms ]
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 3 `i 1086  ]
+[e $U 1087  ]
+"1095
+[e :U 1086 ]
+[; ;MOTEapp.c: 1095: {
+{
+[; ;MOTEapp.c: 1096: responsePortNum[counter] = 0;
+"1096
+[e = *U + &U _responsePortNum * -> _counter `ux -> -> # *U &U _responsePortNum `ui `ux -> -> 0 `i `uc ]
+"1097
+}
+"1094
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 3 `i 1086  ]
+[e :U 1087 ]
+"1097
+}
+[; ;MOTEapp.c: 1097: }
+[; ;MOTEapp.c: 1098: for (uint8_t counter = 0; counter < 34; counter++)
+"1098
+{
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 34 `i 1089  ]
+[e $U 1090  ]
 "1099
-[v _length `ui ~T0 @X0 1 r1 ]
+[e :U 1089 ]
+[; ;MOTEapp.c: 1099: {
+{
+[; ;MOTEapp.c: 1100: responseId[counter] = 0;
 "1100
-[f ]
+[e = *U + &U _responseId * -> _counter `ux -> -> # *U &U _responseId `ui `ux -> -> 0 `i `uc ]
 "1101
-[v _counter `ui ~T0 @X0 1 a ]
-[; ;MOTEapp.c: 1101: uint16_t counter;
-[; ;MOTEapp.c: 1102: for(counter = 0; counter < length; counter++)
+}
+"1098
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 34 `i 1089  ]
+[e :U 1090 ]
+"1101
+}
+[; ;MOTEapp.c: 1101: }
+[; ;MOTEapp.c: 1102: for (uint8_t counter = 0; counter < 10; counter++)
 "1102
 {
-[e = _counter -> -> 0 `i `ui ]
-[e $U 1102  ]
+[v _counter `uc ~T0 @X0 1 a ]
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 10 `i 1092  ]
+[e $U 1093  ]
 "1103
-[e :U 1099 ]
+[e :U 1092 ]
 [; ;MOTEapp.c: 1103: {
 {
-[; ;MOTEapp.c: 1104: _delay((unsigned long)((1)*(48000000/4000.0)));
+[; ;MOTEapp.c: 1104: responseData[counter] = 0;
 "1104
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+[e = *U + &U _responseData * -> _counter `ux -> -> # *U &U _responseData `ui `ux -> -> 0 `i `uc ]
 "1105
 }
 "1102
-[e ++ _counter -> -> 1 `i `ui ]
-[e :U 1102 ]
-[e $ < _counter _length 1099  ]
-[e :U 1100 ]
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 10 `i 1092  ]
+[e :U 1093 ]
 "1105
 }
 [; ;MOTEapp.c: 1105: }
 [; ;MOTEapp.c: 1106: }
 "1106
-[e :UE 1098 ]
+[e :UE 1085 ]
+}
+"1108
+[v _moteApp_add8bToDataBuffer `(v ~T0 @X0 1 ef2`uc`uc ]
+"1109
+{
+[; ;MOTEapp.c: 1108: void moteApp_add8bToDataBuffer(uint8_t number, uint8_t bufferLocation)
+[; ;MOTEapp.c: 1109: {
+[e :U _moteApp_add8bToDataBuffer ]
+"1108
+[v _number `uc ~T0 @X0 1 r1 ]
+[v _bufferLocation `uc ~T0 @X0 1 r2 ]
+"1109
+[f ]
+[; ;MOTEapp.c: 1110: dataBuffer[bufferLocation + 2] = '0' + (number % 10);
+"1110
+[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 2 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui -> % -> _number `i -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1111: number /= 10;
+"1111
+[e =/ _number -> 10 `uc ]
+[; ;MOTEapp.c: 1112: dataBuffer[bufferLocation + 1] = '0' + (number % 10);
+"1112
+[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui -> % -> _number `i -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1113: number /= 10;
+"1113
+[e =/ _number -> 10 `uc ]
+[; ;MOTEapp.c: 1114: dataBuffer[bufferLocation] = '0' + (number % 10);
+"1114
+[e = *U + &U _dataBuffer * -> _bufferLocation `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui -> % -> _number `i -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1115: }
+"1115
+[e :UE 1095 ]
+}
+"1117
+[v _moteApp_add16bToDataBuffer `(v ~T0 @X0 1 ef2`ui`uc ]
+"1118
+{
+[; ;MOTEapp.c: 1117: void moteApp_add16bToDataBuffer(uint16_t number, uint8_t bufferLocation)
+[; ;MOTEapp.c: 1118: {
+[e :U _moteApp_add16bToDataBuffer ]
+"1117
+[v _number `ui ~T0 @X0 1 r1 ]
+[v _bufferLocation `uc ~T0 @X0 1 r2 ]
+"1118
+[f ]
+[; ;MOTEapp.c: 1119: dataBuffer[bufferLocation + 4] = '0' + (number % 10);
+"1119
+[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 4 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1120: number /= 10;
+"1120
+[e =/ _number -> -> 10 `uc `ui ]
+[; ;MOTEapp.c: 1121: dataBuffer[bufferLocation + 3] = '0' + (number % 10);
+"1121
+[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 3 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1122: number /= 10;
+"1122
+[e =/ _number -> -> 10 `uc `ui ]
+[; ;MOTEapp.c: 1123: dataBuffer[bufferLocation + 2] = '0' + (number % 10);
+"1123
+[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 2 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1124: number /= 10;
+"1124
+[e =/ _number -> -> 10 `uc `ui ]
+[; ;MOTEapp.c: 1125: dataBuffer[bufferLocation + 1] = '0' + (number % 10);
+"1125
+[e = *U + &U _dataBuffer * -> -> + -> _bufferLocation `i -> 1 `i `ui `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1126: number /= 10;
+"1126
+[e =/ _number -> -> 10 `uc `ui ]
+[; ;MOTEapp.c: 1127: dataBuffer[bufferLocation] = '0' + (number % 10);
+"1127
+[e = *U + &U _dataBuffer * -> _bufferLocation `ux -> -> # *U &U _dataBuffer `ui `ux -> + -> 48 `ui % _number -> -> 10 `i `ui `uc ]
+[; ;MOTEapp.c: 1128: }
+"1128
+[e :UE 1096 ]
+}
+"1130
+[v _moteApp_delayms `(v ~T0 @X0 1 ef1`ui ]
+"1131
+{
+[; ;MOTEapp.c: 1130: void moteApp_delayms(uint16_t length)
+[; ;MOTEapp.c: 1131: {
+[e :U _moteApp_delayms ]
+"1130
+[v _length `ui ~T0 @X0 1 r1 ]
+"1131
+[f ]
+"1132
+[v _counter `ui ~T0 @X0 1 a ]
+[; ;MOTEapp.c: 1132: uint16_t counter;
+[; ;MOTEapp.c: 1133: for(counter = 0; counter < length; counter++)
+"1133
+{
+[e = _counter -> -> 0 `i `ui ]
+[e $U 1101  ]
+"1134
+[e :U 1098 ]
+[; ;MOTEapp.c: 1134: {
+{
+[; ;MOTEapp.c: 1135: _delay((unsigned long)((1)*(48000000/4000.0)));
+"1135
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 48000000 `l `d .4000.0 `ul ]
+"1136
+}
+"1133
+[e ++ _counter -> -> 1 `i `ui ]
+[e :U 1101 ]
+[e $ < _counter _length 1098  ]
+[e :U 1099 ]
+"1136
+}
+[; ;MOTEapp.c: 1136: }
+[; ;MOTEapp.c: 1137: }
+"1137
+[e :UE 1097 ]
 }
 [p f _sprintf 10780804 ]
 [a 1C 122 0 ]
@@ -9414,10 +9493,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 6C 77 111 98 105 108 101 32 77 111 116 101 32 45 65 112 112 0 ]
 [a 35C 109 97 99 32 106 111 105 110 32 97 98 112 0 ]
 [a 36C 106 111 105 110 32 97 98 112 0 ]
-[a 62C 109 97 99 32 115 101 116 32 97 100 114 32 111 110 0 ]
+[a 71C 109 97 99 32 115 101 116 32 97 100 114 32 111 110 0 ]
 [a 31C 111 110 0 ]
 [a 44C 119 97 105 116 32 109 97 99 95 116 120 95 111 107 0 ]
-[a 54C 109 97 99 95 116 120 95 111 107 0 ]
+[a 63C 109 97 99 95 116 120 95 111 107 0 ]
 [a 14C 111 107 0 ]
 [a 17C 111 107 0 ]
 [a 20C 111 107 0 ]
@@ -9428,52 +9507,61 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 37C 111 107 0 ]
 [a 43C 111 107 0 ]
 [a 33C 115 101 116 32 99 104 0 ]
-[a 46C 114 101 115 116 105 110 103 0 ]
 [a 4C 83 116 97 114 116 105 110 103 0 ]
+[a 49C 83 49 32 61 32 97 117 116 111 32 111 110 47 111 102 102 0 ]
 [a 21C 109 97 99 32 115 101 116 32 97 100 114 32 111 102 102 0 ]
-[a 63C 109 97 99 32 115 101 116 32 97 100 114 32 111 102 102 0 ]
+[a 72C 109 97 99 32 115 101 116 32 97 100 114 32 111 102 102 0 ]
 [a 32C 111 102 102 0 ]
-[a 72C 109 97 99 32 115 97 118 101 0 ]
+[a 81C 109 97 99 32 115 97 118 101 0 ]
 [a 3C 77 79 84 69 32 77 111 100 101 0 ]
+[a 50C 83 50 32 61 32 109 97 110 117 97 108 32 115 101 110 100 0 ]
 [a 39C 97 99 99 101 112 116 101 100 0 ]
 [a 42C 109 111 116 101 87 97 105 116 65 99 99 101 112 116 101 100 0 ]
 [a 25C 115 101 116 32 115 121 110 99 0 ]
-[a 56C 73 115 115 117 101 32 80 101 114 111 100 105 99 32 84 88 0 ]
-[a 52C 109 97 99 32 116 120 32 117 110 99 110 102 32 49 32 37 48 52 88 37 48 52 88 0 ]
+[a 65C 73 115 115 117 101 32 80 101 114 111 100 105 99 32 84 88 0 ]
+[a 61C 109 97 99 32 116 120 32 117 110 99 110 102 32 49 32 37 48 52 88 37 48 52 88 0 ]
+[a 48C 77 65 78 85 65 76 0 ]
+[a 53C 77 65 78 85 65 76 0 ]
+[a 56C 77 65 78 85 65 76 0 ]
 [a 15C 109 97 99 32 115 101 116 32 97 112 112 115 107 101 121 32 50 66 55 69 49 53 49 54 50 56 65 69 68 50 65 54 65 66 70 55 49 53 56 56 48 57 67 70 52 70 51 67 0 ]
 [a 18C 109 97 99 32 115 101 116 32 110 119 107 115 107 101 121 32 50 66 55 69 49 53 49 54 50 56 65 69 68 50 65 54 65 66 70 55 49 53 56 56 48 57 67 70 52 70 51 67 0 ]
-[a 50C 67 0 ]
-[a 60C 67 0 ]
+[a 59C 67 0 ]
+[a 69C 67 0 ]
 [a 5C 82 101 82 117 110 32 80 119 114 84 115 116 60 83 50 62 0 ]
-[a 51C 80 107 116 115 124 58 0 ]
-[a 48C 76 105 103 104 116 58 0 ]
-[a 53C 80 107 116 115 47 58 0 ]
-[a 55C 80 107 116 115 45 58 0 ]
-[a 49C 84 101 109 112 32 58 0 ]
+[a 60C 80 107 116 115 124 58 0 ]
+[a 57C 76 105 103 104 116 58 0 ]
+[a 62C 80 107 116 115 47 58 0 ]
+[a 64C 80 107 116 115 45 58 0 ]
+[a 58C 84 101 109 112 32 58 0 ]
 [a 2C 115 121 115 32 115 108 101 101 112 32 57 57 57 57 57 57 57 57 57 0 ]
-[a 71C 109 97 99 32 115 101 116 32 100 114 32 55 0 ]
-[a 70C 109 97 99 32 115 101 116 32 100 114 32 54 0 ]
-[a 69C 109 97 99 32 115 101 116 32 100 114 32 53 0 ]
+[a 80C 109 97 99 32 115 101 116 32 100 114 32 55 0 ]
+[a 79C 109 97 99 32 115 101 116 32 100 114 32 54 0 ]
+[a 78C 109 97 99 32 115 101 116 32 100 114 32 53 0 ]
 [a 24C 109 97 99 32 115 101 116 32 115 121 110 99 32 51 52 0 ]
-[a 68C 109 97 99 32 115 101 116 32 100 114 32 52 0 ]
+[a 77C 109 97 99 32 115 101 116 32 100 114 32 52 0 ]
 [a 11C 50 57 48 51 0 ]
-[a 67C 109 97 99 32 115 101 116 32 100 114 32 51 0 ]
+[a 76C 109 97 99 32 115 101 116 32 100 114 32 51 0 ]
 [a 28C 115 101 116 32 114 120 50 0 ]
-[a 66C 109 97 99 32 115 101 116 32 100 114 32 50 0 ]
-[a 12C 109 97 99 32 115 101 116 32 100 101 118 97 100 100 114 32 65 66 67 68 48 48 48 49 0 ]
-[a 65C 109 97 99 32 115 101 116 32 100 114 32 49 0 ]
+[a 12C 109 97 99 32 115 101 116 32 100 101 118 97 100 100 114 32 65 66 67 68 48 48 48 50 0 ]
+[a 75C 109 97 99 32 115 101 116 32 100 114 32 50 0 ]
+[a 74C 109 97 99 32 115 101 116 32 100 114 32 49 0 ]
 [a 27C 109 97 99 32 115 101 116 32 114 120 50 32 56 32 57 50 51 51 48 48 48 48 48 0 ]
 [a 40C 109 97 99 32 116 120 32 117 110 99 110 102 32 49 32 48 48 48 48 48 48 48 48 0 ]
-[a 64C 109 97 99 32 115 101 116 32 100 114 32 48 0 ]
+[a 73C 109 97 99 32 115 101 116 32 100 114 32 48 0 ]
 [a 38C 87 97 105 116 32 97 99 99 101 112 116 101 100 46 46 46 0 ]
-[a 61C 114 97 100 105 111 32 116 120 32 0 ]
-[a 58C 76 58 32 32 32 32 32 32 32 84 58 32 0 ]
-[a 57C 79 110 32 80 111 114 116 32 35 58 32 0 ]
-[a 59C 40 78 65 86 41 32 32 32 32 40 83 69 76 41 32 0 ]
+[a 70C 114 97 100 105 111 32 116 120 32 0 ]
+[a 46C 77 111 100 101 58 32 0 ]
+[a 51C 77 111 100 101 58 32 0 ]
+[a 54C 77 111 100 101 58 32 0 ]
+[a 67C 76 58 32 32 32 32 32 32 32 84 58 32 0 ]
+[a 66C 79 110 32 80 111 114 116 32 35 58 32 0 ]
+[a 68C 40 78 65 86 41 32 32 32 32 40 83 69 76 41 32 0 ]
 [a 8C 32 40 83 49 41 32 32 32 32 32 32 40 83 50 41 32 0 ]
-[a 47C 32 32 83 101 110 115 111 114 32 68 97 116 97 32 32 0 ]
-[a 75C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 49 32 49 13 10 0 ]
-[a 74C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 48 32 49 13 10 0 ]
-[a 77C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 49 32 48 13 10 0 ]
-[a 76C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 48 32 48 13 10 0 ]
-[a 73C 0 ]
+[a 47C 65 85 84 79 32 32 0 ]
+[a 52C 65 85 84 79 32 32 0 ]
+[a 55C 65 85 84 79 32 32 0 ]
+[a 84C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 49 32 49 13 10 0 ]
+[a 83C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 48 32 49 13 10 0 ]
+[a 86C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 49 32 48 13 10 0 ]
+[a 85C 115 121 115 32 115 101 116 32 112 105 110 100 105 103 32 71 80 73 79 49 48 32 48 13 10 0 ]
+[a 82C 0 ]

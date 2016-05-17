@@ -1,9 +1,11 @@
 /*
  * File:   main.c
- * Author: C14312
+ * Original Author: C14312
+ * Author: Chris Merck
  *
  * Created on February 16, 2015, 1:45 PM
  * Build 006: 5 May 2016 : build for Scriptr IoT-X Demo
+ * Build 011: 17 May 2016: buttons for auto/manual/trigger feature
  */
 
 #include <stdio.h>
@@ -93,8 +95,8 @@ void main(void)
     // Initial Display Print
     oled_clear();
     oled_putString("Scriptr IoT-X",0,0);
-    oled_putString(" Dev: S1 ",0,1);
-    oled_putString("   build 006   ",0,3);
+    oled_putString(" Dev: S2 ",0,1);
+    oled_putString("   build 011   ",0,3);
     moteApp_delayms(700);
    
     // Application Loop

@@ -8767,7 +8767,7 @@ uint8_t USBapp_getBufferLength(void);
 void USBapp_setrxByteFlag(void);
 uint8_t USBapp_getrxByteFlag(void);
 
-# 23 "main.c"
+# 25 "main.c"
 typedef enum {USB, MOTE} OPERATION_T;
 OPERATION_T operationType;
 typedef enum {MAIN_STARTUP, MAIN_CDC_MODE, MAIN_HOST_MODE} MAIN_STATE_T;
@@ -8791,11 +8791,11 @@ void main(void)
 
 SYSTEM_Initialize();
 
-# 59
+# 61
 oled_init();
 USBDeviceInit();
 
-# 66
+# 68
 USBDeviceAttach();
 
 PEIE = 1;
@@ -8810,7 +8810,7 @@ moteApp_delayms(300);
 
 powerOnStatus = DATAEE_ReadByte(0x00);
 
-# 88
+# 90
 operationType = USB;
 USBapp_handlerState(USB_STARTUP);
 
@@ -8819,8 +8819,8 @@ USBapp_handlerState(USB_STARTUP);
 
 oled_clear();
 oled_putString("Scriptr IoT-X",0,0);
-oled_putString(" Dev: S1 ",0,1);
-oled_putString("   build 006   ",0,3);
+oled_putString(" Dev: S2 ",0,1);
+oled_putString("   build 011   ",0,3);
 moteApp_delayms(700);
 
 

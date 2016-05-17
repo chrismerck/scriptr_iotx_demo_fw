@@ -5,16 +5,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 "8
 [u S939 `uc 1 `S940 1 ]
 [n S939 . TicksBitMap . ]
-"24 main.c
+"26 main.c
 [c E7300 0 1 .. ]
 [n E7300 . USB MOTE  ]
-"26
+"28
 [c E7305 0 1 2 .. ]
 [n E7305 . MAIN_STARTUP MAIN_CDC_MODE MAIN_HOST_MODE  ]
-"28
+"30
 [c E7311 0 1 .. ]
 [n E7311 . APP_LORA_STARTUP APP_HOST_RUNNING  ]
-"30
+"32
 [c E7241 0 1 2 3 4 .. ]
 [n E7241 . MOTE_HARDWARE MOTE_STARTUP MOTE_JOINING MOTE_RUNNING MOTE_SWAP  ]
 [p mainexit ]
@@ -36,7 +36,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _modemResync `(v ~T0 @X0 0 ef ]
 "275 ../Includes/MccGenerated/memory.h
 [v _DATAEE_ReadByte `(uc ~T0 @X0 0 ef1`uc ]
-"89 main.c
+"91 main.c
 [c E7276 0 1 2 .. ]
 [n E7276 . USB_STARTUP USB_RUNNING USB_CDC  ]
 "28 ../Includes/Board/USBapp.h
@@ -6664,176 +6664,176 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;USBapp.h: 35: uint8_t USBapp_getBufferLength(void);
 [; ;USBapp.h: 37: void USBapp_setrxByteFlag(void);
 [; ;USBapp.h: 38: uint8_t USBapp_getrxByteFlag(void);
-[; ;main.c: 23: typedef enum {USB, MOTE} OPERATION_T;
-"24 main.c
+[; ;main.c: 25: typedef enum {USB, MOTE} OPERATION_T;
+"26 main.c
 [v _operationType `E7300 ~T0 @X0 1 e ]
-[; ;main.c: 24: OPERATION_T operationType;
-[; ;main.c: 25: typedef enum {MAIN_STARTUP, MAIN_CDC_MODE, MAIN_HOST_MODE} MAIN_STATE_T;
-"26
-[v _mainState `E7305 ~T0 @X0 1 e ]
-[; ;main.c: 26: MAIN_STATE_T mainState;
-[; ;main.c: 27: typedef enum {APP_LORA_STARTUP, APP_HOST_RUNNING} APP_STATE_T;
+[; ;main.c: 26: OPERATION_T operationType;
+[; ;main.c: 27: typedef enum {MAIN_STARTUP, MAIN_CDC_MODE, MAIN_HOST_MODE} MAIN_STATE_T;
 "28
-[v _appState `E7311 ~T0 @X0 1 e ]
-[; ;main.c: 28: APP_STATE_T appState;
+[v _mainState `E7305 ~T0 @X0 1 e ]
+[; ;main.c: 28: MAIN_STATE_T mainState;
+[; ;main.c: 29: typedef enum {APP_LORA_STARTUP, APP_HOST_RUNNING} APP_STATE_T;
 "30
+[v _appState `E7311 ~T0 @X0 1 e ]
+[; ;main.c: 30: APP_STATE_T appState;
+"32
 [v _moteModeState `E7241 ~T0 @X0 1 e ]
-[; ;main.c: 30: MOTE_MODE_T moteModeState;
-"34
+[; ;main.c: 32: MOTE_MODE_T moteModeState;
+"36
 [v _powerOnStatus `uc ~T0 @X0 1 s ]
 [i _powerOnStatus
 -> -> 0 `i `uc
 ]
-[; ;main.c: 34: static uint8_t powerOnStatus = 0x00;
-"35
+[; ;main.c: 36: static uint8_t powerOnStatus = 0x00;
+"37
 [v _dataRateRead `uc ~T0 @X0 1 s ]
 [i _dataRateRead
 -> -> 0 `i `uc
 ]
-[; ;main.c: 35: static uint8_t dataRateRead = 0x00;
-[; ;main.c: 38: extern void test_powerup(void);
-"41
+[; ;main.c: 37: static uint8_t dataRateRead = 0x00;
+[; ;main.c: 40: extern void test_powerup(void);
+"43
 [v _main `(v ~T0 @X0 1 ef ]
-"42
+"44
 {
-[; ;main.c: 41: void main(void)
-[; ;main.c: 42: {
+[; ;main.c: 43: void main(void)
+[; ;main.c: 44: {
 [e :U _main ]
 [f ]
-[; ;main.c: 44: SYSTEM_Initialize();
-"44
+[; ;main.c: 46: SYSTEM_Initialize();
+"46
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 59: oled_init();
-"59
+[; ;main.c: 61: oled_init();
+"61
 [e ( _oled_init ..  ]
-[; ;main.c: 60: USBDeviceInit();
-"60
+[; ;main.c: 62: USBDeviceInit();
+"62
 [e ( _USBDeviceInit ..  ]
-[; ;main.c: 66: USBDeviceAttach();
-"66
-[e ( _USBDeviceAttach ..  ]
-[; ;main.c: 68: PEIE = 1;
+[; ;main.c: 68: USBDeviceAttach();
 "68
+[e ( _USBDeviceAttach ..  ]
+[; ;main.c: 70: PEIE = 1;
+"70
 [e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 69: GIE = 1;
-"69
+[; ;main.c: 71: GIE = 1;
+"71
 [e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 72: moteApp_delayms(300);
-"72
-[e ( _moteApp_delayms (1 -> -> 300 `i `ui ]
-[; ;main.c: 73: modemResync();
-"73
-[e ( _modemResync ..  ]
 [; ;main.c: 74: moteApp_delayms(300);
 "74
 [e ( _moteApp_delayms (1 -> -> 300 `i `ui ]
-[; ;main.c: 78: powerOnStatus = DATAEE_ReadByte(0x00);
-"78
+[; ;main.c: 75: modemResync();
+"75
+[e ( _modemResync ..  ]
+[; ;main.c: 76: moteApp_delayms(300);
+"76
+[e ( _moteApp_delayms (1 -> -> 300 `i `ui ]
+[; ;main.c: 80: powerOnStatus = DATAEE_ReadByte(0x00);
+"80
 [e = _powerOnStatus ( _DATAEE_ReadByte (1 -> -> 0 `i `uc ]
-[; ;main.c: 88: operationType = USB;
-"88
+[; ;main.c: 90: operationType = USB;
+"90
 [e = _operationType . `E7300 0 ]
-[; ;main.c: 89: USBapp_handlerState(USB_STARTUP);
-"89
+[; ;main.c: 91: USBapp_handlerState(USB_STARTUP);
+"91
 [e ( _USBapp_handlerState (1 . `E7276 0 ]
-[; ;main.c: 94: oled_clear();
-"94
-[e ( _oled_clear ..  ]
-[; ;main.c: 95: oled_putString("Scriptr IoT-X",0,0);
-"95
-[e ( _oled_putString (3 , , :s 1C -> -> 0 `i `uc -> -> 0 `i `uc ]
-[; ;main.c: 96: oled_putString(" Dev: S1 ",0,1);
+[; ;main.c: 96: oled_clear();
 "96
-[e ( _oled_putString (3 , , :s 2C -> -> 0 `i `uc -> -> 1 `i `uc ]
-[; ;main.c: 97: oled_putString("   build 006   ",0,3);
+[e ( _oled_clear ..  ]
+[; ;main.c: 97: oled_putString("Scriptr IoT-X",0,0);
 "97
-[e ( _oled_putString (3 , , :s 3C -> -> 0 `i `uc -> -> 3 `i `uc ]
-[; ;main.c: 98: moteApp_delayms(700);
+[e ( _oled_putString (3 , , :s 1C -> -> 0 `i `uc -> -> 0 `i `uc ]
+[; ;main.c: 98: oled_putString(" Dev: S2 ",0,1);
 "98
+[e ( _oled_putString (3 , , :s 2C -> -> 0 `i `uc -> -> 1 `i `uc ]
+[; ;main.c: 99: oled_putString("   build 011   ",0,3);
+"99
+[e ( _oled_putString (3 , , :s 3C -> -> 0 `i `uc -> -> 3 `i `uc ]
+[; ;main.c: 100: moteApp_delayms(700);
+"100
 [e ( _moteApp_delayms (1 -> -> 700 `i `ui ]
-[; ;main.c: 101: while(1)
-"101
+[; ;main.c: 103: while(1)
+"103
 [e :U 943 ]
-[; ;main.c: 102: {
-"102
-{
-[; ;main.c: 104: switch (operationType)
+[; ;main.c: 104: {
 "104
-[e $U 946  ]
-[; ;main.c: 105: {
-"105
 {
-[; ;main.c: 106: default:
+[; ;main.c: 106: switch (operationType)
 "106
-[e :U 947 ]
-[; ;main.c: 107: while(1);
+[e $U 946  ]
+[; ;main.c: 107: {
 "107
+{
+[; ;main.c: 108: default:
+"108
+[e :U 947 ]
+[; ;main.c: 109: while(1);
+"109
 [e :U 949 ]
 [e :U 948 ]
 [e $U 949  ]
 [e :U 950 ]
-[; ;main.c: 108: break;
-"108
-[e $U 945  ]
-[; ;main.c: 109: case USB:
-"109
-[e :U 951 ]
-[; ;main.c: 110: USBapp_Handler();
+[; ;main.c: 110: break;
 "110
-[e ( _USBapp_Handler ..  ]
-[; ;main.c: 112: operationType = MOTE;
+[e $U 945  ]
+[; ;main.c: 111: case USB:
+"111
+[e :U 951 ]
+[; ;main.c: 112: USBapp_Handler();
 "112
-[e = _operationType . `E7300 1 ]
-[; ;main.c: 113: MOTEapp_handlerState(MOTE_STARTUP);
-"113
-[e ( _MOTEapp_handlerState (1 . `E7241 1 ]
-[; ;main.c: 114: break;
+[e ( _USBapp_Handler ..  ]
+[; ;main.c: 114: operationType = MOTE;
 "114
-[e $U 945  ]
-[; ;main.c: 115: case MOTE:
+[e = _operationType . `E7300 1 ]
+[; ;main.c: 115: MOTEapp_handlerState(MOTE_STARTUP);
 "115
-[e :U 952 ]
-[; ;main.c: 116: if (moteHandler() == MOTE_SWAP)
+[e ( _MOTEapp_handlerState (1 . `E7241 1 ]
+[; ;main.c: 116: break;
 "116
-[e $ ! == -> ( _moteHandler ..  `i -> . `E7241 4 `i 953  ]
-[; ;main.c: 117: {
-"117
-{
-[; ;main.c: 119: operationType = USB;
-"119
-[e = _operationType . `E7300 0 ]
-[; ;main.c: 120: USBapp_handlerState(USB_STARTUP);
-"120
-[e ( _USBapp_handlerState (1 . `E7276 0 ]
-"121
-}
-[e :U 953 ]
-[; ;main.c: 121: }
-[; ;main.c: 122: break;
-"122
 [e $U 945  ]
+[; ;main.c: 117: case MOTE:
+"117
+[e :U 952 ]
+[; ;main.c: 118: if (moteHandler() == MOTE_SWAP)
+"118
+[e $ ! == -> ( _moteHandler ..  `i -> . `E7241 4 `i 953  ]
+[; ;main.c: 119: {
+"119
+{
+[; ;main.c: 121: operationType = USB;
+"121
+[e = _operationType . `E7300 0 ]
+[; ;main.c: 122: USBapp_handlerState(USB_STARTUP);
+"122
+[e ( _USBapp_handlerState (1 . `E7276 0 ]
 "123
 }
+[e :U 953 ]
 [; ;main.c: 123: }
+[; ;main.c: 124: break;
+"124
 [e $U 945  ]
-"104
+"125
+}
+[; ;main.c: 125: }
+[e $U 945  ]
+"106
 [e :U 946 ]
 [e [\ _operationType , $ . `E7300 0 951
  , $ . `E7300 1 952
  947 ]
-"123
+"125
 [e :U 945 ]
-"124
+"126
 }
 [e :U 942 ]
-"101
+"103
 [e $U 943  ]
 [e :U 944 ]
-[; ;main.c: 124: }
-[; ;main.c: 125: }
-"125
+[; ;main.c: 126: }
+[; ;main.c: 127: }
+"127
 [e :UE 941 ]
 }
 [a 1C 83 99 114 105 112 116 114 32 73 111 84 45 88 0 ]
-[a 2C 32 68 101 118 58 32 83 49 32 0 ]
-[a 3C 32 32 32 98 117 105 108 100 32 48 48 54 32 32 32 0 ]
+[a 2C 32 68 101 118 58 32 83 50 32 0 ]
+[a 3C 32 32 32 98 117 105 108 100 32 48 49 49 32 32 32 0 ]

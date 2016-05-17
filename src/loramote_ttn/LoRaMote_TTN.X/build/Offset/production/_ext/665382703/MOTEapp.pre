@@ -7758,6 +7758,13 @@ static uint8_t modemPairingCode[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 static bool responseReady = 0;
 static MOTE_MODE_T moteState = MOTE_STARTUP;
 
+static bool autoMode = 0;
+static bool manualTrigger = 0;
+static uint8_t S1 = 1;
+static uint8_t S2 = 1;
+static uint8_t prevS1 = 1;
+static uint8_t prevS2 = 1;
+
 
 
 
@@ -7792,7 +7799,7 @@ static uint8_t randomPortNum = 0;
 static bool messageReceived = 0;
 static uint16_t pkts = 0;
 
-# 108
+# 115
 static uint8_t secTicker = 0;
 static uint8_t minTicker = 0;
 static uint8_t m10SecTicker = 0;
@@ -7816,7 +7823,7 @@ void modemResync(void)
 bool escapeEvent = 0;
 uint16_t escapeCounter = 0;
 
-# 137
+# 144
 TXSTAbits.TXEN = 0;
 LATCbits.LATC6 = 0;
 moteApp_delayms(10);
@@ -7864,7 +7871,7 @@ bool s2Button = 0;
 bool readMessage = 0;
 buttonStates_t buttonPress = Released;
 
-# 188
+# 195
 if (PORTAbits.RA0)
 moteState = MOTE_SWAP;
 
@@ -7962,7 +7969,7 @@ break;
 return moteState;
 }
 
-# 290
+# 297
 static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
 {
 static int ch = 0;
@@ -7974,13 +7981,7 @@ static bool pending_confirm = 0;
 char buf[50];
 static int skip_count = 0;
 
-
-if (switchEvent)
-{
-activeState = moteComFailure;
-while(!PORTCbits.RC1);
-}
-
+# 315
 switch (activeState)
 {
 default:
@@ -7988,7 +7989,7 @@ while(1);
 break;
 case moteStartup:
 
-# 321
+# 328
 LATAbits.LATA7 = 0;
 LATAbits.LATA6 = 0;
 
@@ -8009,7 +8010,7 @@ if ( messageReady )
 {
 if(strncmp(&modemResonseBuffer[2], "2903", 4) == 0)
 {
-sendCommand("mac set devaddr ABCD0001");
+sendCommand("mac set devaddr ABCD0002");
 oled_clear();
 oled_putString("set devaddr",0,0);
 moteApp_delayms(80);
@@ -8234,20 +8235,43 @@ LATAbits.LATA7 = 1;
 LATAbits.LATA6 = 0;
 
 oled_clear();
-oled_putString("resting",0,0);
+oled_putString("Mode: ",0,0);
+oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+oled_putString("S1 = auto on/off",0,1);
+oled_putString("S2 = manual send",0,2);
 
 moteApp_delayms(80);
 ch = 0;
 activeState = moteRest;
 }
 
-# 592
+# 602
 }
 break;
 case moteRest:
+if (autoMode || manualTrigger) {
 ch++;
+}
 moteApp_delayms(100);
+
+S1 = PORTCbits.RC0;
+S2 = PORTCbits.RC1;
+if (S1 == 0 && prevS1 == 1) {
+
+
+autoMode = !autoMode;
+oled_putString("Mode: ",0,0);
+oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+}
+if (S2 == 0 && prevS2 == 1) {
+
+
+manualTrigger = 1;
+}
+prevS1 = S1;
+prevS2 = S2;
 if (ch>20) {
+manualTrigger=0;
 ch = 0;
 
 uint16_t Traw = 0;
@@ -8268,7 +8292,8 @@ pkts++;
 
 
 oled_clear();
-oled_putString("  Sensor Data  ",0,0);
+oled_putString("Mode: ",0,0);
+oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
 oled_putString("Light:",0,1);
 oled_putString("Temp :",0,2);
 oled_putString("C",12,2);
@@ -8296,7 +8321,7 @@ moteApp_delayms(80);
 activeState = moteTxWait;
 }
 
-# 653
+# 684
 }
 break;
 case moteTxWait:
@@ -8665,7 +8690,7 @@ INTCONbits.IOCIF = 0;
 status = 1;
 }
 
-# 1025
+# 1056
 else
 {
 secTicker = 10;

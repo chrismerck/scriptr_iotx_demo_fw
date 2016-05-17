@@ -7704,8 +7704,8 @@ oled_putString("MoTe v .",0,0);
 oled_putString("0",0,6);
 oled_putString("1",0,8);
 oled_putString("Build Date/Time",0,1);
-oled_putString("May  5 2016",0,2);
-oled_putString("16:03:16",0,3);
+oled_putString("May 17 2016",0,2);
+oled_putString("13:24:07",0,3);
 
 }
 

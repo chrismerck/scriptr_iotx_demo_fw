@@ -57,6 +57,13 @@ static uint8_t modemPairingCode[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 static bool responseReady = false;
 static MOTE_MODE_T moteState = MOTE_STARTUP;
 
+static bool autoMode = false;
+static bool manualTrigger = false;
+static uint8_t S1 = 1;
+static uint8_t S2 = 1;
+static uint8_t prevS1 = 1; // auto/manual
+static uint8_t prevS2 = 1; // manual send
+
 //typedef enum {runningEnter, runningSensorPrepare, runningSensorDisplay, runningPrepareTx, runningSendTx, runningPeriodic, runningSleep} MOTE_RUNNING_T;
 //MOTE_RUNNING_T  runningState = runningEnter;
 
@@ -299,12 +306,12 @@ static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
     static int skip_count = 0;
     
 
-    if (switchEvent)
+    /*if (switchEvent)
     {
         activeState = moteComFailure;
         while(!SWITCH_2_PORT);
-    }
-        
+    }*/
+
     switch (activeState)
     {
         default:        // Invalid
@@ -338,7 +345,7 @@ static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
             {
                 if(strncmp(&modemResonseBuffer[2], "2903", 4) == 0)   // Check 1st [2] Bytes for RN
                 {
-                    sendCommand("mac set devaddr ABCD0001");
+                    sendCommand("mac set devaddr ABCD0002");
                     oled_clear();
                     oled_putString("set devaddr",0,0);
                     moteApp_delayms(80);
@@ -562,8 +569,11 @@ static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
                     LED_RED_LAT = 1;
                     LED_GREEN_LAT = 0;
                     // next we rest for a while                                        
-                    oled_clear();                   
-                    oled_putString("resting",0,0);
+                    oled_clear();                 
+                    oled_putString("Mode: ",0,0);                
+                    oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+                    oled_putString("S1 = auto on/off",0,1);
+                    oled_putString("S2 = manual send",0,2);
                     
                     moteApp_delayms(80);
                     ch = 0;
@@ -592,9 +602,29 @@ static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
             }
         break;
         case moteRest:
-            ch++;           
-            moteApp_delayms(100);           
+            if (autoMode || manualTrigger) {
+                ch++;
+            }
+            moteApp_delayms(100);
+            /* check buttons */
+            S1 = SWITCH_1_PORT; // 1 == unpressed, 0 = pressed
+            S2 = SWITCH_2_PORT;
+            if (S1 == 0 && prevS1 == 1) {
+                /* rising edge of switch 1 */
+                /* alternate mode */
+                autoMode = !autoMode;
+                oled_putString("Mode: ",0,0);                
+                oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
+            }
+            if (S2 == 0 && prevS2 == 1) {
+                /* rising edge of switch 2 */
+                /* schedule a measurement */
+                manualTrigger = true;
+            }
+            prevS1 = S1;
+            prevS2 = S2;
             if (ch>20) {
+                manualTrigger=false;
                 ch = 0;
                 // make a measurement
                 uint16_t Traw = 0;
@@ -615,7 +645,8 @@ static MOTE_T moteJoiningProcess(bool messageReady, bool switchEvent)
                 
                 // display measurement
                 oled_clear();
-                oled_putString("  Sensor Data  ",0,0);
+                oled_putString("Mode: ",0,0);                
+                oled_putString(autoMode?"AUTO  ":"MANUAL",6,0);
                 oled_putString("Light:",0,1);
                 oled_putString("Temp :",0,2);
                 oled_putString("C",12,2);
